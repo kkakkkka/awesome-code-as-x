@@ -14,7 +14,7 @@
 
 ## Overview
 - 🎯 [Aim](#aim)
-- 📚 [Policy Program Definition](#policy-program-definition) | [World Program Definition](#world-program-definition) | [Programmable World Model Definition](#programmable-world-model-definition) | [Edit Graph Definition](#edit-graph-definition)
+- 📚 [Policy Program Definition](#policy-program-definition) | [World Program Definition](#world-program-definition) | [Programmable World Model Definition](#programmable-world-model-definition) | [Edit Graph Definition](#edit-graph-definition) | [Benchmark Definition](#benchmark-definition)
 
 **Code as Policy**
 - 🦾 [Code as Policy](#code-as-policy)
@@ -28,8 +28,11 @@
 **Edit Graphs**
 - ✂️ [Edit Graph](#edit-graph)
 
+**Benchmarks**
+- 📊 [Benchmark](#benchmark)
+
 ## Aim
-We collect papers where an agent writes or edits a program, a tool graph, or an explicit world state, then a simulator, renderer, robot, or editor runs it. That includes robot policies, executable scenes, programmable world models, and image or video edit graphs.
+We collect papers where an agent writes or edits a program, a tool graph, or an explicit world state, then a simulator, renderer, robot, or editor runs it. That includes robot policies, executable scenes, programmable world models, image or video edit graphs, and benchmarks for those agents.
 
 New papers get added as they appear. PRs are welcome.
 
@@ -52,6 +55,11 @@ Programmable world models keep state and transitions in code. The generator or r
 An edit graph is a sequence of tool calls, a visual program, or a timeline patch. You can inspect it and roll it back. VisProg is an early example.
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
+
+## Benchmark Definition
+These benchmarks test whether a coding agent can write, run, and revise programs for robot learning or executable worlds.
+
+- [⭐️] **RLE-Bench**: A Qualifying Exam for Coding Agents as Robot Learning Engineers. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://rle-bench.github.io/)
 
 ## Code as Policy
 
@@ -153,8 +161,6 @@ An edit graph is a sequence of tool calls, a visual program, or a timeline patch
 
 - **GIF-MCTS**, Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search. [![arXiv](https://img.shields.io/badge/arXiv-2405.15383-b31b1b.svg)](https://arxiv.org/abs/2405.15383)
 
-- **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
-
 ## Edit Graph
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
@@ -176,4 +182,10 @@ An edit graph is a sequence of tool calls, a visual program, or a timeline patch
 - **IMAGAgent**: Orchestrating Multi-Turn Image Editing via Constraint-Aware Planning and Reflection. [![arXiv](https://img.shields.io/badge/arXiv-2603.29602-b31b1b.svg)](https://arxiv.org/abs/2603.29602) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/hackermmzz/IMAGAgent)
 
 - **RefineCut**, Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing. [![arXiv](https://img.shields.io/badge/arXiv-2608.25622-b31b1b.svg)](https://arxiv.org/abs/2608.25622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Lancelot-wy/RefineCut)
+
+## Benchmark
+
+- [⭐️] **RLE-Bench**: A Qualifying Exam for Coding Agents as Robot Learning Engineers. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://rle-bench.github.io/)
+
+- **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
