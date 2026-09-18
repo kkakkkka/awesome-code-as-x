@@ -12,13 +12,13 @@
 
 <table align="center">
   <tr>
-    <td align="center" width="240">
-      <img src="sourcemind.jpg" alt="Community QR Code" width="240" height="240">
+    <td align="center" width="35%">
+      <img src="sourcemind.jpg" alt="社区二维码" width="35%">
       <br>
       <sub>社区由<strong>sourcemind</strong>支持</sub>
     </td>
-    <td align="center" width="240">
-      <img src="wechat.jpg" alt="微信群二维码" width="240" height="240">
+    <td align="center" width="35%">
+      <img src="wechat.jpg" alt="微信群二维码" width="35%">
       <br>
       <sub>微信群二维码</sub>
     </td>
