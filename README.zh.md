@@ -20,7 +20,7 @@
     <td align="center" width="240">
       <img src="wechat.jpg" alt="微信群二维码" width="240" height="240">
       <br>
-      <sub>WeChat Group</sub>
+      <sub>微信群二维码</sub>
     </td>
   </tr>
 </table>
