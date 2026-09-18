@@ -10,6 +10,20 @@
 
 [English](README.md) | [中文](README.zh.md)
 
+<table align="center">
+  <tr>
+    <td align="center" width="240">
+      <img src="sourcemind.jpg" alt="Community QR Code" width="240" height="240">
+      <br>
+      <sub>Community supported by <strong>sourcemind</strong></sub>
+    </td>
+    <td align="center" width="240">
+      <img src="wechat.jpg" alt="WeChat Group QR Code" width="240" height="240">
+      <br>
+      <sub>WeChat Group</sub>
+    </td>
+  </tr>
+</table>
 </div>
 
 ## Overview
