@@ -284,6 +284,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 从视频反演世界程序
 
+- **Astra 做 4D 形状拟合**（[Edgar Sucar](https://x.com/SucarEdgar)）：从视频拟合 4D 形状，人工提示叶子对称来约束拟合。要几个小时，并且来回 prompt。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/SucarEdgar/status/2101739645759361322)
+
 - **实验室厨房重建**（[Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919)）：20 秒单目 RGB 视频重建带可动柜门的实验室厨房。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
 - **绳驱灵巧手重建**（[Dmytro Hrybov](https://x.com/dimentary)）：在 MuJoCo 里复现 1X 腱驱手 demo，腱传动做了简化。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/dimentary/status/2097857980150763900)
