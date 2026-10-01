@@ -53,6 +53,7 @@
     - [Plan, then call a VLA](#plan-then-call-a-vla)
     - [World programs from video](#world-programs-from-video)
     - [RL training stacks](#rl-training-stacks)
+    - [Scene programs](#scene-programs)
 
 ## Aim
 We collect papers where an agent writes or edits a program, a tool graph, or an explicit world state, then a simulator, renderer, robot, or editor runs it. That includes robot policies, executable scenes, programmable world models, image or video edit graphs, and benchmarks for those agents. Systems, evals, and case catalogs without a paper go under Projects, not under the paper sections.
@@ -98,6 +99,8 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 - [⭐️] **RATs**, Playful Agentic Robot Learning. [![arXiv](https://img.shields.io/badge/arXiv-2606.19419-b31b1b.svg)](https://arxiv.org/abs/2606.19419) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://Playful-RATs.github.io/)
 
 - [⭐️] **Show-Harness**: Just a VLM Agent Can Play Robots. [![arXiv](https://img.shields.io/badge/arXiv-2609.10522-b31b1b.svg)](https://arxiv.org/abs/2609.10522) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Show-Harness/)
+
+- **Harness VLA**: memory and visual feedback compose frozen VLA calls with analytic motion primitives. [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
@@ -165,6 +168,8 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - [⭐️] **LiteReality-Agent**: An Agentic System for Interactable 3D Indoor Scene Reconstruction. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://litereality.github.io/agent/)
 
+- **AstraLOD3**: multi-view evidence to an editable building reconstruction. [![arXiv](https://img.shields.io/badge/arXiv-2609.28061-b31b1b.svg)](https://arxiv.org/abs/2609.28061)
+
 ## Programmable World Models
 
 - [⭐️] **Code World Model**: Coding Agent as World Brain. [![arXiv](https://img.shields.io/badge/arXiv-2608.25927-b31b1b.svg)](https://arxiv.org/abs/2608.25927) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://buaacyw.github.io/cwm/)
@@ -227,9 +232,13 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **GPT-Policy** / **GPT-Policy-Eval**: VLM agent learns a real-robot plug-insertion policy in-context from one video, without VLA, RL, or DAgger. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
 
-- **GPT-as-Policy**, Galaxea AI: public benchmark and report that scores GPT-6 Astra as an embodied policy. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
+- **GPT-as-Policy**, Galbot: public benchmark and report that scores GPT-6 Astra as an embodied policy. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
 
 - **RoboCurve GPT-6 Astra evaluation**: controlled YAM-arm study; reports 19/20 bowl-task completions and 80% fewer output tokens. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.robocurve.org/gpt-6-astra/)
+
+- **RoboDojo GPT-6 Astra evaluation**: zero-shot run through the fixed RoboProbe harness on 42 simulation tasks (2,100 trials); reports 28.97 average score and 22.48% average success. Real-robot testing was halted for safety. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
+
+- **RPent** (RLinf): recursive harness that pairs an agentic planner with frozen VLA primitives. The leaderboard reports GPT-6 Astra at 92.63% overall on LIBERO-PRO (741/800) and 59.20% on RoboCasa365 Target50. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
 ### Policy programs in simulation
 
@@ -279,6 +288,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Plan, then call a VLA
 
+- **Harness VLA / RPent**: Astra plans with memory and visual feedback, then calls a frozen VLA plus a fixed library of analytic motion primitives. The real-robot demo sorts plates and retries a failed grasp without fine-tuning the VLA. See also [Harness VLA](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
+
 - **Zero-shot Task Execution through FluxVLA** ([Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8)): Astra does task inference and planning; pretrained [FluxVLA](https://github.com/FluxVLA/FluxVLA) runs the low-level actions. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 ### World programs from video
@@ -299,6 +310,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### RL training stacks
 
+- **Office Real2Sim2Real Cart Push** ([watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa)): rebuilds an office, estimates contact supervision, trains an RL cart-push policy with SONIC for whole-body motion, then deploys it on the real humanoid. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
+
 - **Sharpa Hand Pen-spinning RL** ([Wentao Zhu](https://x.com/walterzhu8) / Chengyang Li): autonomous ~1.5-day run that builds the pen mesh, an Isaac Lab Sharpa-hand task, a PPO policy, and a visualization video. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/walterzhu8/status/2100212420840989112)
 
 - **RL-trained Duck Robot** ([拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae)): one image and one description become an RL-trained duck locomotion demo. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
@@ -310,4 +323,44 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 - **Office Scan → Newton / G1 Gym** ([Jiarui Xu](https://x.com/Jiarui_X)): rebuilds an office scan in Blender, exports USD, and makes a G1 walking scene in Newton. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Jiarui_X/status/2098439950991806804)
 
 - **Isaac Sim Environment, PPO Training, and Tuning** ([十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2)): builds an Isaac Sim RL environment, configures PPO, and iterates the run in one workflow. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+
+### Scene programs
+
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 209 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+
+- [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
+
+#### Executable scenes
+
+- **Solace**: architectural iteration through Blender, Cycles, and UE5. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://developers.openai.com/blog/architectural-visualization-with-astra)
+
+- **Pelican on a bicycle**: three Blender iterations with editable meshes and recorded conversations. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/simonw/gpt-6-astra-blender-pelican-bicycle)
+
+- **GPTBlender floor plan**: turns a floor plan into a downloadable furnished home. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/qduoduo-hwh/gptblender_demo)
+
+- **Realsee**: scan to an editable Blender space, with roaming video and prompts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/realsee-developer/realsee-astra-blender)
+
+- **Orbital Core**: Blender and GLB assets inside an interactive Three.js page. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wangruofeng/orbital-core-showcase)
+
+- **Piața Unirii**: same brief, voxel square, prompt and source kept. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/danmana/piata-unirii)
+
+#### CAD programs
+
+- **J-hook**: OpenSCAD print design compared across models; strength testing still pending. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/WescheNex1q/status/2104590493191479337)
+
+- **Villa, recursive film, turbine CAD**: three editable 3D projects in one repo. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-3d-projects)
+
+- **Realitizer**: Swift code-first models of a manta ray and a house. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/koher/realitizer)
+
+#### Playable world programs
+
+- **Living Deep**: extends an existing ocean simulation with underwater ecology. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/emollick/abyssal-living-deep)
+
+- **Smash Karts**: multiplayer client, server, and a public agent trajectory. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/amsminn/gpt-6-astra-smash-karts)
+
+- **Little Flock**: one-shot pasture world, with the goal prompt in the repo. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/songkeys/little-flock)
+
+- **Windfield**: 3D adventure plus a terrain editor. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/fuguai1/status/2104531704740512143)
+
+- **Melon Jelly**: WebGPU soft-body comparison. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
 

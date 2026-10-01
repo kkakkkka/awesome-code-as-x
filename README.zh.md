@@ -54,6 +54,7 @@
     - [规划后调用 VLA](#规划后调用-vla)
     - [从视频反演世界程序](#从视频反演世界程序)
     - [编写 RL 训练栈](#编写-rl-训练栈)
+    - [场景程序](#场景程序)
 
 ## 目标
 agent 写出或改好程序、工具图或可检查的世界状态，再交给仿真器、渲染器、机器人或编辑器去跑。应用场景包括：机器人策略、可执行场景、可编程世界模型、图像和视频编辑图，以及评测这些 agent 的 benchmark。没有论文、但是系统、评测或案例合集的，放进 Projects，不塞进论文栏目。
@@ -99,6 +100,8 @@ World program 是可执行的场景或物理程序，比如 Blender、MuJoCo、U
 - [⭐️] **RATs**, Playful Agentic Robot Learning. [![arXiv](https://img.shields.io/badge/arXiv-2606.19419-b31b1b.svg)](https://arxiv.org/abs/2606.19419) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://Playful-RATs.github.io/)
 
 - [⭐️] **Show-Harness**: Just a VLM Agent Can Play Robots. [![arXiv](https://img.shields.io/badge/arXiv-2609.10522-b31b1b.svg)](https://arxiv.org/abs/2609.10522) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Show-Harness/)
+
+- **Harness VLA**: 用记忆和视觉反馈，把冻结的 VLA 调用和解析运动原语拼在一起。 [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
@@ -166,6 +169,8 @@ World program 是可执行的场景或物理程序，比如 Blender、MuJoCo、U
 
 - [⭐️] **LiteReality-Agent**: An Agentic System for Interactable 3D Indoor Scene Reconstruction. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://litereality.github.io/agent/)
 
+- **AstraLOD3**: 多视图证据重建可编辑建筑。 [![arXiv](https://img.shields.io/badge/arXiv-2609.28061-b31b1b.svg)](https://arxiv.org/abs/2609.28061)
+
 ## Programmable World Models
 
 - [⭐️] **Code World Model**: Coding Agent as World Brain. [![arXiv](https://img.shields.io/badge/arXiv-2608.25927-b31b1b.svg)](https://arxiv.org/abs/2608.25927) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://buaacyw.github.io/cwm/)
@@ -228,9 +233,13 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 - **GPT-Policy** / **GPT-Policy-Eval**：VLM agent 从一段视频 in-context 学会真机插插头，不用 VLA、RL 或 DAgger。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
 
-- **GPT-as-Policy**，银河通用：公开 benchmark 和报告，把 GPT-6 Astra 当具身策略来打分。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
+- **GPT-as-Policy**，银河通用：公开 benchmark 和报告，把 GPT-6 Astra 当具身策略来打分。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
 
 - **RoboCurve GPT-6 Astra evaluation**：YAM 机械臂上的受控对比；报告碗任务 19/20，输出 token 少 80%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.robocurve.org/gpt-6-astra/)
+
+- **RoboDojo GPT-6 Astra evaluation**：固定的 RoboProbe harness 上做 42 个仿真任务、2100 次试验；报告平均分 28.97、平均成功率 22.48%。真机测试因安全原因中止。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
+
+- **RPent**（RLinf）：递归 harness，agent 规划器配冻结的 VLA 原语。榜上 GPT-6 Astra 在 LIBERO-PRO 总成绩 92.63%（741/800），RoboCasa365 Target50 为 59.20%。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
 ### 仿真策略程序
 
@@ -280,6 +289,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 规划后调用 VLA
 
+- **Harness VLA / RPent**：Astra 用记忆和视觉反馈做规划，再调用冻结的 VLA 和一组固定的解析运动原语。真机 demo 分拣盘子，抓取失败后重试，不微调 VLA。另见 [Harness VLA](#code-as-policy)。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
+
 - **经 FluxVLA 做 zero-shot 任务**（[Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8)）：Astra 负责任务理解和规划，预训练 [FluxVLA](https://github.com/FluxVLA/FluxVLA) 跑底层动作。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 ### 从视频反演世界程序
@@ -300,6 +311,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 编写 RL 训练栈
 
+- **办公室 Real2Sim2Real 推车**（[watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa)）：重建办公室，估计接触监督，用 SONIC 做全身运动并训练推车 RL，再部署回真机人形。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
+
 - **Sharpa 手转笔 RL**（[Wentao Zhu](https://x.com/walterzhu8) / Chengyang Li）：大约一天半的自主运行，建笔 mesh、Isaac Lab 任务、PPO 策略和可视化视频。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/walterzhu8/status/2100212420840989112)
 
 - **RL 训练的鸭子机器人**（[拂晓时分_茉莉飘香](https://www.rednote.com/user/profile/5ffbc96d00000000010060ae)）：一张图加一句描述，训出鸭子行走 demo。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa347e2000000000b036667?xsec_token=AB1z4k50CvQ0PFZpqtQXWYlVMONqE2yr3ER8jk-hVWI74=&xsec_source=pc_search&source=web_profile_page)
@@ -311,4 +324,44 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 - **办公室扫描 → Newton / G1 Gym**（[Jiarui Xu](https://x.com/Jiarui_X)）：把办公室扫描重建进 Blender，导出 USD，在 Newton 里做成 G1 行走场景。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Jiarui_X/status/2098439950991806804)
 
 - **Isaac Sim 环境、PPO 训练和调参**（[十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2)）：一个工作流里搭 Isaac Sim RL 环境、配 PPO、再迭代训练。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
+
+### 场景程序
+
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 209 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+
+- [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
+
+#### 可执行场景
+
+- **Solace**：用 Blender、Cycles 和 UE5 迭代建筑方案。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://developers.openai.com/blog/architectural-visualization-with-astra)
+
+- **骑自行车的鹈鹕**：三次 Blender 迭代，网格可编辑，对话有记录。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/simonw/gpt-6-astra-blender-pelican-bicycle)
+
+- **GPTBlender 平面图**：平面图生成可下载的带家具房屋。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/qduoduo-hwh/gptblender_demo)
+
+- **Realsee**：实景扫描到可编辑的 Blender 空间，带漫游视频和提示词。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/realsee-developer/realsee-astra-blender)
+
+- **Orbital Core**：Blender 和 GLB 放进可交互的 Three.js 页面。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wangruofeng/orbital-core-showcase)
+
+- **Piața Unirii**：同一简报做出的体素广场，提示词和源码都在。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/danmana/piata-unirii)
+
+#### CAD 程序
+
+- **J 型挂钩**：OpenSCAD 打印设计的模型对照，强度测试还没做。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/WescheNex1q/status/2104590493191479337)
+
+- **别墅、递归电影、涡轮 CAD**：一个仓库里三个可编辑三维项目。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-3d-projects)
+
+- **Realitizer**：用 Swift 做代码优先的蝠鲼和房屋模型。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/koher/realitizer)
+
+#### 可玩的世界程序
+
+- **Living Deep**：在已有海洋仿真上加海底生态。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/emollick/abyssal-living-deep)
+
+- **Smash Karts**：多人客户端、服务端，以及公开的 agent 轨迹。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/amsminn/gpt-6-astra-smash-karts)
+
+- **Little Flock**：一次写出的牧场世界，目标提示词在仓库里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/songkeys/little-flock)
+
+- **Windfield**：三维冒险加上地形编辑器。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/fuguai1/status/2104531704740512143)
+
+- **Melon Jelly**：WebGPU 软体果冻的模型对照。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
 
