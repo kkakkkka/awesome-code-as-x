@@ -45,6 +45,10 @@
 
 **Benchmarks**
 - 📊 [Benchmark](#benchmark)
+    - [机器人评测基础设施](#机器人评测基础设施)
+
+**综述与经验**
+- 📚 [综述与经验](#综述与经验)
 
 **Projects**
 - 🛠️ [Projects](#projects)
@@ -55,6 +59,9 @@
     - [从视频反演世界程序](#从视频反演世界程序)
     - [编写 RL 训练栈](#编写-rl-训练栈)
     - [场景程序](#场景程序)
+
+**相关资源**
+- 🔗 [相关资源](#相关资源)
 
 ## 目标
 agent 写出或改好程序、工具图或可检查的世界状态，再交给仿真器、渲染器、机器人或编辑器去跑。应用场景包括：机器人策略、可执行场景、可编程世界模型、图像和视频编辑图，以及评测这些 agent 的 benchmark。没有论文、但是系统、评测或案例合集的，放进 Projects，不塞进论文栏目。
@@ -70,6 +77,8 @@ Code-as-Policy 用 LLM / VLM 当高层 agent，写出可执行的机器人程序
 World program 是可执行的场景或物理程序，比如 Blender、MuJoCo、USD、CadQuery，不是静态 mesh，也不是视频。从语言或布局写出来叫生成；从图像、视频或扫描写回去叫反演。
 
 - [⭐️] **SceneCode**: Executable World Programs for Editable Indoor Scenes with Articulated Objects. [![arXiv](https://img.shields.io/badge/arXiv-2605.19587-b31b1b.svg)](https://arxiv.org/abs/2605.19587) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://scene-code.github.io/)
+
+Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence，也用 Code as World 表示机器人任务状态：对象、关系、约束、观测和进度谓词。这个用法和下面按可执行场景程序归类的 World Program 不同；参见 [Physical Coding / HexaAnything](#code-as-policy)。 [![arXiv](https://img.shields.io/badge/arXiv-2609.35432-b31b1b.svg)](https://arxiv.org/abs/2609.35432) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/PhysicalCoding)
 
 ## Programmable World Model 定义
 可编程世界模型把状态和转移写在代码里。生成模型或渲染器只管外观。
@@ -95,11 +104,37 @@ World program 是可执行的场景或物理程序，比如 Blender、MuJoCo、U
 
 - [⭐️] **Code as Policies**: Language Model Programs for Embodied Control. [![arXiv](https://img.shields.io/badge/arXiv-2209.07753-b31b1b.svg)](https://arxiv.org/abs/2209.07753) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-policies.github.io)
 
+- **RACaP**, Agentic Reasoning, Acting, and Coding as Policies for Evolvable Robot Learning：离线进化 typed Policy API，运行时由 ReAct loop 调用冻结 API。 [![arXiv](https://img.shields.io/badge/arXiv-2609.29394-b31b1b.svg)](https://arxiv.org/abs/2609.29394)
+
+- **RoboDawn**, Transferring the Intelligence of VLMs to Robotic Control：给 VLM 一层很薄的离散命令接口，把 `move`、`rotate`、`gripper` 等命令落到运动规划里。 [![arXiv](https://img.shields.io/badge/arXiv-2609.22966-b31b1b.svg)](https://arxiv.org/abs/2609.22966) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodawn.top/)
+
+- **GPT-Policy**, In-Context Robot Learning with VLM Agents：把上下文编译给 VLM agent，再经受约束的控制器发出机器人工具命令。 [![arXiv](https://img.shields.io/badge/arXiv-2609.19138-b31b1b.svg)](https://arxiv.org/abs/2609.19138) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
+
+- **RoboDojo GPT-6 Astra evaluation**, An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond：把 VLM policy 放进固定 RoboProbe harness，跑 42 个仿真任务、2100 次试验；报告平均分 28.97、平均成功率 22.48%，真机测试因安全原因中止。 [![arXiv](https://img.shields.io/badge/arXiv-2609.24170-b31b1b.svg)](https://arxiv.org/abs/2609.24170) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
+
+- **SafeHarness**, Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation：在路径规划和接触执行中加入障碍感知，减少生成的机器人控制程序发生碰撞的风险。 [![arXiv](https://img.shields.io/badge/arXiv-2609.20822-b31b1b.svg)](https://arxiv.org/abs/2609.20822)
+
+- **WetRobo**, A Reproducible Robot Kit for Coding Agents in Biological Laboratories：让 agent 编写并执行实验室流程，同时调用感知、规划和仿真工具。 [![arXiv](https://img.shields.io/badge/arXiv-2609.18435-b31b1b.svg)](https://arxiv.org/abs/2609.18435)
+
+- **AGP**, Agent as Policy for Robotic Manipulation：运行时写程序、执行程序，并根据物理反馈修改策略。 [![arXiv](https://img.shields.io/badge/arXiv-2609.12541-b31b1b.svg)](https://arxiv.org/abs/2609.12541) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/agent-as-policy-2026/agent-as-policy)
+
+- **PhysCaP**, Grounding Code-as-Policy Agent with Physics-Informed Exploration：通过主动交互估计隐藏的物理属性，为机器人操作提供依据。 [![arXiv](https://img.shields.io/badge/arXiv-2608.21031-b31b1b.svg)](https://arxiv.org/abs/2608.21031) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physcap.github.io/)
+
+- **Agentic Push-T**, Revisiting the "Push-T" Robot Manipulation Task with Agentic Robotics：让 coding agent 在没有 demonstrations 的情况下为 Push-T 写操作算法。 [![arXiv](https://img.shields.io/badge/arXiv-2608.18227-b31b1b.svg)](https://arxiv.org/abs/2608.18227)
+
+- **GaP**, A Graph-as-Policy Multi-Agent Self-Learning Harness for Variational Automation Tasks：把 policy 表示成有向的感知-规划-控制图，并在仿真里反复改。 [![arXiv](https://img.shields.io/badge/arXiv-2607.05369-b31b1b.svg)](https://arxiv.org/abs/2607.05369)
+
+- **ASPIRE**: Agentic /Skills Discovery for Robotics。根据执行轨迹编写和修复控制程序，把通过验证的修复积累成可复用的技能库。 [![arXiv](https://img.shields.io/badge/arXiv-2607.00272-b31b1b.svg)](https://arxiv.org/abs/2607.00272) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/ASPIRE)
+
+- **ENPIRE**: Agentic Robot Policy Self-Improvement in the Real World。重置场景、执行策略、检查结果，再根据真机反馈修改策略或训练代码。 [![arXiv](https://img.shields.io/badge/arXiv-2606.19980-b31b1b.svg)](https://arxiv.org/abs/2606.19980) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/enpire/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/ENPIRE)
+
 - [⭐️] **CaP-X**: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2603.22435-b31b1b.svg)](https://arxiv.org/abs/2603.22435) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://capgym.github.io)
 
 - [⭐️] **RATs**, Playful Agentic Robot Learning. [![arXiv](https://img.shields.io/badge/arXiv-2606.19419-b31b1b.svg)](https://arxiv.org/abs/2606.19419) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://Playful-RATs.github.io/)
 
 - [⭐️] **Show-Harness**: Just a VLM Agent Can Play Robots. [![arXiv](https://img.shields.io/badge/arXiv-2609.10522-b31b1b.svg)](https://arxiv.org/abs/2609.10522) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Show-Harness/)
+
+- **Physical Coding / HexaAnything**, Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence：用 Code as World 表示符号任务状态，用 Code as Policy 表示执行过程；HexaAnything 经 Harness 路由感知、规划、控制和 VLA / WAM 工具，检查执行结果，并把通过检查的轨迹存成记忆或训练数据。 [![arXiv](https://img.shields.io/badge/arXiv-2609.35432-b31b1b.svg)](https://arxiv.org/abs/2609.35432) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/PhysicalCoding)
 
 - **Harness VLA**: 用记忆和视觉反馈，把冻结的 VLA 调用和解析运动原语拼在一起。 [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
@@ -221,6 +256,24 @@ World program 是可执行的场景或物理程序，比如 Blender、MuJoCo、U
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
+### 机器人评测基础设施
+
+这些工作评测的是广义机器人策略，包括学习策略、程序接口和命令接口。它们是 policy-evaluation infrastructure，不是代码生成 benchmark。
+
+- **XPolicyLab**: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment. [![arXiv](https://img.shields.io/badge/arXiv-2608.09892-b31b1b.svg)](https://arxiv.org/abs/2608.09892) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/XPolicyLab/XPolicyLab)
+
+- **RoboDojo**: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies. [![arXiv](https://img.shields.io/badge/arXiv-2607.04434-b31b1b.svg)](https://arxiv.org/abs/2607.04434) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robodojo-benchmark/RoboDojo)
+
+- **HumanCLAW**: Can Vision-Language Models Act Through a Body? 用 harness 把 VLM 决策转成全身动作生成器调用，测试 VLM 能否通过身体行动。 [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
+
+## 综述与经验
+
+- **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills：梳理 action-predicting frozen weights 和可执行 robot skills 这两条路线。 [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
+
+- **Code as Agent Harness**：讨论可执行、可验证、带状态的 agent harness 设计，重点是 agent 写代码并运行代码的系统边界。 [![arXiv](https://img.shields.io/badge/arXiv-2605.18747-b31b1b.svg)](https://arxiv.org/abs/2605.18747)
+
+- **What Stops Recursive Self-Improvement in Robotics?** Lessons from 123 Rounds of Agentic Skill Discovery：agent 写、安装并测试 skills，但最终没有完成目标冰箱任务；主要问题是关系感知、早期 skill bottleneck 和 evaluator 行为。 [![arXiv](https://img.shields.io/badge/arXiv-2609.31760-b31b1b.svg)](https://arxiv.org/abs/2609.31760)
+
 ## Projects
 
 X、小红书、以及只有网页的系统。论文仍留在上面的栏目。案例合集见 [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI)。
@@ -231,13 +284,9 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 评测报告
 
-- **GPT-Policy** / **GPT-Policy-Eval**：VLM agent 从一段视频 in-context 学会真机插插头，不用 VLA、RL 或 DAgger。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
-
 - **GPT-as-Policy**，银河通用：公开 benchmark 和报告，把 GPT-6 Astra 当具身策略来打分。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
 
 - **RoboCurve GPT-6 Astra evaluation**：YAM 机械臂上的受控对比；报告碗任务 19/20，输出 token 少 80%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.robocurve.org/gpt-6-astra/)
-
-- **RoboDojo GPT-6 Astra evaluation**：固定的 RoboProbe harness 上做 42 个仿真任务、2100 次试验；报告平均分 28.97、平均成功率 22.48%。真机测试因安全原因中止。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
 
 - **RPent**（RLinf）：递归 harness，agent 规划器配冻结的 VLA 原语。榜上 GPT-6 Astra 在 LIBERO-PRO 总成绩 92.63%（741/800），RoboCasa365 Target50 为 59.20%。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
@@ -365,3 +414,6 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 
 - **Melon Jelly**：WebGPU 软体果冻的模型对照。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
 
+## 相关资源
+
+- **Awesome Physical AI**：更宽的 robot-policy VLM、coding agent、policy harness 和 RoboDojo 类 scorecard 阅读列表。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/Awesome-Physical-AI)

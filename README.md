@@ -44,6 +44,10 @@
 
 **Benchmarks**
 - 📊 [Benchmark](#benchmark)
+    - [Robot evaluation infrastructure](#robot-evaluation-infrastructure)
+
+**Surveys and Lessons**
+- 📚 [Surveys and Lessons](#surveys-and-lessons)
 
 **Projects**
 - 🛠️ [Projects](#projects)
@@ -54,6 +58,9 @@
     - [World programs from video](#world-programs-from-video)
     - [RL training stacks](#rl-training-stacks)
     - [Scene programs](#scene-programs)
+
+**Related Resources**
+- 🔗 [Related Resources](#related-resources)
 
 ## Aim
 We collect papers where an agent writes or edits a program, a tool graph, or an explicit world state, then a simulator, renderer, robot, or editor runs it. That includes robot policies, executable scenes, programmable world models, image or video edit graphs, and benchmarks for those agents. Systems, evals, and case catalogs without a paper go under Projects, not under the paper sections.
@@ -69,6 +76,8 @@ A Code-as-Policy agent is an LLM or VLM that writes executable robot programs, o
 A world program is an executable scene or physics program in Blender, MuJoCo, USD, CadQuery, or a similar stack. It is not a static mesh and not a video. Generation writes the program from language or a layout. Inversion / Reconstruction writes it from images, video, or scans.
 
 - [⭐️] **SceneCode**: Executable World Programs for Editable Indoor Scenes with Articulated Objects. [![arXiv](https://img.shields.io/badge/arXiv-2605.19587-b31b1b.svg)](https://arxiv.org/abs/2605.19587) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://scene-code.github.io/)
+
+Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence, also uses Code as World for symbolic robot task state: objects, relations, constraints, observations, and progress predicates. That is separate from the executable scene programs grouped below; see [Physical Coding / HexaAnything](#code-as-policy). [![arXiv](https://img.shields.io/badge/arXiv-2609.35432-b31b1b.svg)](https://arxiv.org/abs/2609.35432) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/PhysicalCoding)
 
 ## Programmable World Model Definition
 Programmable world models keep state and transitions in code. The generator or renderer only handles how things look.
@@ -94,11 +103,37 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - [⭐️] **Code as Policies**: Language Model Programs for Embodied Control. [![arXiv](https://img.shields.io/badge/arXiv-2209.07753-b31b1b.svg)](https://arxiv.org/abs/2209.07753) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-policies.github.io)
 
+- **RACaP**, Agentic Reasoning, Acting, and Coding as Policies for Evolvable Robot Learning: evolves typed Policy APIs offline, then a runtime ReAct loop calls the frozen APIs. [![arXiv](https://img.shields.io/badge/arXiv-2609.29394-b31b1b.svg)](https://arxiv.org/abs/2609.29394)
+
+- **RoboDawn**, Transferring the Intelligence of VLMs to Robotic Control: gives the VLM a thin discrete command interface that grounds `move`, `rotate`, `gripper`, and related commands into motion. [![arXiv](https://img.shields.io/badge/arXiv-2609.22966-b31b1b.svg)](https://arxiv.org/abs/2609.22966) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodawn.top/)
+
+- **GPT-Policy**, In-Context Robot Learning with VLM Agents: compiles context for a VLM agent that issues robot-tool commands through a constrained controller. [![arXiv](https://img.shields.io/badge/arXiv-2609.19138-b31b1b.svg)](https://arxiv.org/abs/2609.19138) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
+
+- **RoboDojo GPT-6 Astra evaluation**, An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond: runs a VLM policy through the fixed RoboProbe harness on 42 simulation tasks and 2,100 trials; reports 28.97 average score and 22.48% average success, with real-robot testing halted for safety. [![arXiv](https://img.shields.io/badge/arXiv-2609.24170-b31b1b.svg)](https://arxiv.org/abs/2609.24170) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
+
+- **SafeHarness**, Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation: adds obstacle-aware routing and contact execution to reduce collisions in generated robot controllers. [![arXiv](https://img.shields.io/badge/arXiv-2609.20822-b31b1b.svg)](https://arxiv.org/abs/2609.20822)
+
+- **WetRobo**, A Reproducible Robot Kit for Coding Agents in Biological Laboratories: lets agents write and execute lab protocols while calling perception, planning, and simulation tools. [![arXiv](https://img.shields.io/badge/arXiv-2609.18435-b31b1b.svg)](https://arxiv.org/abs/2609.18435)
+
+- **AGP**, Agent as Policy for Robotic Manipulation: writes runtime programs, executes them, and revises the policy from physical feedback. [![arXiv](https://img.shields.io/badge/arXiv-2609.12541-b31b1b.svg)](https://arxiv.org/abs/2609.12541) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/agent-as-policy-2026/agent-as-policy)
+
+- **PhysCaP**, Grounding Code-as-Policy Agent with Physics-Informed Exploration: adds information-seeking interactions to estimate hidden physical properties for robot manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.21031-b31b1b.svg)](https://arxiv.org/abs/2608.21031) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physcap.github.io/)
+
+- **Agentic Push-T**, Revisiting the "Push-T" Robot Manipulation Task with Agentic Robotics: has a coding agent write the manipulation algorithm for Push-T without demonstrations. [![arXiv](https://img.shields.io/badge/arXiv-2608.18227-b31b1b.svg)](https://arxiv.org/abs/2608.18227)
+
+- **GaP**, A Graph-as-Policy Multi-Agent Self-Learning Harness for Variational Automation Tasks: represents policy as a directed perception-planning-control graph and refines it in simulation. [![arXiv](https://img.shields.io/badge/arXiv-2607.05369-b31b1b.svg)](https://arxiv.org/abs/2607.05369)
+
+- **ASPIRE**: Agentic /Skills Discovery for Robotics. Writes and repairs control programs from execution traces, then stores validated fixes in a reusable skill library. [![arXiv](https://img.shields.io/badge/arXiv-2607.00272-b31b1b.svg)](https://arxiv.org/abs/2607.00272) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/ASPIRE)
+
+- **ENPIRE**: Agentic Robot Policy Self-Improvement in the Real World. Resets scenes, executes policies, verifies outcomes, and refines policy or training code from real-robot feedback. [![arXiv](https://img.shields.io/badge/arXiv-2606.19980-b31b1b.svg)](https://arxiv.org/abs/2606.19980) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/enpire/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/ENPIRE)
+
 - [⭐️] **CaP-X**: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2603.22435-b31b1b.svg)](https://arxiv.org/abs/2603.22435) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://capgym.github.io)
 
 - [⭐️] **RATs**, Playful Agentic Robot Learning. [![arXiv](https://img.shields.io/badge/arXiv-2606.19419-b31b1b.svg)](https://arxiv.org/abs/2606.19419) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://Playful-RATs.github.io/)
 
 - [⭐️] **Show-Harness**: Just a VLM Agent Can Play Robots. [![arXiv](https://img.shields.io/badge/arXiv-2609.10522-b31b1b.svg)](https://arxiv.org/abs/2609.10522) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Show-Harness/)
+
+- **Physical Coding / HexaAnything**, Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence: uses Code as World for symbolic task state and Code as Policy for execution; HexaAnything routes perception, planning, control, and VLA / WAM tools, verifies outcomes, and persists accepted traces as memory or training data. [![arXiv](https://img.shields.io/badge/arXiv-2609.35432-b31b1b.svg)](https://arxiv.org/abs/2609.35432) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/PhysicalCoding)
 
 - **Harness VLA**: memory and visual feedback compose frozen VLA calls with analytic motion primitives. [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
@@ -220,6 +255,24 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
+### Robot evaluation infrastructure
+
+These evaluate robot policies broadly, including learned policies and program or command interfaces. They are policy-evaluation infrastructure, not code-generation benchmarks.
+
+- **XPolicyLab**: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment. [![arXiv](https://img.shields.io/badge/arXiv-2608.09892-b31b1b.svg)](https://arxiv.org/abs/2608.09892) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/XPolicyLab/XPolicyLab)
+
+- **RoboDojo**: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies. [![arXiv](https://img.shields.io/badge/arXiv-2607.04434-b31b1b.svg)](https://arxiv.org/abs/2607.04434) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robodojo-benchmark/RoboDojo)
+
+- **HumanCLAW**: Can Vision-Language Models Act Through a Body? Tests VLM decisions through a harness that turns them into humanoid motion-generator calls. [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
+
+## Surveys and Lessons
+
+- **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills: frames the split between frozen action-predicting weights and executable robot skills. [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
+
+- **Code as Agent Harness**: surveys executable, verifiable, stateful harness design for agents that write and run code. [![arXiv](https://img.shields.io/badge/arXiv-2605.18747-b31b1b.svg)](https://arxiv.org/abs/2605.18747)
+
+- **What Stops Recursive Self-Improvement in Robotics?** Lessons from 123 Rounds of Agentic Skill Discovery: reports an agent that wrote, installed, and tested skills, but never solved the target fridge task; relational perception, early-skill bottlenecks, and evaluator behavior were the main failure points. [![arXiv](https://img.shields.io/badge/arXiv-2609.31760-b31b1b.svg)](https://arxiv.org/abs/2609.31760)
+
 ## Projects
 
 X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the sections above. Case catalog: [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI).
@@ -230,13 +283,9 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Eval reports
 
-- **GPT-Policy** / **GPT-Policy-Eval**: VLM agent learns a real-robot plug-insertion policy in-context from one video, without VLA, RL, or DAgger. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cheng-haha.github.io/GPT-Policy/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/cheng-haha/GPT-Policy-Eval)
-
 - **GPT-as-Policy**, Galbot: public benchmark and report that scores GPT-6 Astra as an embodied policy. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anonymous-report-421/GPT-as-Policy)
 
 - **RoboCurve GPT-6 Astra evaluation**: controlled YAM-arm study; reports 19/20 bowl-task completions and 80% fewer output tokens. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.robocurve.org/gpt-6-astra/)
-
-- **RoboDojo GPT-6 Astra evaluation**: zero-shot run through the fixed RoboProbe harness on 42 simulation tasks (2,100 trials); reports 28.97 average score and 22.48% average success. Real-robot testing was halted for safety. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodojo-benchmark.com/report/gpt-6-astra-eval)
 
 - **RPent** (RLinf): recursive harness that pairs an agentic planner with frozen VLA primitives. The leaderboard reports GPT-6 Astra at 92.63% overall on LIBERO-PRO (741/800) and 59.20% on RoboCasa365 Target50. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
@@ -364,3 +413,6 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 
 - **Melon Jelly**: WebGPU soft-body comparison. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
 
+## Related Resources
+
+- **Awesome Physical AI**: broader curated reading list for robot-policy VLMs, coding agents, policy harnesses, and RoboDojo-style scorecards. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/Awesome-Physical-AI)
