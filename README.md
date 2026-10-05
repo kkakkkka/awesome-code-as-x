@@ -137,6 +137,8 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **Harness VLA**: memory and visual feedback compose frozen VLA calls with analytic motion primitives. [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
+- **Recursive Harness Distillation**: Astra writes a playbook and revises it from Luna’s execution feedback, so the cheaper agent can guide a frozen VLA. [![arXiv](https://img.shields.io/badge/arXiv-2609.33378-b31b1b.svg)](https://arxiv.org/abs/2609.33378) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://seungyeon.me/RHD/)
+
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
 - **RHO**, Your Coding Agent is Secretly a Roboticist. [![arXiv](https://img.shields.io/badge/arXiv-2606.16458-b31b1b.svg)](https://arxiv.org/abs/2606.16458)
@@ -289,6 +291,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **RPent** (RLinf): recursive harness that pairs an agentic planner with frozen VLA primitives. The leaderboard reports GPT-6 Astra at 92.63% overall on LIBERO-PRO (741/800) and 59.20% on RoboCasa365 Target50. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
+- **Astra on RoboMME**: three-tier controller on 16 RoboMME tasks; reports 79.13% success (633/800) with 3.63 Astra planning calls per episode. A fine-tuned π0.5 runs the subtask, and a Qwen3-VL-4B monitor decides when Astra should replan. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
+
 ### Policy programs in simulation
 
 - **Dual-ALOHA Spatial-constraint Puzzles** ([Qineng Wang](https://x.com/qineng_wang)): plans Dual-ALOHA motions that unhook interlocked parts and thread a rope through three rings. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/qineng_wang/status/2099893504658866561) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qinengwang-aiden.github.io/demos/constraint_demos/)
@@ -339,6 +343,10 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **Harness VLA / RPent**: Astra plans with memory and visual feedback, then calls a frozen VLA plus a fixed library of analytic motion primitives. The real-robot demo sorts plates and retries a failed grasp without fine-tuning the VLA. See also [Harness VLA](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
+- **Recursive Harness Distillation**: Astra distills robot problem solving into a playbook and revises it from Luna’s feedback, so Luna can steer a frozen VLA. See also [Recursive Harness Distillation](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://seungyeon.me/RHD/)
+
+- **Astra on RoboMME**: Astra plans subtasks from instructions and visual history; a fine-tuned π0.5 executes them, and a fine-tuned Qwen3-VL-4B says when the subtask is done. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
+
 - **Zero-shot Task Execution through FluxVLA** ([Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8)): Astra does task inference and planning; pretrained [FluxVLA](https://github.com/FluxVLA/FluxVLA) runs the low-level actions. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 ### World programs from video
@@ -375,7 +383,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 209 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 245 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -392,6 +400,12 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Orbital Core**: Blender and GLB assets inside an interactive Three.js page. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wangruofeng/orbital-core-showcase)
 
 - **Piața Unirii**: same brief, voxel square, prompt and source kept. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/danmana/piata-unirii)
+
+- **Real2Sim rooms**: photos to editable rooms, with failed reconstructions kept in the repo. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)
+
+- **Jetis**: DWG factory walkthrough exported as a native SketchUp model. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bambssquad/jetis-digital-twin-astra)
+
+- **WorldGen**: three text scenes built in Blender and Unity. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/andyyuyc/WorldGen_Unity)
 
 #### CAD programs
 
@@ -412,6 +426,10 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Windfield**: 3D adventure plus a terrain editor. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/fuguai1/status/2104531704740512143)
 
 - **Melon Jelly**: WebGPU soft-body comparison. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
+
+- **Pelagic**: procedural ocean and sailboat exploration. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-astra-3D-ocean)
+
+- **H3 Battle Lab**: 3D units wired to native VCMI combat. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/yzh119/h3-battle-lab)
 
 ## Related Resources
 

@@ -138,6 +138,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **Harness VLA**: 用记忆和视觉反馈，把冻结的 VLA 调用和解析运动原语拼在一起。 [![arXiv](https://img.shields.io/badge/arXiv-2607.08448-b31b1b.svg)](https://arxiv.org/abs/2607.08448) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/)
 
+- **Recursive Harness Distillation**：Astra 把解题经验写成 playbook，再根据 Luna 的执行反馈改它，让更便宜的 agent 去指挥冻结的 VLA。 [![arXiv](https://img.shields.io/badge/arXiv-2609.33378-b31b1b.svg)](https://arxiv.org/abs/2609.33378) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://seungyeon.me/RHD/)
+
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
 - **RHO**, Your Coding Agent is Secretly a Roboticist. [![arXiv](https://img.shields.io/badge/arXiv-2606.16458-b31b1b.svg)](https://arxiv.org/abs/2606.16458)
@@ -290,6 +292,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 - **RPent**（RLinf）：递归 harness，agent 规划器配冻结的 VLA 原语。榜上 GPT-6 Astra 在 LIBERO-PRO 总成绩 92.63%（741/800），RoboCasa365 Target50 为 59.20%。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
+- **Astra on RoboMME**：三层控制器跑 16 个 RoboMME 任务，报告成功率 79.13%（633/800），平均每回合 3.63 次 Astra 规划。微调过的 π0.5 执行子任务，Qwen3-VL-4B 判断何时重新规划。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
+
 ### 仿真策略程序
 
 - **Dual-ALOHA 空间约束谜题**（[Qineng Wang](https://x.com/qineng_wang)）：规划 Dual-ALOHA 动作，解开互锁零件，并把绳子穿过三个环。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/qineng_wang/status/2099893504658866561) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qinengwang-aiden.github.io/demos/constraint_demos/)
@@ -340,6 +344,10 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 - **Harness VLA / RPent**：Astra 用记忆和视觉反馈做规划，再调用冻结的 VLA 和一组固定的解析运动原语。真机 demo 分拣盘子，抓取失败后重试，不微调 VLA。另见 [Harness VLA](#code-as-policy)。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
 
+- **Recursive Harness Distillation**：Astra 把机器人解题写成 playbook，再按 Luna 的反馈改写，让 Luna 去指挥冻结的 VLA。另见 [Recursive Harness Distillation](#code-as-policy)。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://seungyeon.me/RHD/)
+
+- **Astra on RoboMME**：Astra 根据指令和视觉历史规划子任务，微调过的 π0.5 执行，微调过的 Qwen3-VL-4B 判断子任务是否完成。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
+
 - **经 FluxVLA 做 zero-shot 任务**（[Jikun](https://www.rednote.com/user/profile/5e25bcdc00000000010085a8)）：Astra 负责任务理解和规划，预训练 [FluxVLA](https://github.com/FluxVLA/FluxVLA) 跑底层动作。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa16835000000000b00f46d?xsec_token=ABDcu5eBZZYkAUcveAv8IZNWsbLmXk6CUM5u5BhDPODB0=&xsec_source=pc_search&source=web_profile_page)
 
 ### 从视频反演世界程序
@@ -376,7 +384,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 209 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 245 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -393,6 +401,12 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Orbital Core**：Blender 和 GLB 放进可交互的 Three.js 页面。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wangruofeng/orbital-core-showcase)
 
 - **Piața Unirii**：同一简报做出的体素广场，提示词和源码都在。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/danmana/piata-unirii)
+
+- **Real2Sim 房间**：照片重建成可编辑房间，失败结果也留在仓库里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Roboparty/gpt-6-astra-real2sim-workflow)
+
+- **Jetis**：从 DWG 做成可漫游工厂，并导出原生 SketchUp 模型。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bambssquad/jetis-digital-twin-astra)
+
+- **WorldGen**：三句文字场景，分别在 Blender 和 Unity 里搭出来。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/andyyuyc/WorldGen_Unity)
 
 #### CAD 程序
 
@@ -413,6 +427,10 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Windfield**：三维冒险加上地形编辑器。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/fuguai1/status/2104531704740512143)
 
 - **Melon Jelly**：WebGPU 软体果冻的模型对照。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/esrhengwu/status/2104504957173153951)
+
+- **Pelagic**：程序化海洋和帆船探索。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-astra-3D-ocean)
+
+- **H3 Battle Lab**：三维兵种接到原生 VCMI 战斗接口。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/yzh119/h3-battle-lab)
 
 ## 相关资源
 
