@@ -139,6 +139,10 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **Recursive Harness Distillation**: Astra writes a playbook and revises it from Luna’s execution feedback, so the cheaper agent can guide a frozen VLA. [![arXiv](https://img.shields.io/badge/arXiv-2609.33378-b31b1b.svg)](https://arxiv.org/abs/2609.33378) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://seungyeon.me/RHD/)
 
+- **RoboICL**: frozen GPT-6 Astra controls a robot from demonstration context and bounded interaction memory, without robot-specific finetuning or a learned VLA. [![arXiv](https://img.shields.io/badge/arXiv-2609.34261-b31b1b.svg)](https://arxiv.org/abs/2609.34261) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Mosi-AI/RoboICL)
+
+- **SimEX**: a coding agent grows a toolbox of perception and action primitives in simulation, then writes a fresh code-as-policies script per instruction. Five real-robot trials adapt the toolbox and the simulator together. [![arXiv](https://img.shields.io/badge/arXiv-2609.38982-b31b1b.svg)](https://arxiv.org/abs/2609.38982) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robo-simex.github.io/)
+
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
 - **RHO**, Your Coding Agent is Secretly a Roboticist. [![arXiv](https://img.shields.io/badge/arXiv-2606.16458-b31b1b.svg)](https://arxiv.org/abs/2606.16458)
@@ -257,6 +261,12 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
+- **Video2World**: 222 tasks from 189 embodied videos; coding agents rebuild interactive simulated worlds. Astra ranks 2nd of 9 (V2WScore 43.55, 10.7% success) with the most accurate geometry, still far below the human-assisted reference. [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
+
+- **4DCodeBench**: agents write executable code that reconstructs dynamic scenes from 200 videos. Astra Max leads 18 agents (overall 0.79) and leads dynamics by 31%. [![arXiv](https://img.shields.io/badge/arXiv-2610.03715-b31b1b.svg)](https://arxiv.org/abs/2610.03715) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://4dcodebench.com/)
+
+- **Moonlake 3D Agent**: sim-ready asset benchmark across 22 metrics and Isaac Sim interaction tests; reported rank score 65.2 versus Astra 47.0. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://moonlakeai.com/blog/evaluating-3d-agent)
+
 ### Robot evaluation infrastructure
 
 These evaluate robot policies broadly, including learned policies and program or command interfaces. They are policy-evaluation infrastructure, not code-generation benchmarks.
@@ -293,7 +303,11 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **Astra on RoboMME**: three-tier controller on 16 RoboMME tasks; reports 79.13% success (633/800) with 3.63 Astra planning calls per episode. A fine-tuned π0.5 runs the subtask, and a Qwen3-VL-4B monitor decides when Astra should replan. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
 
+- **RoboICL**: frozen Astra on 30 RoboDojo tasks; reports overall progress 50.64, zero-shot on Open and one demonstration elsewhere, plus three real-robot tasks. See also [RoboICL](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Mosi-AI/RoboICL)
+
 ### Policy programs in simulation
+
+- **UR10 conveyor sorting** (NVIDIA Omniverse): Astra builds a conveyor and inspection scene in VS Code, then wires a UR10 and Robotiq gripper to sort rejects. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvidia-omniverse.github.io/omniverse-labs/projects/astra-vscode-simulation/)
 
 - **Dual-ALOHA Spatial-constraint Puzzles** ([Qineng Wang](https://x.com/qineng_wang)): plans Dual-ALOHA motions that unhook interlocked parts and thread a rope through three rings. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/qineng_wang/status/2099893504658866561) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qinengwang-aiden.github.io/demos/constraint_demos/)
 
@@ -339,6 +353,10 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **Piper Carrot Pick-and-place** ([虽然不但是](https://www.rednote.com/user/profile/5f5ca72900000000010061fb)): Codex / GPT-6 plus Piper and RealSense; repeated visual pick-and-place of a carrot. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6a9bd4c80000000028037f67?xsec_token=ABLUcokp8Tzdy13Avv1khxst1pWqWBaR7JLjQhUhWsSs4=&xsec_source=pc_like)
 
+- **SimEX on a dual-arm YAM**: after sim autoresearch, about ten minutes of real-robot time per task covers barcode scanning, plate-to-tote, and towel folding. See also [SimEX](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robo-simex.github.io/)
+
+- **Mocap whip and lasso** ([Krishna Suresh](https://krishnasuresh.org/blog/2026/robot-whips/)): one prompt builds IK, dynamics-constrained trajectory optimization, and an inverse-dynamics controller so an OpenarmX and an xArm7 replay whip cracking and cleat lassoing open-loop. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://krishnasuresh.org/blog/2026/robot-whips/)
+
 ### Plan, then call a VLA
 
 - **Harness VLA / RPent**: Astra plans with memory and visual feedback, then calls a frozen VLA plus a fixed library of analytic motion primitives. The real-robot demo sorts plates and retries a failed grasp without fine-tuning the VLA. See also [Harness VLA](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://harnessvla.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RLinf/RPent)
@@ -352,6 +370,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 ### World programs from video
 
 - **Astra for 4D Shape Fitting** ([Edgar Sucar](https://x.com/SucarEdgar)): fits a 4D shape from video, using a human tip that leaves are symmetric to constrain the fit. Takes hours and back-and-forth prompting. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/SucarEdgar/status/2101739645759361322)
+
+- **Guan’s Fencing Club**: match video, two animated fencers, and a procedural hall on a UE5 timeline, with a one-second sword-tip trail. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/samguan2020/guans-fencing-club)
 
 - **Lab Kitchen Reconstruction** ([Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919)): rebuilds a lab kitchen with articulated cabinets from a 20-second monocular RGB video. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
@@ -383,7 +403,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 245 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 285 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -407,6 +427,10 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 
 - **WorldGen**: three text scenes built in Blender and Unity. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/andyyuyc/WorldGen_Unity)
 
+- **Junya city generator**: JSON road networks become an editable Blender scene, then Unreal renders. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/junya-tashiro/agent-jp-citygen)
+
+- **Renders**: four Blender architecture projects with revision scripts and an archive of older cuts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/lucas-chu/Renders)
+
 #### CAD programs
 
 - **J-hook**: OpenSCAD print design compared across models; strength testing still pending. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/WescheNex1q/status/2104590493191479337)
@@ -414,6 +438,12 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Villa, recursive film, turbine CAD**: three editable 3D projects in one repo. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-3d-projects)
 
 - **Realitizer**: Swift code-first models of a manta ray and a house. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/koher/realitizer)
+
+- **Aetheris difference engine**: hierarchical CAD of digit wheels, carry gears, and a crank, with STEP export. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/yuechen-li-dev/Aetheris/tree/master/demos/Aetheris.DifferenceEngine.Showcase)
+
+- **LDraw Nova**: Python generators emit editable LDraw cathedrals and a tidal observatory. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anteloc/ldraw-nova)
+
+- **DeepSeek whale**: a logo silhouette becomes an editable single-solid desktop print mesh. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/shyrz/gpt-6-astra-3dp-test)
 
 #### Playable world programs
 
@@ -430,6 +460,12 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Pelagic**: procedural ocean and sailboat exploration. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/az9713/gpt-6-astra-3D-ocean)
 
 - **H3 Battle Lab**: 3D units wired to native VCMI combat. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/yzh119/h3-battle-lab)
+
+- **Seabright**: Unity coastal city builder with roads, services, and taxes. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/codersusu/game-city-skylines)
+
+- **Octane Arena**: procedural 3D car soccer with source for the physics. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Goofykings/Octane-Arena)
+
+- **Astra Air Combat**: seeded arenas and a 60 Hz dogfight loop. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/FLYING37520/astra-air-combat)
 
 ## Related Resources
 
