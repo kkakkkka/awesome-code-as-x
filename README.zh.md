@@ -280,6 +280,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 ## 综述与经验
 
+- **World Models for Embodied Intelligence: From Plausible to Controllable to Actionable**：按预测是否合理、干预是否可控、决策是否因此变好，综述具身世界模型。给可执行和可编程世界模型提供背景，但不要求把代码当中间表示。 [![arXiv](https://img.shields.io/badge/arXiv-2609.16697-b31b1b.svg)](https://arxiv.org/abs/2609.16697)
+
 - **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills：梳理 action-predicting frozen weights 和可执行 robot skills 这两条路线。 [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
 
 - **Code as Agent Harness**：讨论可执行、可验证、带状态的 agent harness 设计，重点是 agent 写代码并运行代码的系统边界。 [![arXiv](https://img.shields.io/badge/arXiv-2605.18747-b31b1b.svg)](https://arxiv.org/abs/2605.18747)
@@ -387,6 +389,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 - **多视角 real-to-sim**（[Lingxiao](https://x.com/Lingxiao234)）：用多视角 RGB、机器人动作、标定、资产和系统辨识，搭出可回放的 MuJoCo / Blender 仿真。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Lingxiao234/status/2096992059731443923)
 
 ### 编写 RL 训练栈
+
+- **Dexterous Astra**（[Jianglong Ye](https://github.com/jianglongye)）：放出的是 Astra 实验的最终产物，不是事先给 agent 的 harness。Sharpa Wave 在 Isaac Lab 里转笔（zero-shot 关键帧规划，再 PPO 转三圈并握住），Wuji 手在 MuJoCo 里解魔方（zero-shot 双手脚本，再学单手策略解出 `U F L`）。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/jianglongye/dexterous-astra)
 
 - **办公室 Real2Sim2Real 推车**（[watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa)）：重建办公室，估计接触监督，用 SONIC 做全身运动并训练推车 RL，再部署回真机人形。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
 

@@ -279,6 +279,8 @@ These evaluate robot policies broadly, including learned policies and program or
 
 ## Surveys and Lessons
 
+- **World Models for Embodied Intelligence: From Plausible to Controllable to Actionable**: surveys embodied world models by predictive plausibility, intervention controllability, and downstream decision utility. Useful context for executable and programmable world models. It does not require code as the intermediate representation. [![arXiv](https://img.shields.io/badge/arXiv-2609.16697-b31b1b.svg)](https://arxiv.org/abs/2609.16697)
+
 - **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills: frames the split between frozen action-predicting weights and executable robot skills. [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
 
 - **Code as Agent Harness**: surveys executable, verifiable, stateful harness design for agents that write and run code. [![arXiv](https://img.shields.io/badge/arXiv-2605.18747-b31b1b.svg)](https://arxiv.org/abs/2605.18747)
@@ -386,6 +388,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 - **Multi-view Real-to-sim Reconstruction** ([Lingxiao](https://x.com/Lingxiao234)): builds a replayable MuJoCo / Blender simulator from multi-view RGB, robot actions, calibration, assets, and system identification. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Lingxiao234/status/2096992059731443923)
 
 ### RL training stacks
+
+- **Dexterous Astra** ([Jianglong Ye](https://github.com/jianglongye)): released artifacts from Astra experiments, not a harness given to the agent. Sharpa Wave pen spinning in Isaac Lab (a zero-shot keyframe planner, then PPO for three turns and a hold) and Wuji-hand Rubik's cube in MuJoCo (a zero-shot two-hand script, then a learned one-hand policy that solves `U F L`). [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/jianglongye/dexterous-astra)
 
 - **Office Real2Sim2Real Cart Push** ([watchtower](https://www.rednote.com/user/profile/5e38ca4e00000000010034fa)): rebuilds an office, estimates contact supervision, trains an RL cart-push policy with SONIC for whole-body motion, then deploys it on the real humanoid. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6ab34cfd0000000018005cab?xsec_token=CBoKOnuhKTqoyv12enaYThxB4L_a-12BnOafHa5vF3aRw=&xsec_source=app_share)
 
