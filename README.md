@@ -179,6 +179,8 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - [⭐️] **VideoCoCo**: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System. [![arXiv](https://img.shields.io/badge/arXiv-2607.27380-b31b1b.svg)](https://arxiv.org/abs/2607.27380) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/micky-li-hd/VideoCoCo)
 
+- **Code Video Model**: writes a Three.js program as an executable previs, renders a proxy video and a reference image, then conditions a pretrained video model on the proxy only in early sampling steps. Code edits change layout, motion, and camera before the final clip. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-video-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
 - **Code-as-Room**: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis. [![arXiv](https://img.shields.io/badge/arXiv-2605.18451-b31b1b.svg)](https://arxiv.org/abs/2605.18451) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-room.github.io/)
 
 - **RoomWright**, Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction. [![arXiv](https://img.shields.io/badge/arXiv-2608.18840-b31b1b.svg)](https://arxiv.org/abs/2608.18840)
@@ -261,6 +263,10 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
+- **CodeVideoBench**: 22 editable Three.js cases for controllable video, covering gaming, scene editing, physics, and 3D/4D reconstruction. With MiniMax-H3, Code Video Model reports overall scores of 85.2 / 82.1 / 85.8 under QwenVL-3.8-27B, GPT-5.6, and GPT-6, versus 74.3 / 73.1 / 80.6 for VACE. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huggingface.co/datasets/code-video-model/CodeVideoBench) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
+- **3JSBench**: 100 short text-to-Three.js tasks, with the generation requests and inspectable geometry. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
+
 - **Video2World**: 222 tasks from 189 embodied videos; coding agents rebuild interactive simulated worlds. Astra ranks 2nd of 9 (V2WScore 43.55, 10.7% success) with the most accurate geometry, still far below the human-assisted reference. [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
 - **4DCodeBench**: agents write executable code that reconstructs dynamic scenes from 200 videos. Astra Max leads 18 agents (overall 0.79) and leads dynamics by 31%. [![arXiv](https://img.shields.io/badge/arXiv-2610.03715-b31b1b.svg)](https://arxiv.org/abs/2610.03715) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://4dcodebench.com/)
@@ -310,6 +316,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 ### Policy programs in simulation
 
 - **UR10 conveyor sorting** (NVIDIA Omniverse): Astra builds a conveyor and inspection scene in VS Code, then wires a UR10 and Robotiq gripper to sort rejects. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvidia-omniverse.github.io/omniverse-labs/projects/astra-vscode-simulation/)
+
+- **G1 stage burpee**: a scripted Unitree G1 routine in public code: carry a stand on stage, hold a pose, do push-ups, then jump. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Siriuslala/g1-robot-burpee)
 
 - **Dual-ALOHA Spatial-constraint Puzzles** ([Qineng Wang](https://x.com/qineng_wang)): plans Dual-ALOHA motions that unhook interlocked parts and thread a rope through three rings. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/qineng_wang/status/2099893504658866561) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qinengwang-aiden.github.io/demos/constraint_demos/)
 
@@ -407,7 +415,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 285 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 313 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -434,6 +442,12 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Junya city generator**: JSON road networks become an editable Blender scene, then Unreal renders. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/junya-tashiro/agent-jp-citygen)
 
 - **Renders**: four Blender architecture projects with revision scripts and an archive of older cuts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/lucas-chu/Renders)
+
+- **Stanford in Blender**: five editable campus scenes, with procedural scripts and standalone `.blend` files. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/minsik-ai/stanford-in-blender)
+
+- **Gulou campus**: a walkable Nanjing University campus in TypeScript, Three.js, and Rapier, with cycling, gliding, and weather. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wang-jiahao/gulou)
+
+- **Gargantua**: a shader accretion disk and bent light, with an orbit camera. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/pedroaugustonyo/gargantua)
 
 #### CAD programs
 
@@ -470,6 +484,8 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Octane Arena**: procedural 3D car soccer with source for the physics. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Goofykings/Octane-Arena)
 
 - **Astra Air Combat**: seeded arenas and a 60 Hz dogfight loop. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/FLYING37520/astra-air-combat)
+
+- **Palm Bay**: a preserved one-shot low-poly driving sandbox, with the original prompt and recovered JavaScript. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/nitzangames/PalmBayOneShot)
 
 ## Related Resources
 

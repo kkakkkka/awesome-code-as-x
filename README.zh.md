@@ -180,6 +180,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - [⭐️] **VideoCoCo**: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System. [![arXiv](https://img.shields.io/badge/arXiv-2607.27380-b31b1b.svg)](https://arxiv.org/abs/2607.27380) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/micky-li-hd/VideoCoCo)
 
+- **Code Video Model**：把提示写成 Three.js 程序当可执行预演，渲出代理视频和参考图，再只在采样早期把代理视频条件送进预训练视频模型。改代码就能改布局、运动和相机，然后再出成片。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-video-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
 - **Code-as-Room**: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis. [![arXiv](https://img.shields.io/badge/arXiv-2605.18451-b31b1b.svg)](https://arxiv.org/abs/2605.18451) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-room.github.io/)
 
 - **RoomWright**, Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction. [![arXiv](https://img.shields.io/badge/arXiv-2608.18840-b31b1b.svg)](https://arxiv.org/abs/2608.18840)
@@ -262,6 +264,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
+- **CodeVideoBench**：22 个可编辑 Three.js 案例，测可控视频，覆盖游戏、场景编辑、物理和 3D/4D 重建。配 MiniMax-H3 时，Code Video Model 在 QwenVL-3.8-27B、GPT-5.6、GPT-6 下总分 85.2 / 82.1 / 85.8，VACE 为 74.3 / 73.1 / 80.6。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://huggingface.co/datasets/code-video-model/CodeVideoBench) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
+- **3JSBench**：100 个短的文本到 Three.js 任务，生成请求和几何都可以检查。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
+
 - **Video2World**：189 段具身视频拆成 222 个任务，coding agent 重建可交互仿真世界。Astra 在 9 个 agent 里排第 2（V2WScore 43.55，成功率 10.7%），几何最准，但仍远低于人工辅助参考。 [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
 - **4DCodeBench**：agent 写可执行代码，从 200 段视频重建动态场景。Astra Max 在 18 个 agent 里总分 0.79 排第一，动态项领先 31%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.03715-b31b1b.svg)](https://arxiv.org/abs/2610.03715) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://4dcodebench.com/)
@@ -311,6 +317,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 ### 仿真策略程序
 
 - **UR10 传送带分拣**（NVIDIA Omniverse）：Astra 在 VS Code 里搭传送带和检测场景，再接上 UR10 和 Robotiq 夹爪分拣不合格件。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvidia-omniverse.github.io/omniverse-labs/projects/astra-vscode-simulation/)
+
+- **G1 舞台波比跳**：公开代码里的一段脚本化 Unitree G1 表演：搬支架上台、摆姿势、俯卧撑，再起跳。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Siriuslala/g1-robot-burpee)
 
 - **Dual-ALOHA 空间约束谜题**（[Qineng Wang](https://x.com/qineng_wang)）：规划 Dual-ALOHA 动作，解开互锁零件，并把绳子穿过三个环。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/qineng_wang/status/2099893504658866561) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://qinengwang-aiden.github.io/demos/constraint_demos/)
 
@@ -408,7 +416,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 285 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 313 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -435,6 +443,12 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Junya 日本城市生成器**：JSON 路网写成可编辑的 Blender 场景，再进 Unreal 渲染。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/junya-tashiro/agent-jp-citygen)
 
 - **Renders**：四座建筑的 Blender 工程，带修订脚本和旧版存档。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/lucas-chu/Renders)
+
+- **Stanford in Blender**：五组可编辑校园场景，带程序化脚本和可单独打开的 `.blend`。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/minsik-ai/stanford-in-blender)
+
+- **鼓楼校园**：用 TypeScript、Three.js 和 Rapier 做成可走的南京大学鼓楼校区，可以骑行、滑翔、切换天气。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/wang-jiahao/gulou)
+
+- **Gargantua**：着色器画的吸积盘和弯曲光线，相机可以环绕。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/pedroaugustonyo/gargantua)
 
 #### CAD 程序
 
@@ -471,6 +485,8 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Octane Arena**：程序化三维车球，物理源码公开。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Goofykings/Octane-Arena)
 
 - **Astra Air Combat**：按种子生成战区，60 Hz 空战循环。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/FLYING37520/astra-air-combat)
+
+- **Palm Bay**：保留下来的一次生成的低多边形驾驶沙盒，原始提示和恢复出的 JavaScript 都在仓库里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/nitzangames/PalmBayOneShot)
 
 ## 相关资源
 
