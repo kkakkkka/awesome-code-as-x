@@ -144,6 +144,30 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **SimEX**：coding agent 在仿真里长出感知和动作原语工具箱，再按每条指令写一份新的 code-as-policies 脚本。五次真机试验同时改工具箱和仿真器。 [![arXiv](https://img.shields.io/badge/arXiv-2609.38982-b31b1b.svg)](https://arxiv.org/abs/2609.38982) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robo-simex.github.io/)
 
+- **OpenRUA**：coding agent 在终端里直接用原生 ROS 2，把传感器读数当文件读写，再按执行反馈改操作程序。 [![arXiv](https://img.shields.io/badge/arXiv-2610.02459-b31b1b.svg)](https://arxiv.org/abs/2610.02459)
+
+- **URAI**, Make Code as Policy Great Again：编程 agent 写并修改可复用的机器人工具，执行 agent 在两次完整局部运动之间挑选工具。 [![arXiv](https://img.shields.io/badge/arXiv-2609.39018-b31b1b.svg)](https://arxiv.org/abs/2609.39018)
+
+- **EmbodiedSWE**：coding agent 解长程灵巧任务，再把成功的程序扩成仿真演示，用来训策略。 [![arXiv](https://img.shields.io/badge/arXiv-2609.27308-b31b1b.svg)](https://arxiv.org/abs/2609.27308)
+
+- **SpatialClaw**：VLM 在持久 Python kernel 里一轮轮写代码，几何工具和中间视觉反馈混在一起。 [![arXiv](https://img.shields.io/badge/arXiv-2606.13673-b31b1b.svg)](https://arxiv.org/abs/2606.13673)
+
+- **EmbodiedRSI**：挑有信息量的试验去检验相互竞争的假设，并改可执行代码、技能和记忆，底层机器人模型保持冻结。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10498-b31b1b.svg)](https://arxiv.org/abs/2610.10498)
+
+- **Recova**：coding agent 在数字孪生里找出恢复技能，部署时再用进度检查去调用任务策略和恢复策略。 [![arXiv](https://img.shields.io/badge/arXiv-2610.01178-b31b1b.svg)](https://arxiv.org/abs/2610.01178)
+
+- **PyRUA-Lean**：在持久 Python cell 里组合机器人原语和冻结的 VLA 调用，带本地检查和重试。 [![arXiv](https://img.shields.io/badge/arXiv-2610.01939-b31b1b.svg)](https://arxiv.org/abs/2610.01939)
+
+- **DynaHarness**：把运行时命令落到控制上，监控执行，回归检查通过之后才改可复用的机器人程序。 [![arXiv](https://img.shields.io/badge/arXiv-2609.40306-b31b1b.svg)](https://arxiv.org/abs/2609.40306)
+
+- **HarnessPAI**：用固定任务程序串起感知和动作原语，回合之间改这段代码，留下通过检查的修复技能。 [![arXiv](https://img.shields.io/badge/arXiv-2609.29166-b31b1b.svg)](https://arxiv.org/abs/2609.29166)
+
+- **Eureka**：LLM 根据环境源码和任务描述写 reward 代码，再按 RL 回报改。 [![arXiv](https://img.shields.io/badge/arXiv-2310.12931-b31b1b.svg)](https://arxiv.org/abs/2310.12931)
+
+- **Code-as-Monitor**：生成视觉监控代码，检查时空约束，违规发生前也能触发。 [![arXiv](https://img.shields.io/badge/arXiv-2412.04455-b31b1b.svg)](https://arxiv.org/abs/2412.04455)
+
+- **ReKep**：把语言和 RGB-D 写成 3D 关键点上的 Python 约束函数，再从这些函数解末端动作。 [![arXiv](https://img.shields.io/badge/arXiv-2409.01652-b31b1b.svg)](https://arxiv.org/abs/2409.01652)
+
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
 - **RHO**, Your Coding Agent is Secretly a Roboticist. [![arXiv](https://img.shields.io/badge/arXiv-2606.16458-b31b1b.svg)](https://arxiv.org/abs/2606.16458)
@@ -181,6 +205,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 - [⭐️] **VideoCoCo**: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System. [![arXiv](https://img.shields.io/badge/arXiv-2607.27380-b31b1b.svg)](https://arxiv.org/abs/2607.27380) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/micky-li-hd/VideoCoCo)
 
 - **Code Video Model**：把提示写成 Three.js 程序当可执行预演，渲出代理视频和参考图，再只在采样早期把代理视频条件送进预训练视频模型。改代码就能改布局、运动和相机，然后再出成片。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-video-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
+- **EmbodiedGen V2**：agent 搭建并编辑资产、多房间场景和任务环境，物理检查之后导出 URDF、USD 或 MJCF。 [![arXiv](https://img.shields.io/badge/arXiv-2607.07459-b31b1b.svg)](https://arxiv.org/abs/2607.07459) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HorizonRobotics/EmbodiedGen)
+
+- **SimFoundry**：模块化的视频到仿真流程，重建物体、编译物理场景，并在 OmniGibson 里提出任务。 [![arXiv](https://img.shields.io/badge/arXiv-2606.28276-b31b1b.svg)](https://arxiv.org/abs/2606.28276) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/SimFoundry)
 
 - **Code-as-Room**: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis. [![arXiv](https://img.shields.io/badge/arXiv-2605.18451-b31b1b.svg)](https://arxiv.org/abs/2605.18451) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-room.github.io/)
 
@@ -268,6 +296,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **3JSBench**：100 个短的文本到 Three.js 任务，生成请求和几何都可以检查。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
 
+- **LIBERO-Agent**：通用 agent 自己选观测、发原生机器人命令；评测拆成感知、短程执行和长程操作。 [![arXiv](https://img.shields.io/badge/arXiv-2609.39507-b31b1b.svg)](https://arxiv.org/abs/2609.39507) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/dzj441/Libero-Agent)
+
 - **Video2World**：189 段具身视频拆成 222 个任务，coding agent 重建可交互仿真世界。Astra 在 9 个 agent 里排第 2（V2WScore 43.55，成功率 10.7%），几何最准，但仍远低于人工辅助参考。 [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
 - **4DCodeBench**：agent 写可执行代码，从 200 段视频重建动态场景。Astra Max 在 18 个 agent 里总分 0.79 排第一，动态项领先 31%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.03715-b31b1b.svg)](https://arxiv.org/abs/2610.03715) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://4dcodebench.com/)
@@ -287,6 +317,12 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 ## 综述与经验
 
 - **World Models for Embodied Intelligence: From Plausible to Controllable to Actionable**：按预测是否合理、干预是否可控、决策是否因此变好，综述具身世界模型。给可执行和可编程世界模型提供背景，但不要求把代码当中间表示。 [![arXiv](https://img.shields.io/badge/arXiv-2609.16697-b31b1b.svg)](https://arxiv.org/abs/2609.16697)
+
+- **Robot-Use Agents**（Phillip Isola）：关于通用 agent 通过传感器和执行器 API 使用机器人的视角文章。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html)
+
+- **Goosebumps**（Ken Goldberg）：coding agent 可以离线编写、测试和修改模块化机器人程序，处在基于模型的工程和机器人学习之间。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Ken_Goldberg/status/2100986412762087909)
+
+- **Survey on Multimodal Embodied Agents**：把电脑使用和机器人使用收成感知、预期、规划、行动、验证。范围比 code-as-IR 方法更宽。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Awesome-Multimodal-Embodied-Agent/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/showlab/Awesome-Multimodal-Embodied-Agent)
 
 - **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills：梳理 action-predicting frozen weights 和可执行 robot skills 这两条路线。 [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
 
@@ -383,6 +419,10 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 - **Astra 做 4D 形状拟合**（[Edgar Sucar](https://x.com/SucarEdgar)）：从视频拟合 4D 形状，人工提示叶子对称来约束拟合。要几个小时，并且来回 prompt。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/SucarEdgar/status/2101739645759361322)
 
 - **Guan’s Fencing Club**：比赛录像、两名动画击剑手和程序化剑馆放在 UE5 时间轴上，剑尖留一秒轨迹。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/samguan2020/guans-fencing-club)
+
+- **AHa-3D**：Astra 加重建工具，把室内视频做成可编辑的 Blender 房间，带接触修正地恢复人体动作，再导出浏览器场景。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://kevinxu02.github.io/real2sim-indoor-site/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KevinXu02/aha-3d)
+
+- **Real2Gym**：agent 从视频重建 Blender / MuJoCo gym，再用生成的 Python 阶段和视觉反馈跑操作，然后迁移技能。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/real2gym/Real2Gym)
 
 - **实验室厨房重建**（[Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919)）：20 秒单目 RGB 视频重建带可动柜门的实验室厨房。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
@@ -491,3 +531,5 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 ## 相关资源
 
 - **Awesome Physical AI**：更宽的 robot-policy VLM、coding agent、policy harness 和 RoboDojo 类 scorecard 阅读列表。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/Awesome-Physical-AI)
+
+- **Awesome Robot Use Agent**：robot-use agent、harness、ROS 工具栈和社交 demo 的总表。这里只收把程序当中间表示的条目。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/)

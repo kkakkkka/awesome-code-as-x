@@ -143,6 +143,30 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **SimEX**: a coding agent grows a toolbox of perception and action primitives in simulation, then writes a fresh code-as-policies script per instruction. Five real-robot trials adapt the toolbox and the simulator together. [![arXiv](https://img.shields.io/badge/arXiv-2609.38982-b31b1b.svg)](https://arxiv.org/abs/2609.38982) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robo-simex.github.io/)
 
+- **OpenRUA**: coding agents use native ROS 2 from the terminal, treat sensor readings as file I/O, and revise manipulation programs from execution feedback. [![arXiv](https://img.shields.io/badge/arXiv-2610.02459-b31b1b.svg)](https://arxiv.org/abs/2610.02459)
+
+- **URAI**, Make Code as Policy Great Again: a programming agent writes and revises reusable robot tools; an execution agent picks tools between complete local motions. [![arXiv](https://img.shields.io/badge/arXiv-2609.39018-b31b1b.svg)](https://arxiv.org/abs/2609.39018)
+
+- **EmbodiedSWE**: coding agents solve long-horizon dexterous tasks, then turn successful programs into simulation demonstrations for policy training. [![arXiv](https://img.shields.io/badge/arXiv-2609.27308-b31b1b.svg)](https://arxiv.org/abs/2609.27308)
+
+- **SpatialClaw**: a VLM writes iterative Python cells in a persistent kernel, mixing geometry tools with intermediate visual feedback. [![arXiv](https://img.shields.io/badge/arXiv-2606.13673-b31b1b.svg)](https://arxiv.org/abs/2606.13673)
+
+- **EmbodiedRSI**: picks informative trials, tests competing hypotheses, and revises executable code, skills, and memory around a frozen robot model. [![arXiv](https://img.shields.io/badge/arXiv-2610.10498-b31b1b.svg)](https://arxiv.org/abs/2610.10498)
+
+- **Recova**: a coding agent discovers recovery skills in a digital twin, then calls task and recovery policies with progress checks on the robot. [![arXiv](https://img.shields.io/badge/arXiv-2610.01178-b31b1b.svg)](https://arxiv.org/abs/2610.01178)
+
+- **PyRUA-Lean**: composes robot primitives and frozen VLA calls inside persistent Python cells, with local checks and retries. [![arXiv](https://img.shields.io/badge/arXiv-2610.01939-b31b1b.svg)](https://arxiv.org/abs/2610.01939)
+
+- **DynaHarness**: grounds runtime commands, monitors execution, and revises reusable robot programs only after regression checks. [![arXiv](https://img.shields.io/badge/arXiv-2609.40306-b31b1b.svg)](https://arxiv.org/abs/2609.40306)
+
+- **HarnessPAI**: runs a fixed task program over perception and action primitives, then edits that code between rollouts and keeps repair skills that pass. [![arXiv](https://img.shields.io/badge/arXiv-2609.29166-b31b1b.svg)](https://arxiv.org/abs/2609.29166)
+
+- **Eureka**: an LLM writes reward code from the environment source and task text, then revises it from RL returns. [![arXiv](https://img.shields.io/badge/arXiv-2310.12931-b31b1b.svg)](https://arxiv.org/abs/2310.12931)
+
+- **Code-as-Monitor**: generates visual monitoring code for spatio-temporal constraints, including checks that fire before a violation. [![arXiv](https://img.shields.io/badge/arXiv-2412.04455-b31b1b.svg)](https://arxiv.org/abs/2412.04455)
+
+- **ReKep**: turns language and RGB-D into Python constraint functions over 3D keypoints, then solves end-effector actions from those functions. [![arXiv](https://img.shields.io/badge/arXiv-2409.01652-b31b1b.svg)](https://arxiv.org/abs/2409.01652)
+
 - **VLCP**, Vision Language Control Policy: Closed-Loop Code Replanning for Robot Manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2608.16978-b31b1b.svg)](https://arxiv.org/abs/2608.16978)
 
 - **RHO**, Your Coding Agent is Secretly a Roboticist. [![arXiv](https://img.shields.io/badge/arXiv-2606.16458-b31b1b.svg)](https://arxiv.org/abs/2606.16458)
@@ -180,6 +204,10 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 - [⭐️] **VideoCoCo**: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System. [![arXiv](https://img.shields.io/badge/arXiv-2607.27380-b31b1b.svg)](https://arxiv.org/abs/2607.27380) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/micky-li-hd/VideoCoCo)
 
 - **Code Video Model**: writes a Three.js program as an executable previs, renders a proxy video and a reference image, then conditions a pretrained video model on the proxy only in early sampling steps. Code edits change layout, motion, and camera before the final clip. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-video-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/code-video-model/CodeVideoModel)
+
+- **EmbodiedGen V2**: an agent builds and edits assets, multi-room scenes, and task environments, then exports URDF, USD, or MJCF after physics checks. [![arXiv](https://img.shields.io/badge/arXiv-2607.07459-b31b1b.svg)](https://arxiv.org/abs/2607.07459) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HorizonRobotics/EmbodiedGen)
+
+- **SimFoundry**: a modular video-to-simulation pipeline that reconstructs objects, compiles a physical scene, and proposes tasks in OmniGibson. [![arXiv](https://img.shields.io/badge/arXiv-2606.28276-b31b1b.svg)](https://arxiv.org/abs/2606.28276) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/SimFoundry)
 
 - **Code-as-Room**: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis. [![arXiv](https://img.shields.io/badge/arXiv-2605.18451-b31b1b.svg)](https://arxiv.org/abs/2605.18451) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://code-as-room.github.io/)
 
@@ -267,6 +295,8 @@ A project here is an X post, Xiaohongshu post, webpage-only system, or eval whos
 
 - **3JSBench**: 100 short text-to-Three.js tasks, with the generation requests and inspectable geometry. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
 
+- **LIBERO-Agent**: general-purpose agents choose observations and issue native robot commands; the split is perception, short-horizon execution, and long-horizon manipulation. [![arXiv](https://img.shields.io/badge/arXiv-2609.39507-b31b1b.svg)](https://arxiv.org/abs/2609.39507) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/dzj441/Libero-Agent)
+
 - **Video2World**: 222 tasks from 189 embodied videos; coding agents rebuild interactive simulated worlds. Astra ranks 2nd of 9 (V2WScore 43.55, 10.7% success) with the most accurate geometry, still far below the human-assisted reference. [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
 - **4DCodeBench**: agents write executable code that reconstructs dynamic scenes from 200 videos. Astra Max leads 18 agents (overall 0.79) and leads dynamics by 31%. [![arXiv](https://img.shields.io/badge/arXiv-2610.03715-b31b1b.svg)](https://arxiv.org/abs/2610.03715) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://4dcodebench.com/)
@@ -286,6 +316,12 @@ These evaluate robot policies broadly, including learned policies and program or
 ## Surveys and Lessons
 
 - **World Models for Embodied Intelligence: From Plausible to Controllable to Actionable**: surveys embodied world models by predictive plausibility, intervention controllability, and downstream decision utility. Useful context for executable and programmable world models. It does not require code as the intermediate representation. [![arXiv](https://img.shields.io/badge/arXiv-2609.16697-b31b1b.svg)](https://arxiv.org/abs/2609.16697)
+
+- **Robot-Use Agents** (Phillip Isola): perspective on general-purpose agents that use robots through sensor and actuator APIs. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html)
+
+- **Goosebumps** (Ken Goldberg): argues that coding agents can write, test, and revise modular robot programs offline, between model-based engineering and robot learning. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Ken_Goldberg/status/2100986412762087909)
+
+- **Survey on Multimodal Embodied Agents**: unifies computer-use and robot-use as perceive, anticipate, plan, act, and verify. Broader than code-as-IR methods. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://showlab.github.io/Awesome-Multimodal-Embodied-Agent/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/showlab/Awesome-Multimodal-Embodied-Agent)
 
 - **Weights or Skills?** A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills: frames the split between frozen action-predicting weights and executable robot skills. [![arXiv](https://img.shields.io/badge/arXiv-2608.01851-b31b1b.svg)](https://arxiv.org/abs/2608.01851)
 
@@ -382,6 +418,10 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 - **Astra for 4D Shape Fitting** ([Edgar Sucar](https://x.com/SucarEdgar)): fits a 4D shape from video, using a human tip that leaves are symmetric to constrain the fit. Takes hours and back-and-forth prompting. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/SucarEdgar/status/2101739645759361322)
 
 - **Guan’s Fencing Club**: match video, two animated fencers, and a procedural hall on a UE5 timeline, with a one-second sword-tip trail. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/samguan2020/guans-fencing-club)
+
+- **AHa-3D**: Astra plus reconstruction tools turn indoor video into editable Blender rooms, recover human motion with contact refinement, and export a browser scene. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://kevinxu02.github.io/real2sim-indoor-site/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KevinXu02/aha-3d)
+
+- **Real2Gym**: an agent rebuilds a Blender / MuJoCo gym from video, then runs generated Python stages with visual feedback before skill transfer. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/real2gym/Real2Gym)
 
 - **Lab Kitchen Reconstruction** ([Frank ZY Dou](https://www.rednote.com/user/profile/5e3431cf0000000001002919)): rebuilds a lab kitchen with articulated cabinets from a 20-second monocular RGB video. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa4d64c000000000b037809?xsec_token=ABur_B60E14GxVQp2ei3USGkgJntlivJm_02tlDaUFWmg=&xsec_source=pc_search&source=web_profile_page)
 
@@ -490,3 +530,5 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 ## Related Resources
 
 - **Awesome Physical AI**: broader curated reading list for robot-policy VLMs, coding agents, policy harnesses, and RoboDojo-style scorecards. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HexaFuture/Awesome-Physical-AI)
+
+- **Awesome Robot Use Agent**: catalog of robot-use agents, harnesses, ROS tool stacks, and social demos. Entries here keep only the ones that use a program as the intermediate representation. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/)
