@@ -29,29 +29,15 @@
 ## Overview
 - 🎯 [Aim](#aim)
 - 📚 [Definitions](#definitions)
-
-**Code as Policy**
 - 🦾 [Code as Policy](#code-as-policy)
-
-**Code as World**
 - 🗺️ [Code as World](#code-as-world)
-
-**Programmable World Models**
 - 🧮 [Programmable World Models](#programmable-world-models)
-
-**Edit Graphs**
 - ✂️ [Edit Graph](#edit-graph)
-
-**Benchmarks**
 - 📊 [Benchmark](#benchmark)
     - [Policy programs](#policy-programs)
     - [World programs](#world-programs)
     - [Robot evaluation infrastructure](#robot-evaluation-infrastructure)
-
-**Surveys and Lessons**
 - 📚 [Surveys and Lessons](#surveys-and-lessons)
-
-**Projects**
 - 🛠️ [Projects](#projects)
     - [Eval reports](#eval-reports)
     - [Policy programs in simulation](#policy-programs-in-simulation)
@@ -60,8 +46,6 @@
     - [World programs from video](#world-programs-from-video)
     - [RL training stacks](#rl-training-stacks)
     - [Scene programs](#scene-programs)
-
-**Related Resources**
 - 🔗 [Related Resources](#related-resources)
 
 ## Aim

@@ -30,29 +30,15 @@
 ## Overview
 - 🎯 [目标](#目标)
 - 📚 [定义](#定义)
-
-**Code as Policy**
 - 🦾 [Code as Policy](#code-as-policy)
-
-**Code as World**
 - 🗺️ [Code as World](#code-as-world)
-
-**Programmable World Models**
 - 🧮 [Programmable World Models](#programmable-world-models)
-
-**Edit Graphs**
 - ✂️ [Edit Graph](#edit-graph)
-
-**Benchmarks**
 - 📊 [Benchmark](#benchmark)
     - [策略程序](#策略程序)
     - [世界程序](#世界程序)
     - [机器人评测基础设施](#机器人评测基础设施)
-
-**综述与经验**
 - 📚 [综述与经验](#综述与经验)
-
-**Projects**
 - 🛠️ [Projects](#projects)
     - [评测报告](#评测报告)
     - [仿真策略程序](#仿真策略程序)
@@ -61,8 +47,6 @@
     - [从视频反演世界程序](#从视频反演世界程序)
     - [编写 RL 训练栈](#编写-rl-训练栈)
     - [场景程序](#场景程序)
-
-**相关资源**
 - 🔗 [相关资源](#相关资源)
 
 ## 目标
