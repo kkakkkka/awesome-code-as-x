@@ -8,7 +8,7 @@
   <img src="assets/awesome-code-as-x.png" alt="Awesome Code as X" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
 </p>
 
-[English](README.md) | [中文](README.zh.md) | [HF Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [中文解读](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA) | [SourceMind](assets/sourcemind.jpg)
+[English](README.md) | [Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [SourceMind](assets/sourcemind.jpg) | [中文](README.zh.md) | [公众号文章](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA)
 
 </div>
 
