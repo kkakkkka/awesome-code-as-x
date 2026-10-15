@@ -5,25 +5,10 @@
 **把程序当作中间表示的 coding agent。** </br>
 
 <p align="center">
-  <img src="awesome-code-as-x.png" alt="Awesome Code as X" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
+  <img src="assets/awesome-code-as-x.png" alt="Awesome Code as X" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
 </p>
 
-[English](README.md) | [中文](README.zh.md) | [HF Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [中文解读](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA)
-
-<table align="center">
-  <tr>
-    <td align="center" width="35%">
-      <img src="sourcemind.jpg" alt="社区二维码" width="35%">
-      <br>
-      <sub>社区由<strong>sourcemind</strong>支持</sub>
-    </td>
-    <td align="center" width="35%">
-      <img src="wechat.jpg" alt="微信群二维码" width="35%">
-      <br>
-      <sub>微信群二维码</sub>
-    </td>
-  </tr>
-</table>
+[English](README.md) | [中文](README.zh.md) | [HF Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [中文解读](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA) | [SourceMind](assets/sourcemind.jpg)
 
 </div>
 
@@ -213,6 +198,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **Agentic Skill Discovery**：语言模型写任务和 reward 代码，RL 训练技能，视觉检查决定能不能进持久技能库。 [![arXiv](https://img.shields.io/badge/arXiv-2405.15019-b31b1b.svg)](https://arxiv.org/abs/2405.15019) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agentic-skill-discovery.github.io)
 
+- **RAX**：coding agent 在线探索机器人任务，记下成功的前提、动作和效果，再编译出不依赖 agent 也能跑的 Python 控制器。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robot-agent-exploration.com/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robot-agent-exploration/rax)
+
+- **ASENA**：把 coding agent 接到机器人感知、受监督执行和持久经验上。学出来的导航策略可以作为工具调用。模型权重固定，重复任务会变好。 [![arXiv](https://img.shields.io/badge/arXiv-2609.39207-b31b1b.svg)](https://arxiv.org/abs/2609.39207) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/asena/)
+
 ## Code as World
 
 ### Generation
@@ -274,6 +263,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 - **VisPhyWorld**: Probing Physical Reasoning via Code-Driven Video Reconstruction. [![arXiv](https://img.shields.io/badge/arXiv-2602.13294-b31b1b.svg)](https://arxiv.org/abs/2602.13294) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/TIGER-AI-Lab/VisPhyWorld)
 
 - **AstraLOD3**: 多视图证据重建可编辑建筑。 [![arXiv](https://img.shields.io/badge/arXiv-2609.28061-b31b1b.svg)](https://arxiv.org/abs/2609.28061)
+
+- **RoboSimStudio**：人和 coding agent 对照观察到的机器人行为，修改 Newton 仿真里的场景和物理参数。 [![arXiv](https://img.shields.io/badge/arXiv-2610.18835-b31b1b.svg)](https://arxiv.org/abs/2610.18835) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robosimstudio.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robosimstudio/robosimstudio)
 
 ## Programmable World Models
 
@@ -343,6 +334,8 @@ agent 写出、跑通或修改机器人控制或学习程序。
 
 - **RoboQuest**：10 个仿真厨房移动操作任务，通用 agent 通过工具调用发机器人命令，要先搜索、检查或测试物体找到隐藏信息，再按 SUBMIT 提交。Astra 在 5 个前沿 agent 里排第一（成功率 23.2%）。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10388-b31b1b.svg)](https://arxiv.org/abs/2610.10388) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://declare-lab.github.io/RoboQuest/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/declare-lab/RoboQuest)
 
+- **AA-Robotics v0.1**：真机 Hiwonder NexArm 上 8 个桌面任务。coding agent 在隔离容器里通过 HTTP API 和四路相机控制机械臂，人按终态打分。GPT-6 Astra 69.4，五个模型里第一。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://artificialanalysis.ai/articles/aa-robotics)
+
 ### 世界程序
 
 agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿真器去跑。
@@ -353,7 +346,7 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 
 - **Video2World**：189 段具身视频拆成 222 个任务，coding agent 重建可交互仿真世界。Astra 在 9 个 agent 里排第 2（V2WScore 43.55，成功率 10.7%），几何最准，但仍远低于人工辅助参考。 [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
-- **BVB**：agent 把每段视频重建成 Blender 程序，再在这份程序上回答时空问题。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
+- **BVB**：agent 把每段视频重建成 Blender 程序，再在这份程序上回答时空问题。论文选出的前沿配置里，Astra high 总分 70.07，51 个里排第一。2026-10-14 的实时榜有 63 个配置，Astra xhigh 为 73.82，排第一。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
@@ -365,6 +358,12 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 
 - **Moonlake 3D Agent**：面向仿真可用资产的评测，22 项指标加 Isaac Sim 交互测试；报告排名分 65.2，Astra 为 47.0。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://moonlakeai.com/blog/evaluating-3d-agent)
 
+- **BuildingBench**：coding agent 把公共建筑的四张照片做成一份带贴图的 glTF。2026-10-14 榜上，Codex CLI ultra 为 0.843 ± 0.014，32 个里第三。Claude Opus 5.5（max）以 0.868 排第一。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://enactra.ai/buildingbench/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/enactra-ai/building-bench)
+
+- **threejseval**：16 个固定的 Three.js 场景提示。人在未标名字的场景之间投票。Astra medium 的 Elo 为 1884 ± 105，36 个里第 4。Claude Opus 5.5 High 以 2071 排第一。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://threejseval.com/ranking)
+
+- **MineBench**：模型对着一个很小的体素 API（`block`、`box`、`line`）写 JavaScript，再由人投票。Astra Pro 为 2259 ± 16.7，74 个里第 2。Gemini 4 Argon 以 2269 排第一，两者区间重叠。作者不把它叫 benchmark。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://minebench.ai/leaderboard) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Ammaar-Alam/minebench)
+
 ### 机器人评测基础设施
 
 这些工作评测的是广义机器人策略，包括学习策略、程序接口和命令接口。它们是 policy-evaluation infrastructure，不是代码生成 benchmark。
@@ -374,6 +373,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **RoboDojo**: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies. [![arXiv](https://img.shields.io/badge/arXiv-2607.04434-b31b1b.svg)](https://arxiv.org/abs/2607.04434) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robodojo-benchmark/RoboDojo)
 
 - **HumanCLAW**: Can Vision-Language Models Act Through a Body? 用 harness 把 VLM 决策转成全身动作生成器调用，测试 VLM 能否通过身体行动。 [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
+
+- **Robo Use Leaderboard**：汇总已发表试验里 agent harness 和 VLA 策略的成功率，带 95% Wilson 区间。每个任务对每个模型和 harness 只计一次。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robouse.ai/hub/leaderboard/)
 
 ## 综述与经验
 
@@ -394,6 +395,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **Harness Engineering for Physical AI**：主张机器人中间件就该当 harness，负责约束、隔离和传递控制、计算与通信。 [![arXiv](https://img.shields.io/badge/arXiv-2606.09416-b31b1b.svg)](https://arxiv.org/abs/2606.09416)
 
 - **Agentic World Modeling**：综述 agentic 世界模型、能力和作者提出的规律。范围比 code-as-IR 方法更宽。 [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg)](https://arxiv.org/abs/2604.22748)
+
+- **Towards Agentic Robots: Model, Data, Environment, and Harness**：把 agentic robot 研究分成模型、数据、环境和 harness 四块。范围比 code-as-IR 方法更宽，harness 是其中一块。 [![arXiv](https://img.shields.io/badge/arXiv-2610.20442-b31b1b.svg)](https://arxiv.org/abs/2610.20442) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/chonghanqin/Awesome-Agentic-Robots)
 
 ## Projects
 
@@ -503,6 +506,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 - **多视角 real-to-sim**（[Lingxiao](https://x.com/Lingxiao234)）：用多视角 RGB、机器人动作、标定、资产和系统辨识，搭出可回放的 MuJoCo / Blender 仿真。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Lingxiao234/status/2096992059731443923)
 
+- **Robotica Real2Sim**：一张桌面照片变成带 Franka Panda 的 MuJoCo 场景。Codex 录下 50 段逆运动学轨迹，再把规划放到不同物理参数下回放。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/inematds/robotica-real2sim)
+
 ### 编写 RL 训练栈
 
 - **Dexterous Astra**（[Jianglong Ye](https://github.com/jianglongye)）：放出的是 Astra 实验的最终产物，不是事先给 agent 的 harness。Sharpa Wave 在 Isaac Lab 里转笔（zero-shot 关键帧规划，再 PPO 转三圈并握住），Wuji 手在 MuJoCo 里解魔方（zero-shot 双手脚本，再学单手策略解出 `U F L`）。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/jianglongye/dexterous-astra)
@@ -523,7 +528,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 328 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 338 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -602,6 +607,10 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Corner Mart**：可编辑便利店，带购物清单和三分钟营业，仓库里有 `.blend`、GLB 和生成脚本。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ericyanpek/game-sample-corner-mart)
 
 - **Hallowmere**：火炬村庄 RPG，程序化角色、战斗和合作模式。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/miguelsolorio/hallowmere)
+
+- **Morrow**：一个 HTML 里的月光毛绒幽灵，可以抓、戳、梳毛和改颜色。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Kayou-31/moonlit-plush-gallery/blob/main/morrow.html)
+
+- **Moss & Moon**：Three.js 里的程序赤狐和林地生态，带骨架、足部 IK 和按需求寻路。Astra 的提交单独放在一个目录里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
 
 ## 相关资源
 

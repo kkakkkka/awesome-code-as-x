@@ -5,25 +5,11 @@
 **Coding-agent papers that treat a program as the intermediate representation.** </br>
 
 <p align="center">
-  <img src="awesome-code-as-x.png" alt="Awesome Code as X" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
+  <img src="assets/awesome-code-as-x.png" alt="Awesome Code as X" width="100%" style="border-radius: 15px; box-shadow: 0 4px 24px rgba(0,0,0,.1); margin: 5px 0;">
 </p>
 
-[English](README.md) | [中文](README.zh.md) | [HF Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [中文解读](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA)
+[English](README.md) | [中文](README.zh.md) | [HF Blog](https://huggingface.co/blog/kkakkkka/from-coding-agents-to-physical-agents) | [中文解读](https://mp.weixin.qq.com/s/MuOz0KmmQa5CxzjY7WEEvA) | [SourceMind](assets/sourcemind.jpg)
 
-<table align="center">
-  <tr>
-    <td align="center" width="35%">
-      <img src="sourcemind.jpg" alt="Community QR Code" width="35%">
-      <br>
-      <sub>Community supported by <strong>sourcemind</strong></sub>
-    </td>
-    <td align="center" width="35%">
-      <img src="wechat.jpg" alt="WeChat Group QR Code" width="35%">
-      <br>
-      <sub>WeChat Group</sub>
-    </td>
-  </tr>
-</table>
 </div>
 
 ## Overview
@@ -212,6 +198,10 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **Agentic Skill Discovery**: a language model writes tasks and reward code, RL trains the skill, and a visual check decides whether the skill enters a persistent library. [![arXiv](https://img.shields.io/badge/arXiv-2405.15019-b31b1b.svg)](https://arxiv.org/abs/2405.15019) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agentic-skill-discovery.github.io)
 
+- **RAX**: a coding agent explores a robot task, records successful preconditions, actions, and effects, then compiles a standalone Python controller that runs without the agent. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robot-agent-exploration.com/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robot-agent-exploration/rax)
+
+- **ASENA**: connects a coding agent to robot sensing, supervised execution, and persistent experience. An optional learned navigation policy can be called as a tool. Model weights stay fixed while repeated tasks improve. [![arXiv](https://img.shields.io/badge/arXiv-2609.39207-b31b1b.svg)](https://arxiv.org/abs/2609.39207) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/asena/)
+
 ## Code as World
 
 ### Generation
@@ -273,6 +263,8 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 - **VisPhyWorld**: Probing Physical Reasoning via Code-Driven Video Reconstruction. [![arXiv](https://img.shields.io/badge/arXiv-2602.13294-b31b1b.svg)](https://arxiv.org/abs/2602.13294) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/TIGER-AI-Lab/VisPhyWorld)
 
 - **AstraLOD3**: multi-view evidence to an editable building reconstruction. [![arXiv](https://img.shields.io/badge/arXiv-2609.28061-b31b1b.svg)](https://arxiv.org/abs/2609.28061)
+
+- **RoboSimStudio**: humans and coding agents refine a Newton simulation's scene and physical parameters against observed robot behavior. [![arXiv](https://img.shields.io/badge/arXiv-2610.18835-b31b1b.svg)](https://arxiv.org/abs/2610.18835) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robosimstudio.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robosimstudio/robosimstudio)
 
 ## Programmable World Models
 
@@ -342,6 +334,8 @@ The agent writes, runs, or revises a robot control or learning program.
 
 - **RoboQuest**: general-purpose agents issue robot commands through tool calls on ten simulated kitchen mobile-manipulation tasks, searching, inspecting, or testing to find hidden information before pressing SUBMIT. Astra leads five frontier agents (23.2% success). [![arXiv](https://img.shields.io/badge/arXiv-2610.10388-b31b1b.svg)](https://arxiv.org/abs/2610.10388) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://declare-lab.github.io/RoboQuest/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/declare-lab/RoboQuest)
 
+- **AA-Robotics v0.1**: eight tabletop tasks on a real Hiwonder NexArm. A coding agent in an isolated container drives the arm through an HTTP API and four cameras, and a person scores the end state. GPT-6 Astra scores 69.4, first of five. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://artificialanalysis.ai/articles/aa-robotics)
+
 ### World programs
 
 The agent writes an executable scene, CAD model, or physics program. A renderer or simulator then runs it.
@@ -352,7 +346,7 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 
 - **Video2World**: 222 tasks from 189 embodied videos; coding agents rebuild interactive simulated worlds. Astra ranks 2nd of 9 (V2WScore 43.55, 10.7% success) with the most accurate geometry, still far below the human-assisted reference. [![arXiv](https://img.shields.io/badge/arXiv-2610.04432-b31b1b.svg)](https://arxiv.org/abs/2610.04432) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://aetherlabsai.github.io/Video2World/)
 
-- **BVB**: the agent rebuilds each video as a Blender program, then answers spatiotemporal questions on that program. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
+- **BVB**: the agent rebuilds each video as a Blender program, then answers spatiotemporal questions on that program. Astra high scores overall 70.07, rank 1 of 51 on the paper's frontier set. On the live leaderboard of 63 configurations (2026-10-14), Astra xhigh is 73.82, rank 1. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
 
 - **WorldCoder-Bench**: Evaluating Executable Three.js Worlds. [![arXiv](https://img.shields.io/badge/arXiv-2606.01869-b31b1b.svg)](https://arxiv.org/abs/2606.01869)
 
@@ -364,6 +358,12 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 
 - **Moonlake 3D Agent**: sim-ready asset benchmark across 22 metrics and Isaac Sim interaction tests; reported rank score 65.2 versus Astra 47.0. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://moonlakeai.com/blog/evaluating-3d-agent)
 
+- **BuildingBench**: a coding agent turns four photographs of a public building into one textured glTF. On the 2026-10-14 leaderboard, Codex CLI at ultra effort scores 0.843 ± 0.014, third of 32. Claude Opus 5.5 (max) leads at 0.868. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://enactra.ai/buildingbench/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/enactra-ai/building-bench)
+
+- **threejseval**: 16 fixed Three.js scene prompts. People vote between unlabeled scenes. Astra at medium effort is Elo 1884 ± 105, rank 4 of 36. Claude Opus 5.5 High leads at 2071. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://threejseval.com/ranking)
+
+- **MineBench**: the model writes JavaScript against a small voxel API (`block`, `box`, `line`), then people vote. Astra Pro is 2259 ± 16.7, rank 2 of 74. Gemini 4 Argon leads at 2269, and the two intervals overlap. The author does not call it a benchmark. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://minebench.ai/leaderboard) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Ammaar-Alam/minebench)
+
 ### Robot evaluation infrastructure
 
 These evaluate robot policies broadly, including learned policies and program or command interfaces. They are policy-evaluation infrastructure, not code-generation benchmarks.
@@ -373,6 +373,8 @@ These evaluate robot policies broadly, including learned policies and program or
 - **RoboDojo**: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies. [![arXiv](https://img.shields.io/badge/arXiv-2607.04434-b31b1b.svg)](https://arxiv.org/abs/2607.04434) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robodojo-benchmark/RoboDojo)
 
 - **HumanCLAW**: Can Vision-Language Models Act Through a Body? Tests VLM decisions through a harness that turns them into humanoid motion-generator calls. [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
+
+- **Robo Use Leaderboard**: aggregates published solve rates for agent harnesses and VLA policies, with 95% Wilson intervals. Each task counts once per model and harness. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robouse.ai/hub/leaderboard/)
 
 ## Surveys and Lessons
 
@@ -393,6 +395,8 @@ These evaluate robot policies broadly, including learned policies and program or
 - **Harness Engineering for Physical AI**: argues that robot middleware should be the harness: it projects, isolates, and transfers control, compute, and communication around a model. [![arXiv](https://img.shields.io/badge/arXiv-2606.09416-b31b1b.svg)](https://arxiv.org/abs/2606.09416)
 
 - **Agentic World Modeling**: a survey of agentic world models, their capabilities, and the laws proposed for them. It is broader than code-as-IR methods. [![arXiv](https://img.shields.io/badge/arXiv-2604.22748-b31b1b.svg)](https://arxiv.org/abs/2604.22748)
+
+- **Towards Agentic Robots: Model, Data, Environment, and Harness**: organizes agentic-robot research into those four domains. Broader than code-as-IR methods; harness is one of the four. [![arXiv](https://img.shields.io/badge/arXiv-2610.20442-b31b1b.svg)](https://arxiv.org/abs/2610.20442) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/chonghanqin/Awesome-Agentic-Robots)
 
 ## Projects
 
@@ -502,6 +506,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **Multi-view Real-to-sim Reconstruction** ([Lingxiao](https://x.com/Lingxiao234)): builds a replayable MuJoCo / Blender simulator from multi-view RGB, robot actions, calibration, assets, and system identification. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/Lingxiao234/status/2096992059731443923)
 
+- **Robotica Real2Sim**: a table photo becomes a MuJoCo scene with a Franka Panda. Codex records 50 inverse-kinematics episodes, then a plan is replayed under physics variations. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/inematds/robotica-real2sim)
+
 ### RL training stacks
 
 - **Dexterous Astra** ([Jianglong Ye](https://github.com/jianglongye)): released artifacts from Astra experiments, not a harness given to the agent. Sharpa Wave pen spinning in Isaac Lab (a zero-shot keyframe planner, then PPO for three turns and a hold) and Wuji-hand Rubik's cube in MuJoCo (a zero-shot two-hand script, then a learned one-hand policy that solves `U F L`). [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/jianglongye/dexterous-astra)
@@ -522,7 +528,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 328 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 338 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -601,6 +607,10 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Corner Mart**: an editable convenience store with shopping lists and a three-minute shift, plus the `.blend`, GLB, and generation scripts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ericyanpek/game-sample-corner-mart)
 
 - **Hallowmere**: a torchlit village RPG with procedural characters, combat, and co-op. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/miguelsolorio/hallowmere)
+
+- **Morrow**: an interactive moonlit plush ghost in one HTML file, with grab, poke, brush, and color controls. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Kayou-31/moonlit-plush-gallery/blob/main/morrow.html)
+
+- **Moss & Moon**: a procedural fox and woodland ecosystem in Three.js, with a skeleton, foot IK, and need-driven pathfinding. The Astra submission is kept in its own folder. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
 
 ## Related Resources
 
