@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you find this curated list useful in your research, please cite it as below."
+title: "Awesome Code as X"
+authors:
+  - family-names: Xu
+    given-names: Zunnan
+repository-code: "https://github.com/kkakkkka/awesome-code-as-x"
+url: "https://github.com/kkakkkka/awesome-code-as-x"
+abstract: >-
+  A curated list of papers and projects on coding agents that use programs
+  as intermediate representations for policies, worlds, editors, and beyond.
+preferred-citation:
+  type: generic
+  title: "Awesome Code as X"
+  authors:
+    - family-names: Xu
+      given-names: Zunnan
+  url: "https://github.com/kkakkkka/awesome-code-as-x"
