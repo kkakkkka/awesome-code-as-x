@@ -4,6 +4,7 @@ title: "Awesome Code as X"
 authors:
   - family-names: Xu
     given-names: Zunnan
+year: 2026
 repository-code: "https://github.com/kkakkkka/awesome-code-as-x"
 url: "https://github.com/kkakkkka/awesome-code-as-x"
 abstract: >-
@@ -15,4 +16,5 @@ preferred-citation:
   authors:
     - family-names: Xu
       given-names: Zunnan
+  year: 2026
   url: "https://github.com/kkakkkka/awesome-code-as-x"

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Awesome Code as Policy/World/Editor
+# Awesome Code as X
 
 **Coding-agent papers that treat a program as the intermediate representation.** </br>
 
@@ -202,6 +202,10 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **ASENA**: connects a coding agent to robot sensing, supervised execution, and persistent experience. An optional learned navigation policy can be called as a tool. Model weights stay fixed while repeated tasks improve. [![arXiv](https://img.shields.io/badge/arXiv-2609.39207-b31b1b.svg)](https://arxiv.org/abs/2609.39207) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/asena/)
 
+- **EmbodiedEvo**: turns interaction feedback in a playground scene into reusable code skills and diagnostic lessons, then freezes them so a fresh agent can solve unseen scenes without weight updates. On RoboDojo-Sim the authors report an average score of 44.48 and 37.82% success. [![arXiv](https://img.shields.io/badge/arXiv-2610.18867-b31b1b.svg)](https://arxiv.org/abs/2610.18867) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://lab.einsia.ai/embodiedevo/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Einsia/EmbodiedEvo)
+
+- **Kinex**: a harness that connects coding agents to robots and simulators through device, tool, and skill layers. The agent reaches a configured device with executable tools. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://stacx-lab.github.io/kinex/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/stacx-lab/kinex)
+
 ## Code as World
 
 ### Generation
@@ -228,7 +232,7 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **AffordCraft**: from one photo and a task, builds task-ready simulation assets. [![arXiv](https://img.shields.io/badge/arXiv-2610.06643-b31b1b.svg)](https://arxiv.org/abs/2610.06643)
 
-- **Agentic RSR**: real-to-sim-to-real through scene reconstruction and execution-grounded robot policies. [![arXiv](https://img.shields.io/badge/arXiv-2610.10479-b31b1b.svg)](https://arxiv.org/abs/2610.10479)
+- **Agentic RSR**: real-to-sim-to-real through scene reconstruction and execution-grounded robot policies. Eighteen scenes on two robots pass a joint visual check, and real-robot task success reaches 80% of simulation success. [![arXiv](https://img.shields.io/badge/arXiv-2610.10479-b31b1b.svg)](https://arxiv.org/abs/2610.10479)
 
 - **Artisan**: a multi-agent pipeline for physically grounded articulated 3D assets. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physicalvision.github.io/artisan/)
 
@@ -245,6 +249,8 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 - **3D-GPT**: Procedural 3D Modeling with Large Language Models. [![arXiv](https://img.shields.io/badge/arXiv-2310.12945-b31b1b.svg)](https://arxiv.org/abs/2310.12945)
 
 - **LL3M**: Large Language 3D Modelers. [![arXiv](https://img.shields.io/badge/arXiv-2508.08228-b31b1b.svg)](https://arxiv.org/abs/2508.08228)
+
+- **3DCodeVerse**: coding agents write raw Blender, Three.js, CadQuery, OpenSCAD, GLSL, or OpenGL, and a harness executes, measures, and judges the program. The release includes about 2M executable 3D programs. On 100 text-to-3D prompts, GPT-6 Astra's human preference rises from 31% in Codex to 69% inside this harness. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://3dcodeverse.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gaoypeng/3dcodeverse)
 
 ### Inversion / Reconstruction
 
@@ -297,6 +303,8 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 - **WALL-E 2.0**: learns neurosymbolic rules so a world-model agent can adapt when the environment changes. [![arXiv](https://img.shields.io/badge/arXiv-2504.15785-b31b1b.svg)](https://arxiv.org/abs/2504.15785) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/elated-sawyer/WALL-E)
 
 - **VisualPredicator**: learns neuro-symbolic predicates as an abstract world model for robot planning. [![arXiv](https://img.shields.io/badge/arXiv-2410.23156-b31b1b.svg)](https://arxiv.org/abs/2410.23156)
+
+- **Matrix-Game 4.0**: gameplay, physics, and player input stay in an executable game engine. A causal video model only turns the engine's low-poly frames into detailed visuals. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://matrix-game-v4-0.github.io/page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SkyworkAI/Matrix-Game)
 
 ## Edit Graph
 
@@ -363,6 +371,8 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 - **threejseval**: 16 fixed Three.js scene prompts. People vote between unlabeled scenes. Astra at medium effort is Elo 1884 ± 105, rank 4 of 36. Claude Opus 5.5 High leads at 2071. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://threejseval.com/ranking)
 
 - **MineBench**: the model writes JavaScript against a small voxel API (`block`, `box`, `line`), then people vote. Astra Pro is 2259 ± 16.7, rank 2 of 74. Gemini 4 Argon leads at 2269, and the two intervals overlap. The author does not call it a benchmark. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://minebench.ai/leaderboard) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Ammaar-Alam/minebench)
+
+- **BlenderWorld**: 223 tasks. The agent turns text, image, or video references into an editable Blender project, scored on 2,651 binary criteria. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
 ### Robot evaluation infrastructure
 
@@ -528,7 +538,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 338 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 344 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -538,7 +548,7 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 
 - **Pelican on a bicycle**: three Blender iterations with editable meshes and recorded conversations. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/simonw/gpt-6-astra-blender-pelican-bicycle)
 
-- **GPTBlender floor plan**: turns a floor plan into a downloadable furnished home. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/qduoduo-hwh/gptblender_demo)
+- **GPTBlender floor plan**: turns a floor plan into a furnished four-bedroom Blender home. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/)
 
 - **Realsee**: scan to an editable Blender space, with roaming video and prompts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/realsee-developer/realsee-astra-blender)
 
@@ -565,6 +575,8 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **BHBench**: Astra’s native black-hole renderer, with the generated C++ / GLSL, ray integration, and a curvature grid. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SSHdotCodes/bhbench/tree/main/submissions/gpt-6-astra-xhigh)
 
 - **One Equation, Three Worlds**: one Lorenz curve kept as an editable copper sculpture, procedural ink, and moving light. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/davisbuilds/oneshots/tree/main/runs/three-worlds-chatgpt)
+
+- **Gemera**: a public Koenigsegg Gemera Blender scene. Astra handles material logic and asset integration; the geometry comes from existing assets. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ITzNomadic/koenigsegg-gemera-blender)
 
 #### CAD programs
 

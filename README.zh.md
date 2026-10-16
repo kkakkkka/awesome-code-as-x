@@ -1,6 +1,6 @@
 <div align="center">
 
-# Awesome Code as Policy/World/Editor
+# Awesome Code as X
 
 **把程序当作中间表示的 coding agent。** </br>
 
@@ -202,6 +202,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **ASENA**：把 coding agent 接到机器人感知、受监督执行和持久经验上。学出来的导航策略可以作为工具调用。模型权重固定，重复任务会变好。 [![arXiv](https://img.shields.io/badge/arXiv-2609.39207-b31b1b.svg)](https://arxiv.org/abs/2609.39207) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://research.nvidia.com/labs/gear/asena/)
 
+- **EmbodiedEvo**：把 Playground 场景里的交互反馈写成可复用的代码 Skill 和诊断 Lesson，冻结后交给新的 agent 解没见过的场景，不更新模型权重。RoboDojo-Sim 上作者报告平均分 44.48，成功率 37.82%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.18867-b31b1b.svg)](https://arxiv.org/abs/2610.18867) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://lab.einsia.ai/embodiedevo/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Einsia/EmbodiedEvo)
+
+- **Kinex**：把 coding agent 接到机器人和仿真器的 harness，分设备、工具和技能三层。agent 通过可执行工具访问已经配置好的设备。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://stacx-lab.github.io/kinex/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/stacx-lab/kinex)
+
 ## Code as World
 
 ### Generation
@@ -228,7 +232,7 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **AffordCraft**：一张照片加任务说明，做成任务可用的仿真资产。 [![arXiv](https://img.shields.io/badge/arXiv-2610.06643-b31b1b.svg)](https://arxiv.org/abs/2610.06643)
 
-- **Agentic RSR**：通过场景重建和执行落地的机器人策略做 real-to-sim-to-real。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10479-b31b1b.svg)](https://arxiv.org/abs/2610.10479)
+- **Agentic RSR**：通过场景重建和执行落地的机器人策略做 real-to-sim-to-real。两台机器人上 18 个场景通过联合视觉检查，真机任务成功率达到仿真的 80%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10479-b31b1b.svg)](https://arxiv.org/abs/2610.10479)
 
 - **Artisan**：多智能体流程，做物理上站得住的关节三维资产。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physicalvision.github.io/artisan/)
 
@@ -245,6 +249,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 - **3D-GPT**: Procedural 3D Modeling with Large Language Models. [![arXiv](https://img.shields.io/badge/arXiv-2310.12945-b31b1b.svg)](https://arxiv.org/abs/2310.12945)
 
 - **LL3M**: Large Language 3D Modelers. [![arXiv](https://img.shields.io/badge/arXiv-2508.08228-b31b1b.svg)](https://arxiv.org/abs/2508.08228)
+
+- **3DCodeVerse**：coding agent 直接写 Blender、Three.js、CadQuery、OpenSCAD、GLSL 或 OpenGL，harness 负责执行、测量和打分。发布里有约 200 万个可执行三维程序。100 个文本到三维物体的提示上，GPT-6 Astra 的人类偏好从 Codex 的 31% 升到这个 harness 里的 69%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://3dcodeverse.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gaoypeng/3dcodeverse)
 
 ### Inversion / Reconstruction
 
@@ -297,6 +303,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 - **WALL-E 2.0**：学神经符号规则，让世界模型 agent 在环境变化时还能改。 [![arXiv](https://img.shields.io/badge/arXiv-2504.15785-b31b1b.svg)](https://arxiv.org/abs/2504.15785) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/elated-sawyer/WALL-E)
 
 - **VisualPredicator**：把神经符号谓词学成抽象世界模型，用来做机器人规划。 [![arXiv](https://img.shields.io/badge/arXiv-2410.23156-b31b1b.svg)](https://arxiv.org/abs/2410.23156)
+
+- **Matrix-Game 4.0**：玩法、物理和玩家输入留在可执行的游戏引擎里。因果视频模型只把引擎的低多边形画面渲染成细节。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://matrix-game-v4-0.github.io/page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SkyworkAI/Matrix-Game)
 
 ## Edit Graph
 
@@ -363,6 +371,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **threejseval**：16 个固定的 Three.js 场景提示。人在未标名字的场景之间投票。Astra medium 的 Elo 为 1884 ± 105，36 个里第 4。Claude Opus 5.5 High 以 2071 排第一。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://threejseval.com/ranking)
 
 - **MineBench**：模型对着一个很小的体素 API（`block`、`box`、`line`）写 JavaScript，再由人投票。Astra Pro 为 2259 ± 16.7，74 个里第 2。Gemini 4 Argon 以 2269 排第一，两者区间重叠。作者不把它叫 benchmark。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://minebench.ai/leaderboard) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Ammaar-Alam/minebench)
+
+- **BlenderWorld**：223 个任务。agent 根据文字、图片或视频参考，交回可编辑的 Blender 工程，用 2,651 条二元标准打分。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
 ### 机器人评测基础设施
 
@@ -528,7 +538,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 338 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 344 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -538,7 +548,7 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 
 - **骑自行车的鹈鹕**：三次 Blender 迭代，网格可编辑，对话有记录。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/simonw/gpt-6-astra-blender-pelican-bicycle)
 
-- **GPTBlender 平面图**：平面图生成可下载的带家具房屋。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/qduoduo-hwh/gptblender_demo)
+- **GPTBlender 平面图**：平面图生成带家具的四卧室 Blender 房屋。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gptblender.com/turn-floor-plan-into-3d-model-gpt6-astra/)
 
 - **Realsee**：实景扫描到可编辑的 Blender 空间，带漫游视频和提示词。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/realsee-developer/realsee-astra-blender)
 
@@ -565,6 +575,8 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **BHBench**：Astra 写的原生黑洞渲染，带生成的 C++ / GLSL、光线积分和曲率网格。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SSHdotCodes/bhbench/tree/main/submissions/gpt-6-astra-xhigh)
 
 - **One Equation, Three Worlds**：同一条洛伦兹曲线做成可编辑铜雕、程序墨迹和移动光线。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/davisbuilds/oneshots/tree/main/runs/three-worlds-chatgpt)
+
+- **Gemera**：公开的 Koenigsegg Gemera Blender 场景。Astra 负责材质逻辑和资产整合，几何来自已有资产。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ITzNomadic/koenigsegg-gemera-blender)
 
 #### CAD 程序
 
