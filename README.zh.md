@@ -206,6 +206,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **Kinex**：把 coding agent 接到机器人和仿真器的 harness，分设备、工具和技能三层。agent 通过可执行工具访问已经配置好的设备。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://stacx-lab.github.io/kinex/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/stacx-lab/kinex)
 
+- **BT-Agent**：机载语言模型做任务决策，行为树技能检查局部执行条件并返回结构化失败反馈。论文报告了四足真机运行，以及 161 个文本任务的评测，其中 39 个在 Habitat 里跑。 [![arXiv](https://img.shields.io/badge/arXiv-2610.13862-b31b1b.svg)](https://arxiv.org/abs/2610.13862) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://goldengait.github.io/bt-agent/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/fabiohuebel/bt-agent)
+
+- **robot-use**：coding agent 给双臂 SO-101 写短 Python 程序，带 MCP 工具，执行前可以先在 MuJoCo 里预览。程序检查点会看相机，一段流程要在不同摆放上重复跑过，才收成技能。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tensortron/robot-use)
+
 ## Code as World
 
 ### Generation
@@ -427,6 +431,8 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 - **Astra on RoboMME**：三层控制器跑 16 个 RoboMME 任务，报告成功率 79.13%（633/800），平均每回合 3.63 次 Astra 规划。微调过的 π0.5 执行子任务，Qwen3-VL-4B 判断何时重新规划。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
 
 - **RoboICL**：冻结的 Astra 跑 30 个 RoboDojo 任务，报告总进度分 50.64；Open 任务 zero-shot，其余给一段示范，另外还有三个真机任务。另见 [RoboICL](#code-as-policy)。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Mosi-AI/RoboICL)
+
+- **TacTalent**：在 RoboICL 闭环里把 GPT-6 Astra 当少样本视触觉策略，不做任务专用的策略训练。19 个 UniVTAC 和 OpenViTac 仿真任务上，视觉加触觉的平均成功率是 93.8% 和 81.8%，只看视觉是 76.3% 和 80.6%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://tactalent.github.io/)
 
 ### 仿真策略程序
 

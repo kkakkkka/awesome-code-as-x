@@ -2,8 +2,7 @@ cff-version: 1.2.0
 message: "If you find this curated list useful in your research, please cite it as below."
 title: "Awesome Code as X"
 authors:
-  - family-names: Xu
-    given-names: Zunnan
+  - name: "Code as X Team"
 year: 2026
 repository-code: "https://github.com/kkakkkka/awesome-code-as-x"
 url: "https://github.com/kkakkkka/awesome-code-as-x"
@@ -14,7 +13,6 @@ preferred-citation:
   type: generic
   title: "Awesome Code as X"
   authors:
-    - family-names: Xu
-      given-names: Zunnan
+    - name: "Code as X Team"
   year: 2026
   url: "https://github.com/kkakkkka/awesome-code-as-x"

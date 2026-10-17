@@ -206,6 +206,10 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **Kinex**: a harness that connects coding agents to robots and simulators through device, tool, and skill layers. The agent reaches a configured device with executable tools. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://stacx-lab.github.io/kinex/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/stacx-lab/kinex)
 
+- **BT-Agent**: an onboard language model makes task decisions, and behavior-tree skills check local execution conditions and return structured failure feedback. The paper reports onboard quadruped runs and a 161-task text benchmark, with 39 tasks evaluated in Habitat. [![arXiv](https://img.shields.io/badge/arXiv-2610.13862-b31b1b.svg)](https://arxiv.org/abs/2610.13862) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://goldengait.github.io/bt-agent/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/fabiohuebel/bt-agent)
+
+- **robot-use**: a coding agent writes short Python programs for bimanual SO-101 arms, with MCP tools and an optional MuJoCo preview. It checks cameras at program checkpoints, and a procedure becomes a skill only after repeated runs on different layouts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tensortron/robot-use)
+
 ## Code as World
 
 ### Generation
@@ -427,6 +431,8 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 - **Astra on RoboMME**: three-tier controller on 16 RoboMME tasks; reports 79.13% success (633/800) with 3.63 Astra planning calls per episode. A fine-tuned π0.5 runs the subtask, and a Qwen3-VL-4B monitor decides when Astra should replan. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bingaochen.github.io/Astra-on-RoboMME/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/bingaochen/Astra-on-RoboMME)
 
 - **RoboICL**: frozen Astra on 30 RoboDojo tasks; reports overall progress 50.64, zero-shot on Open and one demonstration elsewhere, plus three real-robot tasks. See also [RoboICL](#code-as-policy). [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mosi-ai.github.io/RoboICL-GPT6-Astra.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Mosi-AI/RoboICL)
+
+- **TacTalent**: few-shot GPT-6 Astra as a visuo-tactile policy inside the RoboICL loop, with no task-specific policy training. On 19 UniVTAC and OpenViTac simulation tasks, vision plus tactile reports 93.8% and 81.8% average success, against 76.3% and 80.6% for vision only. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://tactalent.github.io/)
 
 ### Policy programs in simulation
 
