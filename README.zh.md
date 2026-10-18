@@ -210,6 +210,12 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **robot-use**：coding agent 给双臂 SO-101 写短 Python 程序，带 MCP 工具，执行前可以先在 MuJoCo 里预览。程序检查点会看相机，一段流程要在不同摆放上重复跑过，才收成技能。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tensortron/robot-use)
 
+- **CarryOn**：包在冻结 VLA 外面的双环 harness。它保留用户和场景记忆，用几何约束挡住动作，再根据反思修改恢复技能。 [![arXiv](https://img.shields.io/badge/arXiv-2610.21453-b31b1b.svg)](https://arxiv.org/abs/2610.21453) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://vincent2311.github.io/Projects/CarryOn/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/JIA-Lab-research/CarryOn)
+
+- **ChunkAct**：把机器人工具原语收成可复用的动作块，块执行失败时把控制交还 agent。动作块可以在线触发，也可以从 agent 记忆离线编译。 [![arXiv](https://img.shields.io/badge/arXiv-2610.18874-b31b1b.svg)](https://arxiv.org/abs/2610.18874)
+
+- **RoboHarness**：把通用 LLM 接到视觉几何工具上，用点击、跟踪关键点和空间约束做操作，不训练机器人策略。 [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
+
 ## Code as World
 
 ### Generation
@@ -378,6 +384,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 
 - **BlenderWorld**：223 个任务。agent 根据文字、图片或视频参考，交回可编辑的 Blender 工程，用 2,651 条二元标准打分。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
+- **LegoBench**：coding agent 根据说明书、成品照片或实车照片，把积木模型重建成 LDraw。评分看结构匹配和外观。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
+
 ### 机器人评测基础设施
 
 这些工作评测的是广义机器人策略，包括学习策略、程序接口和命令接口。它们是 policy-evaluation infrastructure，不是代码生成 benchmark。
@@ -544,7 +552,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 344 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 355 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -583,6 +591,12 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **One Equation, Three Worlds**：同一条洛伦兹曲线做成可编辑铜雕、程序墨迹和移动光线。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/davisbuilds/oneshots/tree/main/runs/three-worlds-chatgpt)
 
 - **Gemera**：公开的 Koenigsegg Gemera Blender 场景。Astra 负责材质逻辑和资产整合，几何来自已有资产。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ITzNomadic/koenigsegg-gemera-blender)
+
+- **单张桌面照片重建**：一张 RGB 照片变成 Blender 场景。Codex 和 Blender MCP 摆放被挡住的物体，最多改五轮。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anhao-zhang/gpt6-blender-reconstruction)
+
+- **Hina**：Three.js 里的程序撑伞角色，带四面检查和一份静态 GLB。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ecooxai.github.io/hina-gpt6-astra-pro-chatgpt-threejs/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ecooxai/hina-gpt6-astra-pro-chatgpt-threejs)
+
+- **A Frontier for the Zeros**：Manim 里穿过 ζ 函数曲面的镜头，场景留成可编辑的 Python。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HarleyCoops/Math-To-Manim/tree/main/papers/quasi-riemann)
 
 #### CAD 程序
 

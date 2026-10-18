@@ -210,6 +210,12 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **robot-use**: a coding agent writes short Python programs for bimanual SO-101 arms, with MCP tools and an optional MuJoCo preview. It checks cameras at program checkpoints, and a procedure becomes a skill only after repeated runs on different layouts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tensortron/robot-use)
 
+- **CarryOn**: a dual-loop harness around a frozen VLA. It keeps user and scene memory, shields actions with geometry, and revises recovery skills from reflection. [![arXiv](https://img.shields.io/badge/arXiv-2610.21453-b31b1b.svg)](https://arxiv.org/abs/2610.21453) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://vincent2311.github.io/Projects/CarryOn/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/JIA-Lab-research/CarryOn)
+
+- **ChunkAct**: groups robot-tool primitives into reusable action chunks, and hands control back to the agent when a chunk fails. Chunks can be triggered online or compiled offline from agent memory. [![arXiv](https://img.shields.io/badge/arXiv-2610.18874-b31b1b.svg)](https://arxiv.org/abs/2610.18874)
+
+- **RoboHarness**: connects a general-purpose LLM to visual-geometric tools, using clicks, tracked keypoints, and spatial constraints instead of a trained robot policy. [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
+
 ## Code as World
 
 ### Generation
@@ -378,6 +384,8 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 
 - **BlenderWorld**: 223 tasks. The agent turns text, image, or video references into an editable Blender project, scored on 2,651 binary criteria. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
+- **LegoBench**: a coding agent rebuilds a brick model as LDraw from instructions, a finished-set photo, or a real-car photo. Scoring covers structural match and appearance. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
+
 ### Robot evaluation infrastructure
 
 These evaluate robot policies broadly, including learned policies and program or command interfaces. They are policy-evaluation infrastructure, not code-generation benchmarks.
@@ -544,7 +552,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 344 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 355 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -583,6 +591,12 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **One Equation, Three Worlds**: one Lorenz curve kept as an editable copper sculpture, procedural ink, and moving light. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/davisbuilds/oneshots/tree/main/runs/three-worlds-chatgpt)
 
 - **Gemera**: a public Koenigsegg Gemera Blender scene. Astra handles material logic and asset integration; the geometry comes from existing assets. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ITzNomadic/koenigsegg-gemera-blender)
+
+- **Single-image tabletop**: one RGB photo becomes a Blender scene. Codex and Blender MCP place occluded objects and revise the scene for up to five rounds. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anhao-zhang/gpt6-blender-reconstruction)
+
+- **Hina**: a procedural umbrella character in Three.js, with a four-side inspection viewer and a static GLB. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://ecooxai.github.io/hina-gpt6-astra-pro-chatgpt-threejs/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ecooxai/hina-gpt6-astra-pro-chatgpt-threejs)
+
+- **A Frontier for the Zeros**: a Manim fly-through of a zeta-function surface, kept as editable Python. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HarleyCoops/Math-To-Manim/tree/main/papers/quasi-riemann)
 
 #### CAD programs
 
