@@ -216,6 +216,10 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **RoboHarness**：把通用 LLM 接到视觉几何工具上，用点击、跟踪关键点和空间约束做操作，不训练机器人策略。 [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
 
+- **CoEvolve**：把多机器人协作写成盖在固定运动技能上的可执行代码。验证器检查每一次状态转移，被拒绝的行为从最近一次通过的检查点改起。 [![arXiv](https://img.shields.io/badge/arXiv-2610.23288-b31b1b.svg)](https://arxiv.org/abs/2610.23288)
+
+- **SenseNova-RoboRSI**：共享运行时根据执行轨迹修改 harness，模型权重保持不动。RoboDojo 上报告平均分 60.08、成功率 54.17%，GPT-6 Astra 基线平均分是 28.97。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/OpenSenseNova/SenseNova-RoboRSI)
+
 ## Code as World
 
 ### Generation
@@ -338,6 +342,8 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **RefineCut**, Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing. [![arXiv](https://img.shields.io/badge/arXiv-2608.25622-b31b1b.svg)](https://arxiv.org/abs/2608.25622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Lancelot-wy/RefineCut)
 
+- **RAP**：把人工海报还原成带类型槽位的 HTML/CSS，再检索一份模板并填槽，生成新海报。RAP-150 留出 150 篇论文，用渲染结果对照。 [![arXiv](https://img.shields.io/badge/arXiv-2610.23230-b31b1b.svg)](https://arxiv.org/abs/2610.23230) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://reconstruct-a-poster.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/VincentHancoder/RAP)
+
 ## Benchmark
 
 ### 策略程序
@@ -385,6 +391,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **BlenderWorld**：223 个任务。agent 根据文字、图片或视频参考，交回可编辑的 Blender 工程，用 2,651 条二元标准打分。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
 - **LegoBench**：coding agent 根据说明书、成品照片或实车照片，把积木模型重建成 LDraw。评分看结构匹配和外观。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
+
+- **WorldBench**：一个提示要求做一座有十个生态区、河流、天气和季节的体素浮岛。模型必须交回一个能独立运行的 Three.js HTML 文件，按程序跑起来的结果打分。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10622-b31b1b.svg)](https://arxiv.org/abs/2610.10622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.krishbakshi.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KrishBakshi/worldbench)
 
 ### 机器人评测基础设施
 
@@ -552,7 +560,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 355 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 360 个例子（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -643,6 +651,8 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Morrow**：一个 HTML 里的月光毛绒幽灵，可以抓、戳、梳毛和改颜色。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Kayou-31/moonlit-plush-gallery/blob/main/morrow.html)
 
 - **Moss & Moon**：Three.js 里的程序赤狐和林地生态，带骨架、足部 IK 和按需求寻路。Astra 的提交单独放在一个目录里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
+
+- **Sunline Archipelago**：热带群岛铁路，Blender 场景加 Three.js 查看器，可以步行，也可以跟车。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://givros.github.io/sunline-archipelago/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/givros/sunline-archipelago)
 
 ## 相关资源
 

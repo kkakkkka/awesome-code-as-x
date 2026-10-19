@@ -216,6 +216,10 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **RoboHarness**: connects a general-purpose LLM to visual-geometric tools, using clicks, tracked keypoints, and spatial constraints instead of a trained robot policy. [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
 
+- **CoEvolve**: represents multi-robot coordination as executable code over fixed motor skills. A verifier checks each transition, and a rejected behavior is revised from the last accepted checkpoint. [![arXiv](https://img.shields.io/badge/arXiv-2610.23288-b31b1b.svg)](https://arxiv.org/abs/2610.23288)
+
+- **SenseNova-RoboRSI**: a shared runtime revises the harness from execution traces while model weights stay fixed. On RoboDojo it reports an average score of 60.08 and 54.17% success, against a GPT-6 Astra baseline of 28.97. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/OpenSenseNova/SenseNova-RoboRSI)
+
 ## Code as World
 
 ### Generation
@@ -338,6 +342,8 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **RefineCut**, Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing. [![arXiv](https://img.shields.io/badge/arXiv-2608.25622-b31b1b.svg)](https://arxiv.org/abs/2608.25622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Lancelot-wy/RefineCut)
 
+- **RAP**: turns a human poster into styled HTML/CSS with typed slots, then generates a new poster by retrieving a template and refilling those slots. RAP-150 holds out 150 papers for render-and-compare. [![arXiv](https://img.shields.io/badge/arXiv-2610.23230-b31b1b.svg)](https://arxiv.org/abs/2610.23230) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://reconstruct-a-poster.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/VincentHancoder/RAP)
+
 ## Benchmark
 
 ### Policy programs
@@ -385,6 +391,8 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 - **BlenderWorld**: 223 tasks. The agent turns text, image, or video references into an editable Blender project, scored on 2,651 binary criteria. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://blenderworld.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/QwenLM/BlenderWorld)
 
 - **LegoBench**: a coding agent rebuilds a brick model as LDraw from instructions, a finished-set photo, or a real-car photo. Scoring covers structural match and appearance. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
+
+- **WorldBench**: one prompt asks for a floating voxel island with ten biomes, rivers, weather, and seasons. The model must return one self-contained Three.js HTML file, scored by what that program does when it runs. [![arXiv](https://img.shields.io/badge/arXiv-2610.10622-b31b1b.svg)](https://arxiv.org/abs/2610.10622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.krishbakshi.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KrishBakshi/worldbench)
 
 ### Robot evaluation infrastructure
 
@@ -552,7 +560,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 355 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 360 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -643,6 +651,8 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Morrow**: an interactive moonlit plush ghost in one HTML file, with grab, poke, brush, and color controls. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Kayou-31/moonlit-plush-gallery/blob/main/morrow.html)
 
 - **Moss & Moon**: a procedural fox and woodland ecosystem in Three.js, with a skeleton, foot IK, and need-driven pathfinding. The Astra submission is kept in its own folder. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
+
+- **Sunline Archipelago**: a tropical island railway in Blender and a Three.js viewer, with walking and a train-follow camera. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://givros.github.io/sunline-archipelago/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/givros/sunline-archipelago)
 
 ## Related Resources
 
