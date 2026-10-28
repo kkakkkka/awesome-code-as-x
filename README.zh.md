@@ -22,6 +22,7 @@
 - 📊 [Benchmark](#benchmark)
     - [策略程序](#策略程序)
     - [世界程序](#世界程序)
+    - [编辑程序](#编辑程序)
     - [机器人评测基础设施](#机器人评测基础设施)
 - 📚 [综述与经验](#综述与经验)
 - 🛠️ [Projects](#projects)
@@ -320,6 +321,58 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **Matrix-Game 4.0**：玩法、物理和玩家输入留在可执行的游戏引擎里。因果视频模型只把引擎的低多边形画面渲染成细节。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://matrix-game-v4-0.github.io/page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SkyworkAI/Matrix-Game)
 
+- **TheoryCoder**：人给出高层 PDDL 抽象，再配一个学出来的低层 Python 转移模型，做双层搜索。 [![arXiv](https://img.shields.io/badge/arXiv-2503.20124-b31b1b.svg)](https://arxiv.org/abs/2503.20124)
+
+- **TheoryCoder-2**：高层抽象不再由人给，而是从经验里学出来，可以复用。 [![arXiv](https://img.shields.io/badge/arXiv-2602.00929-b31b1b.svg)](https://arxiv.org/abs/2602.00929) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ZerghamAhmed/TheoryCoder)
+
+- **OneLife**：把转移写成按条件激活的前提–效果定律，在一局探索内学完；只有被触发的定律会更新。 [![arXiv](https://img.shields.io/badge/arXiv-2510.12088-b31b1b.svg)](https://arxiv.org/abs/2510.12088) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/codezakh/onelife)
+
+- **CASSANDRA**：确定性部分写成 Python 代码，随机变量用贝叶斯网络结构学习。 [![arXiv](https://img.shields.io/badge/arXiv-2601.18620-b31b1b.svg)](https://arxiv.org/abs/2601.18620)
+
+- **Agent2World**：研究员、模型开发者和测试团队三类 agent 写单元测试和仿真测试，按失败结果修 PDDL 和 Python 世界模型。 [![arXiv](https://img.shields.io/badge/arXiv-2512.22336-b31b1b.svg)](https://arxiv.org/abs/2512.22336) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/DeepExperience/agent2world)
+
+- **Memento 3**：维护一份自然语言规则簿，编译成 Python 动力学；只有能逐格重放过去观测的更新才会被接受。 [![arXiv](https://img.shields.io/badge/arXiv-2610.11794-b31b1b.svg)](https://arxiv.org/abs/2610.11794)
+
+- **Executable World Models for ARC-AGI-3** in the Era of Coding Agents：coding agent 用完整交互历史检查自己的 Python 世界模型，并定期按最小描述长度重构，把零散补丁压成紧凑规则。 [![arXiv](https://img.shields.io/badge/arXiv-2605.05138-b31b1b.svg)](https://arxiv.org/abs/2605.05138) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/astroseger/arc-3-agents-baseline1)
+
+- **Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?** 嵌套消融：只要求写可执行模型，相比文本推理有好有坏；完整的验证导向设计在报告的四组模型–推理强度设置里都最高，但 token 开销更大。 [![arXiv](https://img.shields.io/badge/arXiv-2607.15439-b31b1b.svg)](https://arxiv.org/abs/2607.15439)
+
+- **OPINE-World**：用贝叶斯本体误差引导探索，优先尝试当前对象类型层级最解释不了的交互。 [![arXiv](https://img.shields.io/badge/arXiv-2607.01531-b31b1b.svg)](https://arxiv.org/abs/2607.01531)
+
+- **Kepler**：每次动作前把预测和下一步观测对比，不一致就中止计划。审计显示，没有防护的评测可能混入源码泄露或 agent 悄悄自修复。 [![arXiv](https://img.shields.io/badge/arXiv-2610.00834-b31b1b.svg)](https://arxiv.org/abs/2610.00834) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Cveinnt/kepler)
+
+- **RoleWorld**：在功能角色上写 DSL 转移规则；到新环境里只需主动探测，把物体绑定到这些角色。 [![arXiv](https://img.shields.io/badge/arXiv-2610.13172-b31b1b.svg)](https://arxiv.org/abs/2610.13172)
+
+- **World-Time Compute**：从验证过的符号代码世界（OpenWorld）里采样轨迹当训练数据，提升跨世界泛化。 [![arXiv](https://img.shields.io/badge/arXiv-2609.09163-b31b1b.svg)](https://arxiv.org/abs/2609.09163) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/quome-cloud/openworld)
+
+- **VisualPatchWorld**：从图像提取场景图，喂给 Python 运动学和接触草图，用 CEM-MPC 规划。同一规划器下，oracle 状态的规划成功率 69.0%，RGB 输入 61.0%，MuJoCo 为 97.5%。 [![arXiv](https://img.shields.io/badge/arXiv-2607.25236-b31b1b.svg)](https://arxiv.org/abs/2607.25236) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HKBU-KnowComp/VisualPatchWorld)
+
+- **NeSyS**：用可执行规则的分数给神经网络的下一状态候选重排序，微调时侧重规则覆盖不足的转移。 [![arXiv](https://img.shields.io/badge/arXiv-2602.10480-b31b1b.svg)](https://arxiv.org/abs/2602.10480) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tianyi-lab/NeSyS)
+
+- **ProgGen**：为物理场景合成状态估计、动力学和 RGB 渲染三部分 Python 程序。 [![arXiv](https://img.shields.io/badge/arXiv-2505.14948-b31b1b.svg)](https://arxiv.org/abs/2505.14948) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/metro-smiles/ProgGen)
+
+- **DR-WM**：从机器人动作–响应数据标定地形接触属性，在物理仿真器里执行候选动作，再用仿真轨迹引导视频生成。动力学来自标定后的物理引擎，不是合成的转移代码。 [![arXiv](https://img.shields.io/badge/arXiv-2610.17630-b31b1b.svg)](https://arxiv.org/abs/2610.17630)
+
+- **Streaming Code World Model**：在 Code World Model 上加入因果分块视频生成和 diffusion forcing 时序条件。四步蒸馏渲染器更快，但开源版本仍慢于实时播放。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/TingtingLiao/streaming-code-world-model)
+
+- **CoDeR**：多个 agent 写 Three.js 搭出逻辑空间，扩散模型"画师"负责外观，生成的外观再配准回 3D 几何。 [![arXiv](https://img.shields.io/badge/arXiv-2609.26458-b31b1b.svg)](https://arxiv.org/abs/2609.26458) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://becauseimbatman0.github.io/CoDeR)
+
+- **AgentGarten**：代码写成的仿真世界导出深度和法线缓冲，交给用 Adversarial Forcing 蒸馏的实时块因果神经渲染器。 [![arXiv](https://img.shields.io/badge/arXiv-2610.12374-b31b1b.svg)](https://arxiv.org/abs/2610.12374) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/MirroS-Lab/AgentGarten)
+
+- **GameDirector**：用状态跟踪和 agent 动作控制把玩法逻辑和渲染分开，玩家可以自己改玩法机制。 [![arXiv](https://img.shields.io/badge/arXiv-2609.25652-b31b1b.svg)](https://arxiv.org/abs/2609.25652) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://jimntu.github.io/gamedirector/)
+
+- **DAO & JING**：维护一个持久的共享世界，世界状态的变化驱动每个观察者各自的音视频生成。 [![arXiv](https://img.shields.io/badge/arXiv-2610.19726-b31b1b.svg)](https://arxiv.org/abs/2610.19726) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/XGEN-Labs/XGEN-JING)
+
+- **Magpie**：设计者写的玩法规则在游戏引擎里跑，独立的渲染服务器根据引擎输出的观测生成画面。 [![arXiv](https://img.shields.io/badge/arXiv-2608.27168-b31b1b.svg)](https://arxiv.org/abs/2608.27168) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://zhanxy.xyz/Magpie-website)
+
+- **Code2World**：VLM 把下一屏手机界面预测成 HTML/CSS，由浏览器渲染。和 gWorld 一样，代码描述的是预测出的画面，转移仍在网络内部。 [![arXiv](https://img.shields.io/badge/arXiv-2602.09856-b31b1b.svg)](https://arxiv.org/abs/2602.09856) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AMAP-ML/Code2World)
+
+- **StreamRender-H3**：地图、物理和交互规则留在代码游戏引擎里，引擎把平涂的语义图流式送给两步的流式扩散渲染器，外观由参考图和提示词决定。8 张 GB200 上每个流式步渲染 218 ms，所有结果都来自同一款赛车游戏。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)
+
+- **SolarRenderer**：在冻结的 MiniMax-H3 主干上加一个控制 LoRA，逐帧对齐读入结构视频（白模、语义图、深度图），再用加速 LoRA 把采样压到四步。能泛化到训练中没见过的 11 种结构表示，块因果版本可实时流式输出 768p 视频。渲染器本身不维护世界状态，结构来自生成输入视频的引擎或程序。 [![arXiv](https://img.shields.io/badge/arXiv-2610.28630-b31b1b.svg)](https://arxiv.org/abs/2610.28630)
+
+- **AnyGameRenderer**：把 agent 做的粗糙游戏画面（灰色白模、彩色基本体或线框）重新渲染，同时保持实体数量和实体出现、消失的帧。配套 benchmark 在 59 段留出片段里对 753 个实体打分；相比基座模型，时间匹配从 50.9% 升到 62.9%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.31466-b31b1b.svg)](https://arxiv.org/abs/2610.31466)
+
 ## Edit Graph
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
@@ -343,6 +396,32 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 - **RefineCut**, Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing. [![arXiv](https://img.shields.io/badge/arXiv-2608.25622-b31b1b.svg)](https://arxiv.org/abs/2608.25622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Lancelot-wy/RefineCut)
 
 - **RAP**：把人工海报还原成带类型槽位的 HTML/CSS，再检索一份模板并填槽，生成新海报。RAP-150 留出 150 篇论文，用渲染结果对照。 [![arXiv](https://img.shields.io/badge/arXiv-2610.23230-b31b1b.svg)](https://arxiv.org/abs/2610.23230) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://reconstruct-a-poster.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/VincentHancoder/RAP)
+
+- **Back2Struct**：从栅格示意图或图表恢复对象级 SVG/XML（文字、形状、拓扑、布局），奖励同时看可编译性、长度一致性和结构相似度。输出可以导入 PowerPoint 等工具。 [![arXiv](https://img.shields.io/badge/arXiv-2609.37016-b31b1b.svg)](https://arxiv.org/abs/2609.37016) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pengyu965.github.io/Back2Struct.github.io/)
+
+- **ImageEye**：从用户编辑过的几张图合成一个神经符号 DSL 程序。裁剪、模糊等带条件的动作作用在由预训练感知模型和符号关系选出的物体上，一个程序就能处理整批图片；评测的 50 个任务里自动完成 48 个。 [![arXiv](https://img.shields.io/badge/arXiv-2304.03253-b31b1b.svg)](https://arxiv.org/abs/2304.03253) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/celestebarnaby/ImageEye)
+
+- **SIRI**：用参数优化、剪枝和嫁接三种重写器，在测试时改进推断出的视觉程序。 [![arXiv](https://img.shields.io/badge/arXiv-2309.14972-b31b1b.svg)](https://arxiv.org/abs/2309.14972) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bardofcodes.github.io/coref/)
+
+- **Learning to Edit Visual Programs**：网络预测一次局部编辑，让完整程序更接近视觉目标。相同搜索时间下，基于编辑的搜索优于只用一次性预测器。 [![arXiv](https://img.shields.io/badge/arXiv-2406.02383-b31b1b.svg)](https://arxiv.org/abs/2406.02383) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/VPI-Edit)
+
+- **Motion Vectorization**：从动态图形视频恢复 SVG 运动程序，显式给出物体、运动和逐帧遮挡顺序（38 段网络视频平均 L2 RGB 误差 0.0086），再通过变换 API 编辑，比如把物体运动重新对齐到音乐节拍。 [![arXiv](https://img.shields.io/badge/arXiv-2309.14642-b31b1b.svg)](https://arxiv.org/abs/2309.14642)
+
+- **Differentiable 3D CAD Programs**：用户直接拖动几何时，把修改映射回已有 CAD 程序的参数。 [![arXiv](https://img.shields.io/badge/arXiv-2110.01182-b31b1b.svg)](https://arxiv.org/abs/2110.01182)
+
+- **ParSEL**：把对分割网格的语言请求转成参数化编辑程序，参数决定编辑幅度。 [![arXiv](https://img.shields.io/badge/arXiv-2405.20319-b31b1b.svg)](https://arxiv.org/abs/2405.20319) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bardofcodes.github.io/parsel/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/BardOfCodes/parsel)
+
+- **DeTikZify**：从草图和已有科学图合成 TikZ 程序，基于 MCTS 的推理不需额外训练就能继续改进输出。 [![arXiv](https://img.shields.io/badge/arXiv-2405.15306-b31b1b.svg)](https://arxiv.org/abs/2405.15306) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/potamides/DeTikZify)
+
+- **StarVector**：从图像和文本生成 SVG 代码，用椭圆、多边形、文字等图元，而不只是路径曲线。 [![arXiv](https://img.shields.io/badge/arXiv-2312.11556-b31b1b.svg)](https://arxiv.org/abs/2312.11556) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://starvector.github.io) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/joanrod/star-vector)
+
+- **RefineSVG**：先渲染初版 SVG，与目标图对比，把残差图反馈回去再修正一步。 [![arXiv](https://img.shields.io/badge/arXiv-2607.27699-b31b1b.svg)](https://arxiv.org/abs/2607.27699)
+
+- **ShapeMOD**：在 3D 形状程序数据集上发现宏操作；用户研究中，这些宏让交互式形状编辑更高效。 [![arXiv](https://img.shields.io/badge/arXiv-2104.06392-b31b1b.svg)](https://arxiv.org/abs/2104.06392) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/ShapeMOD)
+
+- **ShapeCoder**：同时发现抽象函数和使用这些函数的程序，重写后的程序暴露更少的自由参数。 [![arXiv](https://img.shields.io/badge/arXiv-2305.05661-b31b1b.svg)](https://arxiv.org/abs/2305.05661) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/ShapeCoder)
+
+- **MaLiang-Harness**：这是生成框架，不是编辑器。视觉程序、构建历史和验证共用一个修订引用；恢复早先内容会生成一个新修订，必须通过验证才算完成。 [![arXiv](https://img.shields.io/badge/arXiv-2609.34309-b31b1b.svg)](https://arxiv.org/abs/2609.34309)
 
 ## Benchmark
 
@@ -393,6 +472,16 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **LegoBench**：coding agent 根据说明书、成品照片或实车照片，把积木模型重建成 LDraw。评分看结构匹配和外观。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
 
 - **WorldBench**：一个提示要求做一座有十个生态区、河流、天气和季节的体素浮岛。模型必须交回一个能独立运行的 Three.js HTML 文件，按程序跑起来的结果打分。 [![arXiv](https://img.shields.io/badge/arXiv-2610.10622-b31b1b.svg)](https://arxiv.org/abs/2610.10622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.krishbakshi.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KrishBakshi/worldbench)
+
+### 编辑程序
+
+面向图表、SVG 图形、幻灯片等结构化图像的编辑评测，源程序或结构可以提供精确的参照。
+
+- **StructBench**：评测图表、示意图等结构化图像的生成和编辑，用问答打分。即使在真值图上，这套指标起初也只有约 80%，把答错的问题改写后才超过 95%。 [![arXiv](https://img.shields.io/badge/arXiv-2510.05091-b31b1b.svg)](https://arxiv.org/abs/2510.05091) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://structvisuals.github.io)
+
+- **ChartSync**：级联图表编辑 benchmark。GPT-5.5 流水线先从图表图片还原绘图代码，改代码后重新渲染，OCR F1 最高（88.76），但评判的背景保真度只有 37.44，Nano Banana Pro 为 89.60。 [![arXiv](https://img.shields.io/badge/arXiv-2607.10301-b31b1b.svg)](https://arxiv.org/abs/2607.10301)
+
+- **VeriEdit-Bench**：对 SVG 图形、图表、网页界面和幻灯片的源码做受控编辑，编译出精确的目标图像和像素级编辑掩码。原图不改时，保持度得 100，保真度、定位和幅度都得 0。 [![arXiv](https://img.shields.io/badge/arXiv-2610.04381-b31b1b.svg)](https://arxiv.org/abs/2610.04381)
 
 ### 机器人评测基础设施
 

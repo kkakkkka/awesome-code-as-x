@@ -22,6 +22,7 @@
 - 📊 [Benchmark](#benchmark)
     - [Policy programs](#policy-programs)
     - [World programs](#world-programs)
+    - [Edit programs](#edit-programs)
     - [Robot evaluation infrastructure](#robot-evaluation-infrastructure)
 - 📚 [Surveys and Lessons](#surveys-and-lessons)
 - 🛠️ [Projects](#projects)
@@ -320,6 +321,58 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **Matrix-Game 4.0**: gameplay, physics, and player input stay in an executable game engine. A causal video model only turns the engine's low-poly frames into detailed visuals. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://matrix-game-v4-0.github.io/page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/SkyworkAI/Matrix-Game)
 
+- **TheoryCoder**, Synthesizing World Models for Bilevel Planning: pairs human-provided high-level PDDL abstractions with a learned low-level Python transition model for bilevel search. [![arXiv](https://img.shields.io/badge/arXiv-2503.20124-b31b1b.svg)](https://arxiv.org/abs/2503.20124)
+
+- **TheoryCoder-2**, Learning Abstractions for Hierarchical Planning in Program-Synthesis Agents: learns the reusable high-level abstractions from experience instead of taking them from people. [![arXiv](https://img.shields.io/badge/arXiv-2602.00929-b31b1b.svg)](https://arxiv.org/abs/2602.00929) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/ZerghamAhmed/TheoryCoder)
+
+- **OneLife**, One Life to Learn: Inferring Symbolic World Models for Stochastic Environments from Unguided Exploration: writes transitions as conditionally activated precondition–effect laws, learned within one episode; only the laws that fire get updated. [![arXiv](https://img.shields.io/badge/arXiv-2510.12088-b31b1b.svg)](https://arxiv.org/abs/2510.12088) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/codezakh/onelife)
+
+- **CASSANDRA**: Programmatic and Probabilistic Learning and Inference for Stochastic World Modeling. Python code covers the deterministic features, and Bayesian-network structure learning covers the stochastic variables. [![arXiv](https://img.shields.io/badge/arXiv-2601.18620-b31b1b.svg)](https://arxiv.org/abs/2601.18620)
+
+- **Agent2World**: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback. A researcher, a model developer, and a testing team write unit and simulation tests, then repair PDDL and Python world models from the failures. [![arXiv](https://img.shields.io/badge/arXiv-2512.22336-b31b1b.svg)](https://arxiv.org/abs/2512.22336) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/DeepExperience/agent2world)
+
+- **Memento 3**: Model-Based Recursive Self-Improvement through Reflective Rulebooks. Keeps a natural-language rulebook, compiles it into Python dynamics, and accepts an update only if it replays past observations cell for cell. [![arXiv](https://img.shields.io/badge/arXiv-2610.11794-b31b1b.svg)](https://arxiv.org/abs/2610.11794)
+
+- **Executable World Models for ARC-AGI-3** in the Era of Coding Agents: a coding agent checks its Python world model against the full interaction history and periodically refactors it for minimum description length, so ad-hoc fixes collapse into compact rules. [![arXiv](https://img.shields.io/badge/arXiv-2605.05138-b31b1b.svg)](https://arxiv.org/abs/2605.05138) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/astroseger/arc-3-agents-baseline1)
+
+- **Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?** Nested ablations: requiring an executable model alone has mixed effects against text reasoning, while the full verification-oriented design scores highest in all four reported model–effort settings, at a higher token cost. [![arXiv](https://img.shields.io/badge/arXiv-2607.15439-b31b1b.svg)](https://arxiv.org/abs/2607.15439)
+
+- **OPINE-World**: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration for ARC-AGI-3. Explores where a Bayesian ontology error says the current object-type hierarchy explains interactions worst. [![arXiv](https://img.shields.io/badge/arXiv-2607.01531-b31b1b.svg)](https://arxiv.org/abs/2607.01531)
+
+- **Kepler**: Auditable World Models for ARC-AGI-3. Compares each pre-action prediction with the next observation and halts the plan on a mismatch. The audits show that unguarded runs can be confounded by source-code leakage or silent agent self-repair. [![arXiv](https://img.shields.io/badge/arXiv-2610.00834-b31b1b.svg)](https://arxiv.org/abs/2610.00834) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Cveinnt/kepler)
+
+- **RoleWorld**: Knowledge Transfer in World Modeling with Functional Role Abstractions. Writes DSL transition rules over functional roles, then probes a new environment only to bind its objects to those roles. [![arXiv](https://img.shields.io/badge/arXiv-2610.13172-b31b1b.svg)](https://arxiv.org/abs/2610.13172)
+
+- **World-Time Compute** with Verified Code World Models: samples trajectories from verified symbolic code worlds (OpenWorld) as training data for cross-world generalization. [![arXiv](https://img.shields.io/badge/arXiv-2609.09163-b31b1b.svg)](https://arxiv.org/abs/2609.09163) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/quome-cloud/openworld)
+
+- **VisualPatchWorld**: Code World Models as Latent Structured Representations for Planning. Image-derived scene graphs feed Python kinematic and contact sketches for CEM-MPC. Planning success is 69.0% with oracle state and 61.0% from RGB, against 97.5% for MuJoCo under the same planner. [![arXiv](https://img.shields.io/badge/arXiv-2607.25236-b31b1b.svg)](https://arxiv.org/abs/2607.25236) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HKBU-KnowComp/VisualPatchWorld)
+
+- **NeSyS**, Neuro-Symbolic Synergy for World Modeling: reranks neural next-state candidates with executable rule scores, and focuses fine-tuning on transitions the rules cover weakly. [![arXiv](https://img.shields.io/badge/arXiv-2602.10480-b31b1b.svg)](https://arxiv.org/abs/2602.10480) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/tianyi-lab/NeSyS)
+
+- **ProgGen**, Programmatic Video Prediction Using Large Language Models: synthesizes Python programs for state estimation, dynamics, and RGB rendering of physical scenes. [![arXiv](https://img.shields.io/badge/arXiv-2505.14948-b31b1b.svg)](https://arxiv.org/abs/2505.14948) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/metro-smiles/ProgGen)
+
+- **DR-WM**, From Pixels to Executable Physics: Behavior-Grounded World Models for Embodied Action Consequence Prediction: calibrates terrain contact from robot action–response data, runs candidate actions in a physics simulator, and uses the simulated trajectories to guide video generation. The dynamics come from a calibrated physics engine, not from synthesized transition code. [![arXiv](https://img.shields.io/badge/arXiv-2610.17630-b31b1b.svg)](https://arxiv.org/abs/2610.17630)
+
+- **Streaming Code World Model**: extends Code World Model with causal chunk-wise video generation and diffusion-forcing temporal conditioning. The four-step distilled renderer is faster, though the release is still slower than real-time playback. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/TingtingLiao/streaming-code-world-model)
+
+- **CoDeR**, Code Plans, Diffusion Renders: Open-Ended Generative World Modeling: multi-agent Three.js coders build the logical space, diffusion "Artists" paint it, and the generated appearance is registered back onto the 3D geometry. [![arXiv](https://img.shields.io/badge/arXiv-2609.26458-b31b1b.svg)](https://arxiv.org/abs/2609.26458) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://becauseimbatman0.github.io/CoDeR)
+
+- **AgentGarten**: Code Worlds for Evolving Agents. Code-authored simulation worlds export depth and normal buffers to a real-time block-causal neural renderer distilled with Adversarial Forcing. [![arXiv](https://img.shields.io/badge/arXiv-2610.12374-b31b1b.svg)](https://arxiv.org/abs/2610.12374) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/MirroS-Lab/AgentGarten)
+
+- **GameDirector**: Decoupling Gameplay Logic from Rendering for Player-Configurable Game World Models. State tracking and agentic action control let players reconfigure gameplay mechanics separately from the renderer. [![arXiv](https://img.shields.io/badge/arXiv-2609.25652-b31b1b.svg)](https://arxiv.org/abs/2609.25652) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://jimntu.github.io/gamedirector/)
+
+- **DAO & JING**, Generative World Simulation with DAO and JING: keeps one persistent shared world whose evolving state conditions audiovisual generation for each observer. [![arXiv](https://img.shields.io/badge/arXiv-2610.19726-b31b1b.svg)](https://arxiv.org/abs/2610.19726) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/XGEN-Labs/XGEN-JING)
+
+- **Magpie**: Real-Time World Renderer for Interactive Games. Designer-written gameplay rules run in a game engine; a separate render server generates visuals from the engine's observations. [![arXiv](https://img.shields.io/badge/arXiv-2608.27168-b31b1b.svg)](https://arxiv.org/abs/2608.27168) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://zhanxy.xyz/Magpie-website)
+
+- **Code2World**: A GUI World Model via Renderable Code Generation. A VLM predicts the next mobile screen as HTML/CSS that a browser renders. As with gWorld, the code describes the predicted screen, and the transition stays inside the network. [![arXiv](https://img.shields.io/badge/arXiv-2602.09856-b31b1b.svg)](https://arxiv.org/abs/2602.09856) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AMAP-ML/Code2World)
+
+- **StreamRender-H3**: Interactive Coding Worlds with Real-time Streaming Diffusion Render. Maps, physics, and interaction rules stay in a code game engine, which streams flat-colored semantic maps to a two-step streaming diffusion renderer styled by a reference image and a prompt. Rendering takes 218 ms per streaming step on eight GB200 GPUs, and all reported results come from one racing game. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)
+
+- **SolarRenderer**: Few-Step Generative Reference Rendering. A control LoRA on a frozen MiniMax-H3 backbone reads structural videos (block-outs, semantic maps, depth maps) frame by frame, and an acceleration LoRA cuts sampling to four steps. It generalizes to 11 structural representations unseen in training, and a block-causal variant streams 768p video in real time. The renderer keeps no world state; the structure comes from whatever engine or program makes the input video. [![arXiv](https://img.shields.io/badge/arXiv-2610.28630-b31b1b.svg)](https://arxiv.org/abs/2610.28630)
+
+- **AnyGameRenderer**: Entity-Consistent Generative Rendering Across Games and an Entity-Level Benchmark. Re-renders crude gameplay from agent-made games (gray block-outs, colored primitives, or wireframes) while keeping entity counts and the frames where entities appear and disappear. Its benchmark scores 753 entities in 59 held-out clips; temporal match rises from 50.9% to 62.9% over the base model. [![arXiv](https://img.shields.io/badge/arXiv-2610.31466-b31b1b.svg)](https://arxiv.org/abs/2610.31466)
+
 ## Edit Graph
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
@@ -343,6 +396,32 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 - **RefineCut**, Plans You Can Check: Verifier-Grounded Learning of an Open-Weight Planner for Executable Video-Editing. [![arXiv](https://img.shields.io/badge/arXiv-2608.25622-b31b1b.svg)](https://arxiv.org/abs/2608.25622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://github.com/Lancelot-wy/RefineCut)
 
 - **RAP**: turns a human poster into styled HTML/CSS with typed slots, then generates a new poster by retrieving a template and refilling those slots. RAP-150 holds out 150 papers for render-and-compare. [![arXiv](https://img.shields.io/badge/arXiv-2610.23230-b31b1b.svg)](https://arxiv.org/abs/2610.23230) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://reconstruct-a-poster.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/VincentHancoder/RAP)
+
+- **Back2Struct**: Making Structured Images Editable Again. Recovers object-level SVG/XML (text, shapes, topology, layout) from a raster diagram or chart, with rewards for compilability, length consistency, and structural similarity. The output imports into tools such as PowerPoint. [![arXiv](https://img.shields.io/badge/arXiv-2609.37016-b31b1b.svg)](https://arxiv.org/abs/2609.37016) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://pengyu965.github.io/Back2Struct.github.io/)
+
+- **ImageEye**: Batch Image Processing Using Program Synthesis. Synthesizes a neuro-symbolic DSL program from a few user-edited images. Guarded actions such as crop or blur apply to objects picked by pretrained perception models and symbolic relations, so one program processes a whole batch; it automates 48 of 50 evaluated tasks. [![arXiv](https://img.shields.io/badge/arXiv-2304.03253-b31b1b.svg)](https://arxiv.org/abs/2304.03253) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/celestebarnaby/ImageEye)
+
+- **SIRI**, Improving Unsupervised Visual Program Inference with Code Rewriting Families: parameter-optimization, pruning, and grafting rewriters improve inferred visual programs at test time. [![arXiv](https://img.shields.io/badge/arXiv-2309.14972-b31b1b.svg)](https://arxiv.org/abs/2309.14972) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bardofcodes.github.io/coref/)
+
+- **Learning to Edit Visual Programs** with Self-Supervision: a network predicts a local edit that brings a complete program closer to a visual target. Under equal search time, edit-based search beats the one-shot predictor alone. [![arXiv](https://img.shields.io/badge/arXiv-2406.02383-b31b1b.svg)](https://arxiv.org/abs/2406.02383) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/VPI-Edit)
+
+- **Motion Vectorization**, Editing Motion Graphics Video via Motion Vectorization and Transformation: recovers an SVG motion program with explicit objects, motions, and per-frame occlusion order (average L2 RGB error 0.0086 over 38 web videos), then edits it through a transformation API, for example retiming object motion to a music beat. [![arXiv](https://img.shields.io/badge/arXiv-2309.14642-b31b1b.svg)](https://arxiv.org/abs/2309.14642)
+
+- **Differentiable 3D CAD Programs** for Bidirectional Editing: maps direct manipulation of the geometry back to updates of the existing CAD program's parameters. [![arXiv](https://img.shields.io/badge/arXiv-2110.01182-b31b1b.svg)](https://arxiv.org/abs/2110.01182)
+
+- **ParSEL**: Parameterized Shape Editing with Language. Turns a language request on a segmented mesh into a parameterized editing program whose parameters set the edit magnitudes. [![arXiv](https://img.shields.io/badge/arXiv-2405.20319-b31b1b.svg)](https://arxiv.org/abs/2405.20319) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://bardofcodes.github.io/parsel/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/BardOfCodes/parsel)
+
+- **DeTikZify**: Synthesizing Graphics Programs for Scientific Figures and Sketches with TikZ. MCTS-based inference refines the TikZ output without extra training. [![arXiv](https://img.shields.io/badge/arXiv-2405.15306-b31b1b.svg)](https://arxiv.org/abs/2405.15306) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/potamides/DeTikZify)
+
+- **StarVector**: Generating Scalable Vector Graphics Code from Images and Text. Writes SVG with primitives such as ellipses, polygons, and text, not only path curves. [![arXiv](https://img.shields.io/badge/arXiv-2312.11556-b31b1b.svg)](https://arxiv.org/abs/2312.11556) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://starvector.github.io) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/joanrod/star-vector)
+
+- **RefineSVG**: Visual Feedback-Driven Reinforcement Learning for Image-to-SVG Generation. Renders its first SVG, compares it with the target, and feeds the residual map back for a correction step. [![arXiv](https://img.shields.io/badge/arXiv-2607.27699-b31b1b.svg)](https://arxiv.org/abs/2607.27699)
+
+- **ShapeMOD**: Macro Operation Discovery for 3D Shape Programs. Discovers macros across datasets of shape programs; in a user study, the macros made interactive shape editing more efficient. [![arXiv](https://img.shields.io/badge/arXiv-2104.06392-b31b1b.svg)](https://arxiv.org/abs/2104.06392) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/ShapeMOD)
+
+- **ShapeCoder**: Discovering Abstractions for Visual Programs from Unstructured Primitives. Jointly discovers abstraction functions and programs that use them, so rewritten programs expose fewer free parameters. [![arXiv](https://img.shields.io/badge/arXiv-2305.05661-b31b1b.svg)](https://arxiv.org/abs/2305.05661) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/rkjones4/ShapeCoder)
+
+- **MaLiang-Harness**: A Programmable Path to Image and Video Generation. A generation framework rather than an editor: the visual program, its construction history, and its verification share one revision reference. Restoring earlier content creates a new revision that must pass verification. [![arXiv](https://img.shields.io/badge/arXiv-2609.34309-b31b1b.svg)](https://arxiv.org/abs/2609.34309)
 
 ## Benchmark
 
@@ -393,6 +472,16 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 - **LegoBench**: a coding agent rebuilds a brick model as LDraw from instructions, a finished-set photo, or a real-car photo. Scoring covers structural match and appearance. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://unifiedsense.com/blog/legobench)
 
 - **WorldBench**: one prompt asks for a floating voxel island with ten biomes, rivers, weather, and seasons. The model must return one self-contained Three.js HTML file, scored by what that program does when it runs. [![arXiv](https://img.shields.io/badge/arXiv-2610.10622-b31b1b.svg)](https://arxiv.org/abs/2610.10622) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldbench.krishbakshi.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/KrishBakshi/worldbench)
+
+### Edit programs
+
+Editing benchmarks for structured visuals such as charts, SVG graphics, and slides, where the source program or structure can supply exact references.
+
+- **StructBench**, Factuality Matters: When Image Generation and Editing Meet Structured Visuals: generation and editing of charts, diagrams, and other structured visuals, scored by question answering. On ground-truth targets the metric first scored about 80%, and rose above 95% only after the failing questions were rewritten. [![arXiv](https://img.shields.io/badge/arXiv-2510.05091-b31b1b.svg)](https://arxiv.org/abs/2510.05091) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://structvisuals.github.io)
+
+- **ChartSync**: A Benchmark for Visuo-Logical Cascading Chart Editing. A GPT-5.5 pipeline that reconstructs plotting code from the chart image, edits it, and re-renders gets the highest OCR F1 (88.76) but a judged background fidelity of 37.44, against 89.60 for Nano Banana Pro. [![arXiv](https://img.shields.io/badge/arXiv-2607.10301-b31b1b.svg)](https://arxiv.org/abs/2607.10301)
+
+- **VeriEdit-Bench**, Beyond Plausibility: Verifiable Fine-Grained Image Editing on Structured Assets: compiles controlled edits to the source of SVG graphics, charts, web interfaces, and slides into exact target images and pixel-level edit masks. The unchanged input scores 100 on preservation and 0 on fidelity, localization, and magnitude. [![arXiv](https://img.shields.io/badge/arXiv-2610.04381-b31b1b.svg)](https://arxiv.org/abs/2610.04381)
 
 ### Robot evaluation infrastructure
 
