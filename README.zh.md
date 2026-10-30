@@ -332,11 +332,13 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 
 ## Programmable World Models
 
+本节也收录代码驱动世界的生成式渲染组件。这类系统由上游引擎或程序维护状态与转移规则，渲染器将其结构输出转为视频。
+
 - [⭐️] **Code World Model**: Coding Agent as World Brain. [![arXiv](https://img.shields.io/badge/arXiv-2608.25927-b31b1b.svg)](https://arxiv.org/abs/2608.25927) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://buaacyw.github.io/cwm/)
 
 - [⭐️] **Programmable World Model**. [![arXiv](https://img.shields.io/badge/arXiv-2609.10540-b31b1b.svg)](https://arxiv.org/abs/2609.10540) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://alaya-lab.github.io/pwm/)
 
-- [⭐️] **Fight World Model (FWM)**，Customizable Combat through Visual Interaction Proxies：可执行引擎维护角色状态并执行战斗规则，确定性编译器将动作、受击反应和血量对齐编码为视觉交互代理，再交给视频模型渲染。伤害倍率、免疫、吸血和多阶段技能可在不重训渲染器的情况下修改。 [![arXiv](https://img.shields.io/badge/arXiv-2610.40607-b31b1b.svg)](https://arxiv.org/abs/2610.40607) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://fight-world-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/fight-world-model/FWM)
+- [⭐️] **Fight World Model**，Customizable Combat through Visual Interaction Proxies：可执行引擎维护角色状态并执行战斗规则，确定性编译器将动作、受击反应和血量对齐编码为视觉交互代理，再交给视频模型渲染。伤害倍率、免疫、吸血和多阶段技能可在不重训渲染器的情况下修改。 [![arXiv](https://img.shields.io/badge/arXiv-2610.40607-b31b1b.svg)](https://arxiv.org/abs/2610.40607) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://fight-world-model.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/fight-world-model/FWM)
 
 - **PoE-World**: Compositional World Modeling with Products of Programmatic Experts. [![arXiv](https://img.shields.io/badge/arXiv-2505.10819-b31b1b.svg)](https://arxiv.org/abs/2505.10819) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://topwasu.github.io/poe-world)
 
@@ -398,7 +400,7 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 
 - **DR-WM**：从机器人动作–响应数据标定地形接触属性，在物理仿真器里执行候选动作，再用仿真轨迹引导视频生成。动力学来自标定后的物理引擎，不是合成的转移代码。 [![arXiv](https://img.shields.io/badge/arXiv-2610.17630-b31b1b.svg)](https://arxiv.org/abs/2610.17630)
 
-- **Streaming Code World Model**：在 Code World Model 上加入因果分块视频生成和 diffusion forcing 时序条件。四步蒸馏渲染器更快，但开源版本仍慢于实时播放。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/TingtingLiao/streaming-code-world-model)
+- **Streaming Code World Model**：为 CWM 加入因果分块渲染和 diffusion forcing 条件，代理信号来自独立的脚本世界生成器。作者报告四步蒸馏模型在单张 H200 上用 5.1 秒生成 0.71 秒视频，开源版本尚非实时。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/TingtingLiao/streaming-code-world-model)
 
 - **CoDeR**：多个 agent 写 Three.js 搭出逻辑空间，扩散模型"画师"负责外观，生成的外观再配准回 3D 几何。 [![arXiv](https://img.shields.io/badge/arXiv-2609.26458-b31b1b.svg)](https://arxiv.org/abs/2609.26458) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://becauseimbatman0.github.io/CoDeR)
 
@@ -412,11 +414,11 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 
 - **Code2World**：VLM 把下一屏手机界面预测成 HTML/CSS，由浏览器渲染。和 gWorld 一样，代码描述的是预测出的画面，转移仍在网络内部。 [![arXiv](https://img.shields.io/badge/arXiv-2602.09856-b31b1b.svg)](https://arxiv.org/abs/2602.09856) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AMAP-ML/Code2World)
 
-- **StreamRender-H3**：地图、物理和交互规则留在代码游戏引擎里，引擎把平涂的语义图流式送给两步的流式扩散渲染器，外观由参考图和提示词决定。8 张 GB200 上每个流式步渲染 218 ms，所有结果都来自同一款赛车游戏。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/)
+- **StreamRender-H3**：地图、物理和交互规则留在代码游戏引擎里，引擎把平涂的语义图流式送给两步的流式扩散渲染器，外观由参考图和提示词决定。8 张 GB200 上每个流式步渲染 218 ms，所有结果都来自同一款赛车游戏。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://nvlabs.github.io/Sana/Sol-Engine/StreamRender-H3/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/NVlabs/Sana/tree/sol-engine/models/streamrender_h3)
 
-- **SolarRenderer**：在冻结的 MiniMax-H3 主干上加一个控制 LoRA，逐帧对齐读入结构视频（白模、语义图、深度图），再用加速 LoRA 把采样压到四步。能泛化到训练中没见过的 11 种结构表示，块因果版本可实时流式输出 768p 视频。渲染器本身不维护世界状态，结构来自生成输入视频的引擎或程序。 [![arXiv](https://img.shields.io/badge/arXiv-2610.28630-b31b1b.svg)](https://arxiv.org/abs/2610.28630)
+- **SolarRenderer**：在冻结的 MiniMax-H3 主干上加一个控制 LoRA，逐帧对齐读入结构视频（白模、语义图、深度图），再用加速 LoRA 把采样压到四步。能泛化到训练中没见过的 11 种结构表示，块因果版本可实时流式输出 768p 视频。渲染器本身不维护世界状态，结构来自生成输入视频的引擎或程序。 [![arXiv](https://img.shields.io/badge/arXiv-2610.28630-b31b1b.svg)](https://arxiv.org/abs/2610.28630) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://enderfga.cn/SolarRenderer/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Enderfga/SolarRenderer)
 
-- **AnyGameRenderer**：把 agent 做的粗糙游戏画面（灰色白模、彩色基本体或线框）重新渲染，同时保持实体数量和实体出现、消失的帧。配套 benchmark 在 59 段留出片段里对 753 个实体打分；相比基座模型，时间匹配从 50.9% 升到 62.9%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.31466-b31b1b.svg)](https://arxiv.org/abs/2610.31466)
+- **AnyGameRenderer**：重新渲染 agent 编写游戏的粗糙画面，改善实体位置、时序和数量对应性，游戏逻辑与状态仍由源程序维护。配套 benchmark 在 59 段留出片段里对 753 个实体打分；相比基座模型，时间匹配从 50.9% 升到 62.9%。 [![arXiv](https://img.shields.io/badge/arXiv-2610.31466-b31b1b.svg)](https://arxiv.org/abs/2610.31466) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://alaya-lab.github.io/AnyGameRenderer/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AlayaLab/AnyGameRenderer)
 
 - **Trace2World**：从交互轨迹重建带来源证据的应用状态与转移，编译为可执行浏览器环境，再通过独立工作流回放修复实现。 [![arXiv](https://img.shields.io/badge/arXiv-2610.30792-b31b1b.svg)](https://arxiv.org/abs/2610.30792)
 
