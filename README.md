@@ -33,6 +33,7 @@
     - [Plan, then call a VLA](#plan-then-call-a-vla)
     - [World programs from video](#world-programs-from-video)
     - [RL training stacks](#rl-training-stacks)
+    - [Visual programs](#visual-programs)
     - [Scene programs](#scene-programs)
 - 🔗 [Related Resources](#related-resources)
 
@@ -216,7 +217,7 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **ChunkAct**: groups robot-tool primitives into reusable action chunks, and hands control back to the agent when a chunk fails. Chunks can be triggered online or compiled offline from agent memory. [![arXiv](https://img.shields.io/badge/arXiv-2610.18874-b31b1b.svg)](https://arxiv.org/abs/2610.18874)
 
-- **RoboHarness**: connects a general-purpose LLM to visual-geometric tools, using clicks, tracked keypoints, and spatial constraints instead of a trained robot policy. [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
+- **RoboHarness**: connects a general-purpose LLM to visual-geometric tools, using clicks, tracked keypoints, and spatial constraints instead of a trained robot policy. [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://roboharness-lab.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/BinceQu/RoboHarness)
 
 - **CoEvolve**: represents multi-robot coordination as executable code over fixed motor skills. A verifier checks each transition, and a rejected behavior is revised from the last accepted checkpoint. [![arXiv](https://img.shields.io/badge/arXiv-2610.23288-b31b1b.svg)](https://arxiv.org/abs/2610.23288)
 
@@ -252,6 +253,20 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **HARBOR**: coding agents develop simulation tasks, reward code, and policy-training configurations through persistent artifacts, executable gates, and parallel experiments. [![arXiv](https://img.shields.io/badge/arXiv-2606.08610-b31b1b.svg)](https://arxiv.org/abs/2606.08610) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://supersglzc.github.io/harbor-rl/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/supersglzc/harbor-rl)
 
+- **RoboArchitect**: diagnoses rollout failures and revises control code and persistent memory around a frozen policy, then evaluates the harness on held-out scenes and tasks. [![arXiv](https://img.shields.io/badge/arXiv-2610.42141-b31b1b.svg)](https://arxiv.org/abs/2610.42141) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://roboarchitect-ai.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/roboarchitect-ai/RoboArchitect)
+
+- **TinyAstral**: coding agents revise a frozen teacher's tool, feedback, memory, and recovery harness through paired checks, then distill its reasoning and tool use into a smaller trained planner that runs the same frozen harness. [![arXiv](https://img.shields.io/badge/arXiv-2610.41216-b31b1b.svg)](https://arxiv.org/abs/2610.41216) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://garfield-kh.github.io/TinyAstral/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Garfield-kh/TinyAstral)
+
+- **CaPtain**: synthetic SFT and multi-turn RL train a small VLM to generate Python programs calling perception, geometry, and guarded-motion APIs; a privileged critic supplies training feedback but stays out of deployment. [![arXiv](https://img.shields.io/badge/arXiv-2610.40799-b31b1b.svg)](https://arxiv.org/abs/2610.40799) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://waltstephen.github.io/captain/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/waltstephen/CaPtain)
+
+- **Auriga**: controls two arms through direct tools or generated multi-step Python programs, previews trajectories before motion, and repairs execution from tolerance and grasping feedback. [![arXiv](https://img.shields.io/badge/arXiv-2611.01112-b31b1b.svg)](https://arxiv.org/abs/2611.01112) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://auriga.stelledge.com/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/lose4578/Auriga)
+
+- **uni-robot-agent**: gives open-weight agents shared robot-tool interfaces and execution feedback across environments, supporting direct tool control or hybrid execution with compatible action models. [![arXiv](https://img.shields.io/badge/arXiv-2611.01560-b31b1b.svg)](https://arxiv.org/abs/2611.01560) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Open-RUA/uni-robot-agent)
+
+- **TAMPAgent**: writes sandboxed Python scripts that build a computation graph linking perception and motion tools to belief-space task-and-motion constraints, certifies the next action, then observes and replans. [![arXiv](https://img.shields.io/badge/arXiv-2611.03584-b31b1b.svg)](https://arxiv.org/abs/2611.03584) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://umishra.me/TAMPAgent/)
+
+- **REA**: a reasoning agent writes and selects capabilities offline; a lightweight runtime routes execution among frozen code programs, learned policies, and tool controllers, consulting the slower model only at execution boundaries. [![arXiv](https://img.shields.io/badge/arXiv-2610.42053-b31b1b.svg)](https://arxiv.org/abs/2610.42053) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mikeeeeeeeeeeeeee.github.io/REA/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/REA)
+
 ## Code as Memory
 
 Agents write and revise programs that construct memory and retrieve evidence; the program determines how experience gets stored and queried.
@@ -283,6 +298,10 @@ Agents write and revise programs that construct memory and retrieve evidence; th
 - **RoboSimStudio**: humans and coding agents refine a Newton simulation's scene and physical parameters against observed robot behavior. [![arXiv](https://img.shields.io/badge/arXiv-2610.18835-b31b1b.svg)](https://arxiv.org/abs/2610.18835) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robosimstudio.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robosimstudio/robosimstudio)
 
 - **WorldMirror**: a coding agent reconstructs robot demonstrations as executable world programs, revising asset and assembly code from visual, geometric, and physical feedback while preserving trajectory replay. [![arXiv](https://img.shields.io/badge/arXiv-2610.31834-b31b1b.svg)](https://arxiv.org/abs/2610.31834) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldmirror-page.github.io/)
+
+- **CUE**, Closing the Dynamics Gap through Self-Directed Robotic Interaction: builds a MuJoCo scene and camera-based ball tracker, fits physical parameters to observed trajectories, and actively selects new interactions where the executable simulation predicts poorly. [![arXiv](https://img.shields.io/badge/arXiv-2611.02691-b31b1b.svg)](https://arxiv.org/abs/2611.02691) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cue-dynamics.github.io/)
+
+- **Ortho2CAD**: turns orthographic engineering drawings into editable CadQuery programs, repairing execution errors and revising code by comparing rendered orthographic projections with the drawings. [![arXiv](https://img.shields.io/badge/arXiv-2607.08891-b31b1b.svg)](https://arxiv.org/abs/2607.08891) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AdityaJoglekar/Ortho2CAD)
 
 ### Generation
 
@@ -329,6 +348,8 @@ Agents write and revise programs that construct memory and retrieve evidence; th
 - **3DCodeVerse**: coding agents write raw Blender, Three.js, CadQuery, OpenSCAD, GLSL, or OpenGL, and a harness executes, measures, and judges the program. The release includes about 2M executable 3D programs. On 100 text-to-3D prompts, GPT-6 Astra's human preference rises from 31% in Codex to 69% inside this harness. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://3dcodeverse.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gaoypeng/3dcodeverse)
 
 - **BrickWright**: writes and revises BrickLayer Python programs for LEGO models using connector assembly, collision, floating-part, and connectivity checks, and rendered feedback, then exports LDraw. [![arXiv](https://img.shields.io/badge/arXiv-2610.31651-b31b1b.svg)](https://arxiv.org/abs/2610.31651) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://avalovelace1.github.io/brickwright/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AvaLovelace1/brickwright)
+
+- **Gym-Anything for Robotics**: coding agents build robot scenes, physics, tasks, and reward code, then revise them through adversarial creation–audit loops. The released RoboWorld collection contains 25 simulations and 200 RL environments. [![arXiv](https://img.shields.io/badge/arXiv-2610.40565-b31b1b.svg)](https://arxiv.org/abs/2610.40565) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gym-anything.github.io/robotics/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gym-anything/robotics)
 
 ## Programmable World Models
 
@@ -422,6 +443,8 @@ This section also includes generative rendering components for code-driven world
 
 - **Trace2World**: reconstructs app states and transitions with source evidence from interaction traces, compiles them into executable browser environments, and repairs the implementation through independent workflow replay. [![arXiv](https://img.shields.io/badge/arXiv-2610.30792-b31b1b.svg)](https://arxiv.org/abs/2610.30792)
 
+- **EvoBelief**: learns evidence-linked condition–action–effect rules and executes validated rules to predict consequences and plan; counterexamples narrow or retire their scope while the LLM stays frozen. [![arXiv](https://img.shields.io/badge/arXiv-2610.12789-b31b1b.svg)](https://arxiv.org/abs/2610.12789)
+
 ## Edit Graph
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
@@ -514,7 +537,7 @@ The agent writes an executable scene, CAD model, or physics program. A renderer 
 
 - **3JSBench**: 100 short text-to-Three.js tasks, with the generation requests and inspectable geometry. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
 
-- **BenchCAD**: multi-view renders to CadQuery, scored by mean voxel IoU. With tools, Astra is reported at 95.9%. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
+- **BenchCAD**: multi-view renders to CadQuery, scored by mean voxel IoU. With tools, Astra is reported at 95.9%. A 2026-11-03 report extends the coverage in BenchCAD 2.0 to part and assembly reconstruction and PCB connection identification. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial) [![Report](https://img.shields.io/badge/Report-Link-blue)](https://openai.com/index/accelerating-engineering-for-the-physical-world/)
 
 - **Moonlake 3D Agent**: sim-ready asset benchmark across 22 metrics and Isaac Sim interaction tests; reported rank score 65.2 versus Astra 47.0. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://moonlakeai.com/blog/evaluating-3d-agent)
 
@@ -551,6 +574,8 @@ These evaluate robot policies broadly, including learned policies and program or
 - **HumanCLAW**: Can Vision-Language Models Act Through a Body? Tests VLM decisions through a harness that turns them into humanoid motion-generator calls. [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
 
 - **Robo Use Leaderboard**: aggregates published solve rates for agent harnesses and VLA policies, with 95% Wilson intervals. Each task counts once per model and harness. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robouse.ai/hub/leaderboard/)
+
+- **RoboColosseum**: unifies policy serving and blinded paired trials across embodiments and distributed real robots, comparing frontier agents and learned policies under a common evaluation protocol. [![arXiv](https://img.shields.io/badge/arXiv-2611.02497-b31b1b.svg)](https://arxiv.org/abs/2611.02497) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RoboColosseum/robocolosseum-client)
 
 ## Surveys and Lessons
 
@@ -708,9 +733,15 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 - **Isaac Sim Environment, PPO Training, and Tuning** ([十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2)): builds an Isaac Sim RL environment, configures PPO, and iterates the run in one workflow. [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
+### Visual programs
+
+- **Claude Animated Shorts**: a coding-agent workflow writes editable Three.js and Remotion scene and shot programs, checks still frames and rendered frames, then renders animated shorts. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/mromidev/claude-animated-shorts)
+
+- **pixelfx**: an editable JavaScript pixel-effects library and agent skill with a draft, render, inspect, and refine loop; contact-sheet review precedes sprite-sheet export. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://patch-gg.github.io/pixelfx/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/patch-gg/pixelfx)
+
 ### Scene programs
 
-Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The full set is 414 Astra examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Coding agents write a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The Astra catalog has 437 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -756,6 +787,14 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 
 - **A Frontier for the Zeros**: a Manim fly-through of a zeta-function surface, kept as editable Python. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HarleyCoops/Math-To-Manim/tree/main/papers/quasi-riemann)
 
+- **teardown**: an agent skill generates a self-contained HTML mechanical model with controls and exploded views, then inspects its renders. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/elvarofficial/teardown)
+
+- **AnyScene**: agents write Blender layout, lighting, camera, and rendering scripts around generated prop assets, with visual review before accepting the scene. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/apekshik/anyscene)
+
+- **ascii-diorama**: an agent skill writes Three.js miniature scenes and material shaders that render them as animated colored characters. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/JDhruv14/ascii-diorama)
+
+- **Leon Lin's procedural scene programs**: agents write architecture, terrain, and ocean programs in Three.js, WebGL2, Python, or GLSL, revising them against reference renders and retaining editable cameras and audiovisual timelines. Sources: [Athenaion](https://github.com/Leonxlnx/athenaion), [Golden Temple](https://github.com/Leonxlnx/golden-temple), [Halo Above the Clouds](https://github.com/Leonxlnx/halo-above-the-clouds), [Na Pali](https://github.com/Leonxlnx/napali), [Open Water](https://github.com/Leonxlnx/open-water), [Procedural Alpine Lake](https://github.com/Leonxlnx/procedural-alpine-lake), [Shanshui](https://github.com/Leonxlnx/shanshui).
+
 #### CAD programs
 
 - **J-hook**: OpenSCAD print design compared across models; strength testing still pending. [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/WescheNex1q/status/2104590493191479337)
@@ -769,6 +808,8 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **LDraw Nova**: Python generators emit editable LDraw cathedrals and a tidal observatory. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anteloc/ldraw-nova)
 
 - **DeepSeek whale**: a logo silhouette becomes an editable single-solid desktop print mesh. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/shyrz/gpt-6-astra-3dp-test)
+
+- **cad-image-to-3d**: a Claude skill converts orthographic drawings into CadQuery, checks rendered views and named features, then exports STEP and a Unity scene. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/skykim/cad-image-to-3d)
 
 #### Playable world programs
 
@@ -803,6 +844,8 @@ Astra writes a scene, CAD model, or playable world as code, then Blender, OpenSC
 - **Moss & Moon**: a procedural fox and woodland ecosystem in Three.js, with a skeleton, foot IK, and need-driven pathfinding. The Astra submission is kept in its own folder. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
 
 - **Sunline Archipelago**: a tropical island railway in Blender and a Three.js viewer, with walking and a train-follow camera. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://givros.github.io/sunline-archipelago/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/givros/sunline-archipelago)
+
+- **Robot Curling**: Codex-assisted Python and MuJoCo code implements a curling game that estimates ice conditions from motion and simulates endpoints; the player selects the throws. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/MasahitoKumada/physical_ai_last_assignment)
 
 ## Related Resources
 

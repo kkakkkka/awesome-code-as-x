@@ -33,6 +33,7 @@
     - [规划后调用 VLA](#规划后调用-vla)
     - [从视频反演世界程序](#从视频反演世界程序)
     - [编写 RL 训练栈](#编写-rl-训练栈)
+    - [视觉程序](#视觉程序)
     - [场景程序](#场景程序)
 - 🔗 [相关资源](#相关资源)
 
@@ -216,7 +217,7 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **ChunkAct**：把机器人工具原语收成可复用的动作块，块执行失败时把控制交还 agent。动作块可以在线触发，也可以从 agent 记忆离线编译。 [![arXiv](https://img.shields.io/badge/arXiv-2610.18874-b31b1b.svg)](https://arxiv.org/abs/2610.18874)
 
-- **RoboHarness**：把通用 LLM 接到视觉几何工具上，用点击、跟踪关键点和空间约束做操作，不训练机器人策略。 [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018)
+- **RoboHarness**：把通用 LLM 接到视觉几何工具上，用点击、跟踪关键点和空间约束做操作，不训练机器人策略。 [![arXiv](https://img.shields.io/badge/arXiv-2610.14018-b31b1b.svg)](https://arxiv.org/abs/2610.14018) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://roboharness-lab.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/BinceQu/RoboHarness)
 
 - **CoEvolve**：把多机器人协作写成盖在固定运动技能上的可执行代码。验证器检查每一次状态转移，被拒绝的行为从最近一次通过的检查点改起。 [![arXiv](https://img.shields.io/badge/arXiv-2610.23288-b31b1b.svg)](https://arxiv.org/abs/2610.23288)
 
@@ -252,6 +253,20 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **HARBOR**：coding agent 通过持久产物、可执行验收门槛和并行试验，完成仿真任务、奖励代码和策略训练配置的开发。 [![arXiv](https://img.shields.io/badge/arXiv-2606.08610-b31b1b.svg)](https://arxiv.org/abs/2606.08610) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://supersglzc.github.io/harbor-rl/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/supersglzc/harbor-rl)
 
+- **RoboArchitect**：诊断 rollout 失败，修改冻结策略外围的控制代码与持久记忆，再在留出场景和任务上评测 harness。 [![arXiv](https://img.shields.io/badge/arXiv-2610.42141-b31b1b.svg)](https://arxiv.org/abs/2610.42141) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://roboarchitect-ai.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/roboarchitect-ai/RoboArchitect)
+
+- **TinyAstral**：coding agent 通过配对检查修改冻结 teacher 的工具、反馈、记忆与恢复 harness，再将其推理和工具使用蒸馏到经过训练的小型规划器，运行同一冻结 harness。 [![arXiv](https://img.shields.io/badge/arXiv-2610.41216-b31b1b.svg)](https://arxiv.org/abs/2610.41216) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://garfield-kh.github.io/TinyAstral/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Garfield-kh/TinyAstral)
+
+- **CaPtain**：用合成数据 SFT 和多轮 RL 训练小型 VLM，生成调用感知、几何与带保护运动 API 的 Python 程序；特权 critic 只提供训练反馈，不参与部署。 [![arXiv](https://img.shields.io/badge/arXiv-2610.40799-b31b1b.svg)](https://arxiv.org/abs/2610.40799) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://waltstephen.github.io/captain/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/waltstephen/CaPtain)
+
+- **Auriga**：通过直接工具调用或生成多步 Python 程序控制双臂，运动前预览轨迹，并根据容差与抓取反馈修复执行。 [![arXiv](https://img.shields.io/badge/arXiv-2611.01112-b31b1b.svg)](https://arxiv.org/abs/2611.01112) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://auriga.stelledge.com/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/lose4578/Auriga)
+
+- **uni-robot-agent**：为开放权重 agent 提供跨环境共享的机器人工具接口与执行反馈，支持直接工具控制，或与兼容动作模型混合执行。 [![arXiv](https://img.shields.io/badge/arXiv-2611.01560-b31b1b.svg)](https://arxiv.org/abs/2611.01560) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Open-RUA/uni-robot-agent)
+
+- **TAMPAgent**：编写沙箱 Python 脚本构建计算图，将感知和运动工具绑定到信念空间任务与运动约束，认证下一步动作后观察并重新规划。 [![arXiv](https://img.shields.io/badge/arXiv-2611.03584-b31b1b.svg)](https://arxiv.org/abs/2611.03584) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://umishra.me/TAMPAgent/)
+
+- **REA**：推理 agent 离线编写和选择能力，轻量运行时在冻结代码程序、学习策略和工具控制器之间路由执行，只在执行边界调用较慢的模型。 [![arXiv](https://img.shields.io/badge/arXiv-2610.42053-b31b1b.svg)](https://arxiv.org/abs/2610.42053) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mikeeeeeeeeeeeeee.github.io/REA/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/REA)
+
 ## Code as Memory
 
 agent 编写和修订记忆构建与证据检索程序，由程序决定经验如何存储和查询。
@@ -283,6 +298,10 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 - **RoboSimStudio**：人和 coding agent 对照观察到的机器人行为，修改 Newton 仿真里的场景和物理参数。 [![arXiv](https://img.shields.io/badge/arXiv-2610.18835-b31b1b.svg)](https://arxiv.org/abs/2610.18835) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robosimstudio.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/robosimstudio/robosimstudio)
 
 - **WorldMirror**：coding agent 把机器人示范重建为可执行世界程序，根据视觉、几何和物理反馈修改资产与组装代码，并保留轨迹回放能力。 [![arXiv](https://img.shields.io/badge/arXiv-2610.31834-b31b1b.svg)](https://arxiv.org/abs/2610.31834) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://worldmirror-page.github.io/)
+
+- **CUE**，Closing the Dynamics Gap through Self-Directed Robotic Interaction：构建 MuJoCo 场景和相机球体跟踪器，用观察到的轨迹拟合物理参数，并主动选择可执行仿真预测最不准确的交互继续校准。 [![arXiv](https://img.shields.io/badge/arXiv-2611.02691-b31b1b.svg)](https://arxiv.org/abs/2611.02691) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://cue-dynamics.github.io/)
+
+- **Ortho2CAD**：把正交工程图转成可编辑 CadQuery 程序，修复执行错误，再比较渲染出的正交投影与原图来修改代码。 [![arXiv](https://img.shields.io/badge/arXiv-2607.08891-b31b1b.svg)](https://arxiv.org/abs/2607.08891) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AdityaJoglekar/Ortho2CAD)
 
 ### Generation
 
@@ -329,6 +348,8 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 - **3DCodeVerse**：coding agent 直接写 Blender、Three.js、CadQuery、OpenSCAD、GLSL 或 OpenGL，harness 负责执行、测量和打分。发布里有约 200 万个可执行三维程序。100 个文本到三维物体的提示上，GPT-6 Astra 的人类偏好从 Codex 的 31% 升到这个 harness 里的 69%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://3dcodeverse.com) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gaoypeng/3dcodeverse)
 
 - **BrickWright**：编写并修改 BrickLayer Python 程序，通过连接器装配、碰撞、悬空和连通性检查及渲染反馈生成 LEGO 模型，再导出 LDraw。 [![arXiv](https://img.shields.io/badge/arXiv-2610.31651-b31b1b.svg)](https://arxiv.org/abs/2610.31651) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://avalovelace1.github.io/brickwright/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AvaLovelace1/brickwright)
+
+- **Gym-Anything for Robotics**：coding agent 编写机器人场景、物理、任务和奖励代码，再通过对抗式创建—审计循环修订。发布的 RoboWorld 包含 25 种仿真和 200 个 RL 环境。 [![arXiv](https://img.shields.io/badge/arXiv-2610.40565-b31b1b.svg)](https://arxiv.org/abs/2610.40565) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://gym-anything.github.io/robotics/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/gym-anything/robotics)
 
 ## Programmable World Models
 
@@ -422,6 +443,8 @@ agent 编写和修订记忆构建与证据检索程序，由程序决定经验�
 
 - **Trace2World**：从交互轨迹重建带来源证据的应用状态与转移，编译为可执行浏览器环境，再通过独立工作流回放修复实现。 [![arXiv](https://img.shields.io/badge/arXiv-2610.30792-b31b1b.svg)](https://arxiv.org/abs/2610.30792)
 
+- **EvoBelief**：学习带证据关联的条件—动作—效果规则，执行已验证的规则来预测后果和规划；遇到反例后缩小规则范围或撤销规则，LLM 保持冻结。 [![arXiv](https://img.shields.io/badge/arXiv-2610.12789-b31b1b.svg)](https://arxiv.org/abs/2610.12789)
+
 ## Edit Graph
 
 - [⭐️] **VisProg**, Visual Programming: Compositional Visual Reasoning Without Training. [![Website](https://img.shields.io/badge/Website-Link-blue)](https://prior.allenai.org/projects/visprog)
@@ -514,7 +537,7 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 
 - **3JSBench**：100 个短的文本到 Three.js 任务，生成请求和几何都可以检查。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/GeneralContext/3jsbench)
 
-- **BenchCAD**：多视图渲染写成 CadQuery，用体素 IoU 打分。带工具时，报告里 Astra 为 95.9%。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial)
+- **BenchCAD**：多视图渲染写成 CadQuery，用体素 IoU 打分。带工具时，报告里 Astra 为 95.9%。2026-11-03 的报告将 BenchCAD 2.0 的覆盖扩展到零件与装配重建，以及 PCB 连接识别。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://frank-zy-dou.github.io/awesome-ai-3d-modeling-robotics/#3d-cad-and-spatial) [![Report](https://img.shields.io/badge/Report-Link-blue)](https://openai.com/index/accelerating-engineering-for-the-physical-world/)
 
 - **Moonlake 3D Agent**：面向仿真可用资产的评测，22 项指标加 Isaac Sim 交互测试；报告排名分 65.2，Astra 为 47.0。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://moonlakeai.com/blog/evaluating-3d-agent)
 
@@ -551,6 +574,8 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 - **HumanCLAW**: Can Vision-Language Models Act Through a Body? 用 harness 把 VLM 决策转成全身动作生成器调用，测试 VLM 能否通过身体行动。 [![arXiv](https://img.shields.io/badge/arXiv-2607.27180-b31b1b.svg)](https://arxiv.org/abs/2607.27180)
 
 - **Robo Use Leaderboard**：汇总已发表试验里 agent harness 和 VLA 策略的成功率，带 95% Wilson 区间。每个任务对每个模型和 harness 只计一次。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robouse.ai/hub/leaderboard/)
+
+- **RoboColosseum**：统一策略服务与盲化配对试验，在不同机器人形态和分布式真机上，用共同评测协议比较前沿 agent 与学习策略。 [![arXiv](https://img.shields.io/badge/arXiv-2611.02497-b31b1b.svg)](https://arxiv.org/abs/2611.02497) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/RoboColosseum/robocolosseum-client)
 
 ## 综述与经验
 
@@ -708,9 +733,15 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 - **Isaac Sim 环境、PPO 训练和调参**（[十一](https://www.rednote.com/user/profile/610bc8f100000000200284e2)）：一个工作流里搭 Isaac Sim RL 环境、配 PPO、再迭代训练。 [![Rednote](https://img.shields.io/badge/Rednote-Post-ff2442)](https://www.rednote.com/discovery/item/6aa29087000000002600bb2e?xsec_token=ABupW63bXfa1dAqIk6vaYviNev-xOXuTmePvxk8Su9NK4=&xsec_source=pc_collect)
 
+### 视觉程序
+
+- **Claude Animated Shorts**：coding agent 工作流编写可编辑的 Three.js、Remotion 场景与镜头程序，检查静帧和渲染帧后输出动画短片。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/mromidev/claude-animated-shorts)
+
+- **pixelfx**：可编辑的 JavaScript 像素特效库与 agent skill，按起草、渲染、查看和修改的循环迭代，审核帧预览拼图后导出精灵图集。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://patch-gg.github.io/pixelfx/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/patch-gg/pixelfx)
+
 ### 场景程序
 
-Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。完整集合是 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 里的 414 个 Astra 案例（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+coding agent 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。Astra 图集 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 收录 437 个 Astra 案例（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
@@ -756,6 +787,14 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 
 - **A Frontier for the Zeros**：Manim 里穿过 ζ 函数曲面的镜头，场景留成可编辑的 Python。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/HarleyCoops/Math-To-Manim/tree/main/papers/quasi-riemann)
 
+- **teardown**：agent skill 生成自包含 HTML 机械模型，提供控制与拆解视图，再检查渲染结果。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/elvarofficial/teardown)
+
+- **AnyScene**：agent 围绕生成的道具资产编写 Blender 布局、灯光、相机和渲染脚本，通过视觉复核后接受场景。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/apekshik/anyscene)
+
+- **ascii-diorama**：agent skill 编写 Three.js 微缩场景与材质着色器，将画面渲染成动态彩色字符。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/JDhruv14/ascii-diorama)
+
+- **Leon Lin's procedural scene programs**：agent 用 Three.js、WebGL2、Python 或 GLSL 编写建筑、地形与海洋程序，对照参考渲染修改，并保留可编辑镜头与声画时间线。源码：[Athenaion](https://github.com/Leonxlnx/athenaion)、[Golden Temple](https://github.com/Leonxlnx/golden-temple)、[Halo Above the Clouds](https://github.com/Leonxlnx/halo-above-the-clouds)、[Na Pali](https://github.com/Leonxlnx/napali)、[Open Water](https://github.com/Leonxlnx/open-water)、[Procedural Alpine Lake](https://github.com/Leonxlnx/procedural-alpine-lake)、[Shanshui](https://github.com/Leonxlnx/shanshui)。
+
 #### CAD 程序
 
 - **J 型挂钩**：OpenSCAD 打印设计的模型对照，强度测试还没做。 [![X](https://img.shields.io/badge/X-Post-black)](https://x.com/WescheNex1q/status/2104590493191479337)
@@ -769,6 +808,8 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **LDraw Nova**：Python 生成器输出可编辑的 LDraw 大教堂和潮汐观测站。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/anteloc/ldraw-nova)
 
 - **DeepSeek 鲸鱼摆件**：标志剪影做成可改尺寸的单实体打印网格。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/shyrz/gpt-6-astra-3dp-test)
+
+- **cad-image-to-3d**：Claude skill 将正交图转成 CadQuery，检查渲染图与命名特征，再导出 STEP 和 Unity 场景。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/skykim/cad-image-to-3d)
 
 #### 可玩的世界程序
 
@@ -803,6 +844,8 @@ Astra 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD
 - **Moss & Moon**：Three.js 里的程序赤狐和林地生态，带骨架、足部 IK 和按需求寻路。Astra 的提交单独放在一个目录里。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/hdnng/ai-3d-animal-astra-vs-argon-vs-opus/tree/main/astra)
 
 - **Sunline Archipelago**：热带群岛铁路，Blender 场景加 Three.js 查看器，可以步行，也可以跟车。 [![Website](https://img.shields.io/badge/Website-Link-blue)](https://givros.github.io/sunline-archipelago/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/givros/sunline-archipelago)
+
+- **Robot Curling**：Codex 辅助编写 Python、MuJoCo 冰壶游戏，根据运动估计冰面条件并模拟终点，由玩家选择投掷。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/MasahitoKumada/physical_ai_last_assignment)
 
 ## 相关资源
 
