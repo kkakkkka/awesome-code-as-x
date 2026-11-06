@@ -267,6 +267,14 @@ Physical Coding, from Self-Evolving Coding Agents: From Digital Programs to Phys
 
 - **REA**: a reasoning agent writes and selects capabilities offline; a lightweight runtime routes execution among frozen code programs, learned policies, and tool controllers, consulting the slower model only at execution boundaries. [![arXiv](https://img.shields.io/badge/arXiv-2610.42053-b31b1b.svg)](https://arxiv.org/abs/2610.42053) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mikeeeeeeeeeeeeee.github.io/REA/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/REA)
 
+- **VISTA**: a meta coding agent probes failures in simulation and repairs executable skills and decision logic, keeping frozen harness versions, evaluation evidence, and revision lineage in a graph. [![arXiv](https://img.shields.io/badge/arXiv-2610.35051-b31b1b.svg)](https://arxiv.org/abs/2610.35051) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agenticei.github.io/VISTA-page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AgenticEI/VISTA)
+
+- **RoboDoctor**: a frozen multimodal agent diagnoses policy action chunks, releases a bounded prefix or corrects execution through grounded end-effector and joint tools, then verifies the effect and records conditions for reuse. [![arXiv](https://img.shields.io/badge/arXiv-2610.35604-b31b1b.svg)](https://arxiv.org/abs/2610.35604) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodoctor-rsi.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/THUSI-Lab/RoboDoctor)
+
+- **The Trinity**: a general-agent harness generates verifiable training worlds and revises reusable capability modules through versioned function interfaces, routing tasks to compatible executable harnesses while the backbone stays frozen. Its demonstrations include robot use. [![arXiv](https://img.shields.io/badge/arXiv-2610.36077-b31b1b.svg)](https://arxiv.org/abs/2610.36077) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://trinity-rsi.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/The-Trinity)
+
+- **HALO**, Perceptive Humanoid Motion from Simulation: a VLM writes and revises ordered plans through a fixed skill-tool interface, checking completion, retrying, or inserting steps from visual feedback; learned motion generation and tracking execute each subtask. [![arXiv](https://img.shields.io/badge/arXiv-2611.06908-b31b1b.svg)](https://arxiv.org/abs/2611.06908) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://apple-aiml-research.github.io/ml-halo/)
+
 ## Code as Memory
 
 Agents write and revise programs that construct memory and retrieve evidence; the program determines how experience gets stored and queried.
@@ -601,6 +609,10 @@ These evaluate robot policies broadly, including learned policies and program or
 
 - **Toward Recursive Self-Improvement in Physical AI**: surveys physical feedback that revises robot behavior and the procedures for subsequent improvement, distinguishing persistent gains from evidence attributable to recursion itself. [![arXiv](https://img.shields.io/badge/arXiv-2610.29677-b31b1b.svg)](https://arxiv.org/abs/2610.29677) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physical2rsi.github.io/)
 
+- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement**: surveys harnesses for video production, world-model interaction, and self-improvement, including hybrid designs where programs maintain world state and video models render observations. Broader than code-as-IR methods; the linked repository collects literature and resources. [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg)](https://arxiv.org/abs/2610.40191) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agentic-videogen.github.io/) [![Resources](https://img.shields.io/badge/Resources-GitHub-black)](https://github.com/agentic-videogen/awesome-agentic-videogen)
+
+- **Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation**: surveys persistent policy, memory, skill, and executable-harness changes, distinguishing learner gains from revisions to the improvement procedure and discussing the controls needed to attribute them. [![arXiv](https://img.shields.io/badge/arXiv-2610.38266-b31b1b.svg)](https://arxiv.org/abs/2610.38266) [![Resources](https://img.shields.io/badge/Resources-GitHub-black)](https://github.com/nkd-lkz/physical-ai-rsi-survey)
+
 ## Projects
 
 X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the sections above. Case catalog: [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI).
@@ -741,7 +753,7 @@ X posts, Xiaohongshu posts, and webpage-only systems. Papers stay in the section
 
 ### Scene programs
 
-Coding agents write a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The Astra catalog has 437 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
+Coding agents write a scene, CAD model, or playable world as code, then Blender, OpenSCAD, Three.js, or a game engine runs it. The Astra catalog has 443 examples in [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) ([gallery](https://carpentry-liu.github.io/awesome-astra-3d/)). Entries below are source-backed starting points, grouped by the program that gets executed. Video-only renders stay in that atlas.
 
 - [⭐️] **Awesome Astra 3D**: Blender, Houdini, Three.js, CAD, VRM, and interactive-game case catalog. [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 

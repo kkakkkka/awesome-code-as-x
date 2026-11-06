@@ -267,6 +267,14 @@ Physical Coding 来自 Self-Evolving Coding Agents: From Digital Programs to Phy
 
 - **REA**：推理 agent 离线编写和选择能力，轻量运行时在冻结代码程序、学习策略和工具控制器之间路由执行，只在执行边界调用较慢的模型。 [![arXiv](https://img.shields.io/badge/arXiv-2610.42053-b31b1b.svg)](https://arxiv.org/abs/2610.42053) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://mikeeeeeeeeeeeeee.github.io/REA/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/REA)
 
+- **VISTA**：meta coding agent 在仿真中主动探查失败，修复可执行技能和决策逻辑，用图保留冻结的 harness 版本、评测证据与修订谱系。 [![arXiv](https://img.shields.io/badge/arXiv-2610.35051-b31b1b.svg)](https://arxiv.org/abs/2610.35051) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agenticei.github.io/VISTA-page/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/AgenticEI/VISTA)
+
+- **RoboDoctor**：冻结的多模态 agent 诊断策略动作块，放行有界前缀，或通过落地的末端执行器与关节工具纠正执行，再验证效果并记录复用条件。 [![arXiv](https://img.shields.io/badge/arXiv-2610.35604-b31b1b.svg)](https://arxiv.org/abs/2610.35604) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://robodoctor-rsi.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/THUSI-Lab/RoboDoctor)
+
+- **The Trinity**：通用 agent harness 生成可验证训练世界，通过版本化函数接口修订可复用能力模块，将任务路由到兼容的可执行 harness，主干模型保持冻结。演示也包含机器人使用。 [![arXiv](https://img.shields.io/badge/arXiv-2610.36077-b31b1b.svg)](https://arxiv.org/abs/2610.36077) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://trinity-rsi.github.io/) [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/InfRec-Cardinal/The-Trinity)
+
+- **HALO**，Perceptive Humanoid Motion from Simulation：VLM 通过固定技能工具接口编写并修订有序计划，根据视觉反馈检查完成情况、重试或插入步骤，由学习到的动作生成与跟踪模块执行各个子任务。 [![arXiv](https://img.shields.io/badge/arXiv-2611.06908-b31b1b.svg)](https://arxiv.org/abs/2611.06908) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://apple-aiml-research.github.io/ml-halo/)
+
 ## Code as Memory
 
 agent 编写和修订记忆构建与证据检索程序，由程序决定经验如何存储和查询。
@@ -601,6 +609,10 @@ agent 写出可执行的场景、CAD 或物理程序，再交给渲染器或仿�
 
 - **Toward Recursive Self-Improvement in Physical AI**：综述物理反馈如何修改机器人行为及后续改进程序，区分持久收益与可归因于递归本身的证据。 [![arXiv](https://img.shields.io/badge/arXiv-2610.29677-b31b1b.svg)](https://arxiv.org/abs/2610.29677) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://physical2rsi.github.io/)
 
+- **Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement**：综述视频制作、世界模型交互与自我改进中的 harness，包括由程序维护世界状态、视频模型渲染观测的混合设计。范围比 code-as-IR 方法更宽；链接仓库收集文献与资源。 [![arXiv](https://img.shields.io/badge/arXiv-2610.40191-b31b1b.svg)](https://arxiv.org/abs/2610.40191) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://agentic-videogen.github.io/) [![Resources](https://img.shields.io/badge/Resources-GitHub-black)](https://github.com/agentic-videogen/awesome-agentic-videogen)
+
+- **Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation**：综述策略、记忆、技能与可执行 harness 的持久变化，区分学习器收益与改进程序本身的修订，并讨论归因所需的对照实验。 [![arXiv](https://img.shields.io/badge/arXiv-2610.38266-b31b1b.svg)](https://arxiv.org/abs/2610.38266) [![Resources](https://img.shields.io/badge/Resources-GitHub-black)](https://github.com/nkd-lkz/physical-ai-rsi-survey)
+
 ## Projects
 
 X、小红书、以及只有网页的系统。论文仍留在上面的栏目。案例合集见 [Awesome Astra Embodied AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI)。
@@ -741,7 +753,7 @@ X、小红书、以及只有网页的系统。论文仍留在上面的栏目。�
 
 ### 场景程序
 
-coding agent 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。Astra 图集 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 收录 437 个 Astra 案例（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
+coding agent 把场景、CAD 或可玩世界写成程序，再交给 Blender、OpenSCAD、Three.js 或游戏引擎去跑。Astra 图集 [Awesome Astra 3D](https://github.com/carpentry-liu/awesome-astra-3d) 收录 443 个 Astra 案例（[画廊](https://carpentry-liu.github.io/awesome-astra-3d/)）。下面只收有源码或可检查程序的入口，按跑起来的程序分组。只有视频的渲染留在那个图集里。
 
 - [⭐️] **Awesome Astra 3D**：Blender、Houdini、Three.js、CAD、VRM 和交互游戏的案例合集。 [![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/carpentry-liu/awesome-astra-3d) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://carpentry-liu.github.io/awesome-astra-3d/)
 
